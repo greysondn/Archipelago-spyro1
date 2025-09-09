@@ -1,5 +1,9 @@
 from enum import IntEnum
 
+# type aliases
+Name = str
+Address = int
+Flag = int
 
 def internal_id_to_offset(internal_id: int) -> int:
     """Translates internal ID to zero-indexed offset in the overall environment"""
@@ -15,11 +19,8 @@ class SpyroEnvironment():
     text_offset: int
     has_vortex: bool
 
-    dragons: dict[str, tuple[int, int]]
-    """dragons[name] = (address, flag)"""
-
-    eggs: dict[str, tuple[int, int]]
-    """eggs[name] = (address, flag)"""
+    dragons: dict[Name, tuple[Address, Flag]]
+    eggs: dict[Name, tuple[Address, Flag]]
 
     gem_counter: int
     total_gems: int

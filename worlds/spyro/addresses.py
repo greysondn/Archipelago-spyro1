@@ -7,8 +7,7 @@ def internal_id_to_offset(internal_id: int) -> int:
     homeworld_offset: int = internal_id % 10
     return (homeworld_index * 6) + homeworld_offset
 
-
-class Environment():
+class SpyroEnvironment():
     """A container holding various useful pieces of data tied to a given level or homeworld"""
     balloon_pointers: list[int]
     name: str
@@ -25,7 +24,7 @@ class Environment():
     gem_counter: int
     total_gems: int
     statue_head_checks: list[int]
-    child_environments: list["Environment"]
+    child_environments: list["SpyroEnvironment"]
     portal_surface_types: list[int]
     portal_dest_level_ids: list[int]
     vortex_moby_pointer: int
@@ -70,49 +69,49 @@ class RAM:
 
     last_selected_valid_choice: int = unused_space + 16
 
-    hub_environments: list[Environment] = []
+    hub_environments: list[SpyroEnvironment] = []
 
-    hub_environments.append(Environment("Artisans", 10))
-    hub_environments.append(Environment("Peace Keepers", 20))
-    hub_environments.append(Environment("Magic Crafters", 30))
-    hub_environments.append(Environment("Beast Makers", 40))
-    hub_environments.append(Environment("Dream Weavers", 50))
-    hub_environments.append(Environment("Gnasty's World", 60))
+    hub_environments.append(SpyroEnvironment("Artisans", 10))
+    hub_environments.append(SpyroEnvironment("Peace Keepers", 20))
+    hub_environments.append(SpyroEnvironment("Magic Crafters", 30))
+    hub_environments.append(SpyroEnvironment("Beast Makers", 40))
+    hub_environments.append(SpyroEnvironment("Dream Weavers", 50))
+    hub_environments.append(SpyroEnvironment("Gnasty's World", 60))
 
-    hub_environments[0].child_environments.append(Environment("Stone Hill", 11, True))
-    hub_environments[0].child_environments.append(Environment("Dark Hollow", 12, True))
-    hub_environments[0].child_environments.append(Environment("Town Square", 13, True))
-    hub_environments[0].child_environments.append(Environment("Toasty", 14, True))
-    hub_environments[0].child_environments.append(Environment("Sunny Flight", 15))
+    hub_environments[0].child_environments.append(SpyroEnvironment("Stone Hill", 11, True))
+    hub_environments[0].child_environments.append(SpyroEnvironment("Dark Hollow", 12, True))
+    hub_environments[0].child_environments.append(SpyroEnvironment("Town Square", 13, True))
+    hub_environments[0].child_environments.append(SpyroEnvironment("Toasty", 14, True))
+    hub_environments[0].child_environments.append(SpyroEnvironment("Sunny Flight", 15))
 
-    hub_environments[1].child_environments.append(Environment("Dry Canyon", 21, True))
-    hub_environments[1].child_environments.append(Environment("Cliff Town", 22, True))
-    hub_environments[1].child_environments.append(Environment("Ice Cavern", 23, True))
-    hub_environments[1].child_environments.append(Environment("Doctor Shemp", 24, True))
-    hub_environments[1].child_environments.append(Environment("Night Flight", 25))
+    hub_environments[1].child_environments.append(SpyroEnvironment("Dry Canyon", 21, True))
+    hub_environments[1].child_environments.append(SpyroEnvironment("Cliff Town", 22, True))
+    hub_environments[1].child_environments.append(SpyroEnvironment("Ice Cavern", 23, True))
+    hub_environments[1].child_environments.append(SpyroEnvironment("Doctor Shemp", 24, True))
+    hub_environments[1].child_environments.append(SpyroEnvironment("Night Flight", 25))
 
-    hub_environments[2].child_environments.append(Environment("Alpine Ridge", 31, True))
-    hub_environments[2].child_environments.append(Environment("High Caves", 32, True))
-    hub_environments[2].child_environments.append(Environment("Wizard Peak", 33, True))
-    hub_environments[2].child_environments.append(Environment("Blowhard", 34, True))
-    hub_environments[2].child_environments.append(Environment("Crystal Flight", 35))
+    hub_environments[2].child_environments.append(SpyroEnvironment("Alpine Ridge", 31, True))
+    hub_environments[2].child_environments.append(SpyroEnvironment("High Caves", 32, True))
+    hub_environments[2].child_environments.append(SpyroEnvironment("Wizard Peak", 33, True))
+    hub_environments[2].child_environments.append(SpyroEnvironment("Blowhard", 34, True))
+    hub_environments[2].child_environments.append(SpyroEnvironment("Crystal Flight", 35))
 
-    hub_environments[3].child_environments.append(Environment("Terrace Village", 41, True))
-    hub_environments[3].child_environments.append(Environment("Misty Bog", 42, True))
-    hub_environments[3].child_environments.append(Environment("Tree Tops", 43, True))
-    hub_environments[3].child_environments.append(Environment("Metalhead", 44, True))
-    hub_environments[3].child_environments.append(Environment("Wild Flight", 45))
+    hub_environments[3].child_environments.append(SpyroEnvironment("Terrace Village", 41, True))
+    hub_environments[3].child_environments.append(SpyroEnvironment("Misty Bog", 42, True))
+    hub_environments[3].child_environments.append(SpyroEnvironment("Tree Tops", 43, True))
+    hub_environments[3].child_environments.append(SpyroEnvironment("Metalhead", 44, True))
+    hub_environments[3].child_environments.append(SpyroEnvironment("Wild Flight", 45))
 
-    hub_environments[4].child_environments.append(Environment("Dark Passage", 51, True))
-    hub_environments[4].child_environments.append(Environment("Lofty Castle", 52, True))
-    hub_environments[4].child_environments.append(Environment("Haunted Towers", 53, True))
-    hub_environments[4].child_environments.append(Environment("Jacques", 54, True))
-    hub_environments[4].child_environments.append(Environment("Icy Flight", 55))
+    hub_environments[4].child_environments.append(SpyroEnvironment("Dark Passage", 51, True))
+    hub_environments[4].child_environments.append(SpyroEnvironment("Lofty Castle", 52, True))
+    hub_environments[4].child_environments.append(SpyroEnvironment("Haunted Towers", 53, True))
+    hub_environments[4].child_environments.append(SpyroEnvironment("Jacques", 54, True))
+    hub_environments[4].child_environments.append(SpyroEnvironment("Icy Flight", 55))
 
-    hub_environments[5].child_environments.append(Environment("Gnorc Cove", 61, True))
-    hub_environments[5].child_environments.append(Environment("Twilight Harbor", 62, True))
-    hub_environments[5].child_environments.append(Environment("Gnasty Gnorc", 63))
-    hub_environments[5].child_environments.append(Environment("Gnasty's Loot", 64, True))
+    hub_environments[5].child_environments.append(SpyroEnvironment("Gnorc Cove", 61, True))
+    hub_environments[5].child_environments.append(SpyroEnvironment("Twilight Harbor", 62, True))
+    hub_environments[5].child_environments.append(SpyroEnvironment("Gnasty Gnorc", 63))
+    hub_environments[5].child_environments.append(SpyroEnvironment("Gnasty's Loot", 64, True))
 
     hub_environments[0].balloon_pointers = [0x7bc04, 0x7bc08]
     hub_environments[1].balloon_pointers = [0x7c5dc, 0x7c5e0]
@@ -198,7 +197,7 @@ class RAM:
     hub_environments[5].child_environments[2].text_offset = 0x10094  # gnasty gnorc
     hub_environments[5].child_environments[3].text_offset = 0x10084  # gnasty's loot
 
-    hub: Environment = hub_environments[0]
+    hub:SpyroEnvironment = hub_environments[0]
     for hub in hub_environments:
         dest_offset: int = 0
         for dest_offset in hub.portal_dest_level_ids:

@@ -13,38 +13,26 @@ def internal_id_to_offset(internal_id: int) -> int:
 
 class SpyroEnvironment():
     """A container holding various useful pieces of data tied to a given level or homeworld"""
-    balloon_pointers: list[int]
-    name: str
-    internal_id: int
-    text_offset: int
-    has_vortex: bool
-
-    dragons: dict[Name, tuple[Address, Flag]]
-    eggs: dict[Name, tuple[Address, Flag]]
-
-    gem_counter: int
-    total_gems: int
-    statue_head_checks: list[int]
-    child_environments: list["SpyroEnvironment"]
-    portal_surface_types: list[int]
-    portal_dest_level_ids: list[int]
-    vortex_moby_pointer: int
-
+    
     def __init__(self, name: str, internal_id: int, has_vortex: bool = False) -> None:
-        self.name = name
-        self.internal_id = internal_id
-        self.balloon_pointers = []
-        self.text_offset = 0
-        self.has_vortex = has_vortex
-        self.dragons = {}
-        self.eggs = {}
-        self.gem_counter = 0
-        self.total_gems = 0
-        self.statue_head_checks = []
-        self.child_environments = []
-        self.portal_surface_types = []
-        self.portal_dest_level_ids = []
-        self.vortex_moby_pointer = 0
+        self.balloon_pointers: list[int] = []
+        self.name: str = name
+        self.internal_id: int = internal_id
+        self.text_offset: int = 0
+        self.has_vortex: bool = has_vortex
+        
+        self.dragons: dict[Name, tuple[Address, Flag]]  = {}
+        """dict[Name, tuple[Address, Flag]]"""
+        self.eggs: dict[Name, tuple[Address, Flag]] = {}
+        """dict[Name, tuple[Address, Flag]]"""
+        
+        self.gem_counter: int = 0
+        self.total_gems: int = 0
+        self.statue_head_checks: list[int] = []
+        self.child_environments: list["SpyroEnvironment"] = []
+        self.portal_surface_types: list[int] = []
+        self.portal_dest_level_ids: list[int] = []
+        self.vortex_moby_pointer: int = 0
 
     def is_hub(self) -> bool:
         """Whether the current environment is a homeworld"""

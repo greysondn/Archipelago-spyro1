@@ -11,7 +11,7 @@ BHMemoryAddress = Tuple[int, int, str]
 
 class BHLocation(APLocation):
     """An APLocation, with extras for Bizhawk implementations"""
-    def __init__(self, game:str, address:int, length:int, region:BHEndianType):
+    def __init__(self, game:str, address:int, length:int, region:BHEndianType, endian:BHEndianType):
         """Init.
 
         Args:
@@ -19,23 +19,24 @@ class BHLocation(APLocation):
             address: the memory address this location lives at
             length: the length of the data in memory
             region: the region of memory this is in
+            endian: Endianness of memory
         """
         super().__init__(game)
-        self.ram:BHMemoryEntry = BHMemoryEntry(address, length, region)
+        self.ram:BHMemoryEntry = BHMemoryEntry(address, length, region, endian)
 
 class BHMemoryEntry():
     """Internal representation of a single memory entry from Bizhawk.
     
     Comparable, in some ways, to a RAM watch's output in Bizhawk.
     """
-    def __init__(self, address:int, length:int, region:str, endian:BHEndianType = "little"):
+    def __init__(self, address:int, length:int, region:str, endian:BHEndianType):
         """Init.
 
         Args:
             address: where this resides in memory
             length: the length of this in memory
             region: the region of memory this is in
-            endian: Endianess of this data point. (Default: "little")
+            endian: Endianess of this data point.
         """
         self.raw_data:bytes = b""
         self.address:int = address

@@ -281,7 +281,17 @@ class SpyroWorld(World):
 
         trap_percentage: float = 0.05
         total_unfilled_locations: int = len(self.multiworld.get_unfilled_locations(self.player))
-        total_filled_local_locations: int = len(itempool) + 1  # Victory item
+
+        # Ensure we're not in UT gen, because we can't look up these by name until later
+        if not hasattr(self.multiworld, "generation_is_fake"):
+            if self.goal == "gnasty":
+                self.get_location("Defeated Gnasty Gnorc").place_locked_item(victory)
+            elif self.goal == "loot":
+                self.get_location("Gnasty's Loot Vortex").place_locked_item(victory)
+        
+            total_unfilled_locations -= 1
+        
+        total_filled_local_locations: int = len(itempool)
         trap_count: int = round((total_unfilled_locations - total_filled_local_locations) * trap_percentage)
         total_filled_local_locations += trap_count
 
@@ -294,13 +304,6 @@ class SpyroWorld(World):
         for _ in range(junk_count):
             random_filler: str = self.multiworld.random.choice(filler_items)
             itempool += [self.create_item(random_filler)]
-
-        # Ensure we're not in UT gen, because we can't look up these by name until later
-        if not hasattr(self.multiworld, "generation_is_fake"):
-            if self.goal == "gnasty":
-                self.get_location("Defeated Gnasty Gnorc").place_locked_item(victory)
-            elif self.goal == "loot":
-                self.get_location("Gnasty's Loot Vortex").place_locked_item(victory)
 
         self.multiworld.itempool += itempool
 

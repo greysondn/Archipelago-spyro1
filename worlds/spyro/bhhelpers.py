@@ -1,3 +1,10 @@
+from aphelpers import APLocation
+
+class BHLocation(APLocation):
+    def __init__(self, game:str, address:int, length:int):
+        super().__init__(game)
+        self.ram:BHMemoryEntry = BHMemoryEntry(address, length)
+
 class BHMemoryEntry():
     def __init__(self, address:int, length:int):
         self.raw_data:bytes = b""
@@ -22,6 +29,7 @@ class BHMemoryEntryList(list):
 
 # define everything for lazy import
 __all__ = [
+    "BHLocation",
     "BHMemoryEntry",
     "BHMemoryEntryList",
 ]

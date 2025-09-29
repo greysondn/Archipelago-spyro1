@@ -2,6 +2,8 @@ import logging
 import struct
 
 from typing import TYPE_CHECKING
+from typing import cast
+
 
 try:
     from typing import override, ClassVar
@@ -15,7 +17,7 @@ from NetUtils import ClientStatus, NetworkItem
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
 
-from .addresses import RAM, menu_lookup, Environment, internal_id_to_offset
+from .addresses import RAM, menu_lookup, SpyroEnvironment, SpyroHub, internal_id_to_offset
 from .locations import SpyroPlayerLocations, static_locations
 from .items import item_id_to_name, boss_items, homeworld_access, goal_item
 from .world import SlotDataTypes
@@ -24,28 +26,7 @@ if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext
 
 logger: logging.Logger = logging.getLogger("Client")
-CLIENT_VERSION: str = "v0.4.0"  # TODO: Remove before PR to main
-
-
-class RamRead():
-    """Class for holding data related to reads from BizHawk memory. Tracks address, byte count, and the data at address
-    in BizHawk's memory.
-    """
-
-    def __init__(self, address: int, byte_count: int) -> None:
-        self.address: int = address
-        self.byte_count: int = byte_count
-        self.raw_data: bytes = b''
-        return
-
-    def value(self) -> int:
-        """Return the value of the read data intrepreted as an int from a little-endian representation
-
-        Returns:
-            Little-endian int representation of the raw data
-        """
-        return int.from_bytes(self.raw_data, byteorder="little")
-
+CLIENT_VERSION: str = "v0.5.0"  # TODO: Remove before PR to main
 
 class SpyroClient(BizHawkClient):
     game: ClassVar[str] = "Spyro the Dragon"
@@ -57,48 +38,10 @@ class SpyroClient(BizHawkClient):
     slot_data_gem_threshold_mult: float = 1.0
     slot_data_max_per_env_threshold: int = 100
 
-    location_name_to_id: dict[str, int]
-
-    env_by_id: dict[int, Environment] = {}
-    env_by_name: dict[str, Environment] = {}
-
     player_locations: SpyroPlayerLocations
-
-    hub: Environment
-    level: Environment
-    for hub in RAM.hub_environments:
-        env_by_id[hub.internal_id] = hub
-        env_by_name[hub.name] = hub
-
-        for level in hub.child_environments:
-            env_by_id[level.internal_id] = level
-            env_by_name[level.name] = level
 
     ap_unlocked_worlds: set[str] = set()
     boss_items: set[str] = set()
-
-    recv_index: RamRead = RamRead(RAM.last_received_archipelago_id, 4)
-    """Index of last processed AP item"""
-
-    cur_game_state: RamRead = RamRead(RAM.cur_game_state, 1)
-    cur_level_id: RamRead = RamRead(RAM.cur_level_id, 1)
-    spyro_color: RamRead = RamRead(RAM.spyro_color_filter, 4)
-    gnasty_anim_flag: RamRead = RamRead(RAM.gnasty_anim_flag, 1)
-    unlocked_worlds: RamRead = RamRead(RAM.unlocked_worlds, 6)
-    balloonist_menu_choice: RamRead = RamRead(RAM.balloonist_menu_choice, 1)
-    total_gems_collected: RamRead = RamRead(RAM.total_gem_count, 4)
-    did_portal_switch: RamRead = RamRead(RAM.switched_portal_dest, 1)
-    spyro_anim: RamRead = RamRead(RAM.spyro_cur_animation, 1)
-    last_whirlwind_pointer: RamRead = RamRead(RAM.last_touched_whirlwind, 3)
-
-    gem_counts: list[RamRead] = []
-    """Keeps track of gem counts"""
-
-    dragons: dict[int, list[RamRead]] = {}
-    """Tracks rescued dragons, indexed by level ID"""
-
-    eggs: dict[int, list[RamRead]] = {}
-    """Tracks collected eggs, indexed by level ID"""
 
     portal_accesses: dict[str, bool] = {}
     """Keeps track of portal access, indexed by level name"""
@@ -119,21 +62,12 @@ class SpyroClient(BizHawkClient):
     """Whether we've processed slot data"""
 
     def __init__(self) -> None:
-        for env_id, env in self.env_by_id.items():
-            self.gem_counts.append(RamRead(env.gem_counter, 2))
-
-            self.dragons[env_id] = []
-            self.eggs[env_id] = []
-
-            for dragon_data in env.dragons.values():
-                self.dragons[env_id].append(RamRead(dragon_data[0], 1))
-
-            for egg_data in env.eggs.values():
-                self.eggs[env_id].append(RamRead(egg_data[0], 1))
-
-            if not env.is_hub():
-                self.portal_accesses[env.name] = False
-
+        self.read_list = RAM.to_read_list()
+            
+        for hub in RAM.world.hubs.values():
+            for level in hub.levels.values():
+                self.portal_accesses[level.name] = False
+            
         return
 
     @override
@@ -190,77 +124,50 @@ class SpyroClient(BizHawkClient):
         await self.process_received_items(ctx.items_received, ctx)
 
         try:
-            # Build up a list of RAM reads to request from BizHawk
-            to_read_list: list[RamRead] = []
-            to_read_list.append(self.recv_index)
-            to_read_list.append(self.cur_game_state)
-            to_read_list.append(self.cur_level_id)
-            to_read_list.append(self.spyro_color)
-            to_read_list.append(self.gnasty_anim_flag)
-            to_read_list.append(self.unlocked_worlds)
-            to_read_list.append(self.balloonist_menu_choice)
-            to_read_list.append(self.total_gems_collected)
-            to_read_list.append(self.did_portal_switch)
-            to_read_list.append(self.spyro_anim)
-            to_read_list.append(self.last_whirlwind_pointer)
-            to_read_list.extend(self.gem_counts)
-
-            for dragon_ramreads in self.dragons.values():
-                to_read_list.extend(dragon_ramreads)
-
-            for egg_ramreads in self.eggs.values():
-                to_read_list.extend(egg_ramreads)
-
-            batched_reads: list[tuple[int, int, str]] = []
-
-            # Format the list in the way BizHawk expects
-            for ram_item in to_read_list:
-                batched_reads.append((ram_item.address, ram_item.byte_count, "MainRAM"))
-
-            # Request the reads from BizHawk
-            bizhawk_peek_bytes: list[bytes] = await bizhawk.read(ctx.bizhawk_ctx, batched_reads)
+            # Request reads from BizHawk
+            bizhawk_peek_bytes: list[bytes] = await bizhawk.read(ctx.bizhawk_ctx, self.read_list.to_batched_read_list())
 
             # Take the results from BizHawk and store them in their corresponding variables, in the order the list was
             # initially built. No more being careful to modify two lists in sync, Python can just handle it for us.
-            for ram_read, bizhawk_peek_byte in zip(to_read_list, bizhawk_peek_bytes):
+            for ram_read, bizhawk_peek_byte in zip(self.read_list, bizhawk_peek_bytes):
                 ram_read.raw_data = bizhawk_peek_byte
 
-            await self.process_locations(self.cur_game_state.value(), self.cur_level_id.value(), ctx)
-            self.update_spyro_color(self.spyro_color.value(), self.cur_game_state.value())
-            self.set_internal_worlds_unlocked(self.unlocked_worlds.raw_data)
-            self.adjust_level_names(self.cur_game_state.value(), ctx)
-            self.reset_portal_switch(self.did_portal_switch.value(), self.cur_level_id.value())
+            await self.process_locations(int(RAM.cur_game_state), int(RAM.cur_level_id), ctx)
+            self.update_spyro_color(int(RAM.spyro_color), int(RAM.cur_game_state))
+            self.set_internal_worlds_unlocked(RAM.unlocked_worlds.raw_data)
+            self.adjust_level_names(int(RAM.cur_game_state), ctx)
+            self.reset_portal_switch(int(RAM.switched_portal_dest), int(RAM.cur_level_id))
 
-            if self.cur_level_id.value() == 0:  # We're on the title screen or in early load
+            if int(RAM.cur_level_id) == 0:  # We're on the title screen or in early load
                 self.set_starting_world()
             else:  # We're hopefully in a valid level here
 
-                if self.cur_game_state.value() == RAM.GameStates.TITLE_SCREEN:
+                if int(RAM.cur_game_state) == RAM.GameStates.TITLE_SCREEN:
                     # We're on the title screen after quitting to menu? Seems cur_level_id doesn't change when doing so
                     self.set_starting_world()
 
                 await self.do_portal_shuffle_changes(
-                    self.did_portal_switch.value(),
-                    self.spyro_anim.value(),
-                    self.cur_level_id.value(),
-                    self.last_whirlwind_pointer.value(),
+                    int(RAM.switched_portal_dest),
+                    int(RAM.spyro_cur_animation),
+                    int(RAM.cur_level_id),
+                    int(RAM.last_touched_whirlwind),
                     ctx
                 )
 
-                env: Environment = self.env_by_id[self.cur_level_id.value()]
+                env: SpyroEnvironment = RAM.world.find_env_by_id(int(RAM.cur_level_id))
 
                 # Make Nestor skippable
                 if env.name == "Artisans":
-                    self.to_write_lists[RAM.GameStates.GAMEPLAY].append((RAM.nestor_unskippable, b'\x00'))
+                    self.to_write_lists[RAM.GameStates.GAMEPLAY].append((RAM.NESTOR_UNSKIPPABLE, b'\x00'))
 
                 # Prevent Tuco's warp-to-level shenanigans by setting egg minimum to -1
                 if env.name == "Magic Crafters":
-                    self.to_write_lists[RAM.GameStates.GAMEPLAY].append((RAM.tuco_egg_minimum, b'\xff\xff'))
+                    self.to_write_lists[RAM.GameStates.GAMEPLAY].append((RAM.TUCO_EGG_MINIMUM, b'\xff\xff'))
 
-                if env.is_hub():
+                if isinstance(env, SpyroHub):
                     self.override_head_checks(env)
                     self.do_hub_portal_mods(env)
-                    self.do_balloonist_mods(env, self.balloonist_menu_choice.value())
+                    self.do_balloonist_mods(env, int(RAM.balloonist_menu_choice))
 
             for game_state, write_list in self.to_write_lists.items():
                 await self.write_on_state(write_list, game_state.to_bytes(1, byteorder="little"), ctx)
@@ -290,8 +197,9 @@ class SpyroClient(BizHawkClient):
                 "global_gem_percent": 100,
                 "max_per_env_threshold": 100,
             }
-            for key, value in ctx.slot_data.items():
-                slot_data[key] = value
+            
+            slot_data.update(cast(SlotDataTypes, ctx.slot_data))
+            
             # Read in Spyro color from slot data
             # TODO: Add in datastorage bit here so the color can be modified during gameplay
             color_value: int
@@ -321,11 +229,10 @@ class SpyroClient(BizHawkClient):
             self.slot_data_max_per_env_threshold = slot_data["max_per_env_threshold"]
 
             # Create location lookup table
-            self.location_name_to_id = static_locations
+            self.location_name_to_ap_id = static_locations
 
             # Create list of locations for the current player
             self.player_locations = SpyroPlayerLocations(
-                list(self.env_by_id.values()),
                 self.slot_data_gem_threshold_mult,
                 self.slot_data_max_per_env_threshold,
             )
@@ -349,8 +256,8 @@ class SpyroClient(BizHawkClient):
         fake_timer: bytes = b'\x1f' if should_allow else b'\x00'
         choice_byte: bytes = choice.to_bytes(1, byteorder="little")
         result: list[tuple[int, bytes]] = []
-        result.append((RAM.fake_timer, fake_timer))
-        result.append((RAM.last_selected_valid_choice, choice_byte))
+        result.append((RAM.FAKE_TIMER, fake_timer))
+        result.append((RAM.LAST_SELECTED_VALID_CHOICE, choice_byte))
         return result
 
     def set_balloonist_unlocks(self, mapped_choice: int, raw_choice: int) -> list[tuple[int, bytes]]:
@@ -372,7 +279,7 @@ class SpyroClient(BizHawkClient):
         stay_here: int = 0
         if mapped_choice != -1:
             hub_id = (mapped_choice + 1) * 10
-            hub_name = self.env_by_id[hub_id].name
+            hub_name = RAM.world.find_env_by_id(hub_id).name
 
         should_allow_choice: bool
         last_selected_valid_choice: int
@@ -409,7 +316,7 @@ class SpyroClient(BizHawkClient):
 
         if len(write_list) > 0:
             _ = await bizhawk.guarded_write(
-                ctx.bizhawk_ctx, to_write_list, [(RAM.cur_game_state, state, "MainRAM")]
+                ctx.bizhawk_ctx, to_write_list, [(int(RAM.cur_game_state), state, "MainRAM")]
             )
 
     async def send_location_once(self, location_name: str, ctx: "BizHawkClientContext") -> None:
@@ -420,7 +327,7 @@ class SpyroClient(BizHawkClient):
             location_name: The name of the location to send
             ctx: BizhawkClientContext
         """
-        location_id: int = self.location_name_to_id[location_name]
+        location_id: int = self.location_name_to_ap_id[location_name]
 
         if location_id not in ctx.checked_locations:
             await ctx.send_msgs([{"cmd": "LocationChecks", "locations": [location_id]}])
@@ -453,7 +360,7 @@ class SpyroClient(BizHawkClient):
 
         stripped_flyin_name: str = ""
         # Find level name that matches part of the pairing's name
-        for env_name in self.env_by_name:
+        for env_name in RAM.world.list_environments_by_name():
             if env_name in flyin_level_name:
                 stripped_flyin_name = env_name
 
@@ -486,7 +393,7 @@ class SpyroClient(BizHawkClient):
         # Iterate through levels to get the name of the portal that led to the current level
         # and return it
         stripped_portal_name: str = ""
-        for env_name in self.env_by_name:
+        for env_name in RAM.world.list_environments_by_name():
             if env_name in hub_entrance_portal_name:
                 stripped_portal_name = env_name
 
@@ -505,7 +412,7 @@ class SpyroClient(BizHawkClient):
         found_unchecked: bool = False
 
         checked_loc_names: set[str] = set()
-        loc_id_to_name: dict[int, str] = {v: k for k, v in self.location_name_to_id.items()}
+        loc_id_to_name: dict[int, str] = {v: k for k, v in self.location_name_to_ap_id.items()}
 
         for loc_id in checked_locations:
             checked_loc_names.add(loc_id_to_name[loc_id])
@@ -528,6 +435,8 @@ class SpyroClient(BizHawkClient):
     def is_portal_accessible(self, portal_name: str) -> bool:
         return (portal_name in self.portal_accesses) and (self.portal_accesses[portal_name])
 
+# --------------------------------------------------------
+
     def show_access(self, game_state: int, ctx: "BizHawkClientContext") -> list[tuple[int, bytes]]:
         """Returns a list of writes to be performed to edit level/hub names to show on portals or in the inventory
         screen that they are accessible and whether they have unchecked locations within
@@ -543,25 +452,30 @@ class SpyroClient(BizHawkClient):
         first_char: bytes
         # '.' is locked, '!' is unlocked and has unchecked locations, vanilla first character otherwise
 
-        for env in self.env_by_id.values():
-            first_char = b'.'  # Default this to locked, override further in as needed
-            has_unchecked_locations: bool = False
-            is_accessible: bool = False
-            locs_checked: set[int] = ctx.checked_locations
+        locs_checked: set[int] = ctx.checked_locations
 
-            if env.is_hub():
-                is_accessible = self.is_hub_accessible(env.name)
-            else:
-                is_accessible = self.is_portal_accessible(env.name)
+        for hub in RAM.world.hubs.values():
+            hub_first_char = b'.' # Default this to locked, override further in as needed
+            hub_has_unchecked_locations:bool = False 
+            hub_is_accessible:bool = False
 
+            hub_is_accessible = self.is_hub_accessible(hub.name)
+
+            for level in hub.levels.values():
+                level_first_char=b'.'
+                level_has_unchecked_locations:bool = False 
+                level_is_accessible:bool = False
+
+                level_is_accessible = self.is_portal_accessible(level.name)
+            
             if is_accessible:
-                if env.is_hub():
+                if isinstance(env, SpyroHub):
                     if self.env_has_unchecked_locations(env.name, locs_checked):
                         has_unchecked_locations = True
                     else:
                         # Check to see if any of the levels accessible from this hub have unchecked locations
                         has_unchecked_locations = False
-                        for portal in env.child_environments:
+                        for portal in env:
                             if has_unchecked_locations:
                                 continue
 
@@ -588,6 +502,8 @@ class SpyroClient(BizHawkClient):
             write_list.append((env.text_offset, first_char))
 
         return write_list
+
+# -----------------------------------------------------
 
     async def process_received_items(self, received_list: list[NetworkItem], ctx: "BizHawkClientContext") -> None:
         """Processes items received from the Archipelago server.

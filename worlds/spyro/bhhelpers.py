@@ -11,7 +11,7 @@ BHMemoryAddress = Tuple[int, int, str]
 
 class BHLocation(APLocation):
     """An APLocation, with extras for Bizhawk implementations"""
-    def __init__(self, game:str, address:int, length:int, region:BHEndianType, endian:BHEndianType):
+    def __init__(self, game:str, address:int, length:int, region:str, endian:BHEndianType):
         """Init.
 
         Args:

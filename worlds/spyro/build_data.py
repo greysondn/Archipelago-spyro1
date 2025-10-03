@@ -4,6 +4,8 @@
 # The intent is to take these objects and build a working object tree,
 # then dump that object tree out for later consumption.
 
+import jsonpickle
+
 class BHMemoryEntry:
     def __init__(self, address, length):
         self.address = address
@@ -41,34 +43,6 @@ class SpyroHub:
 
     def add_level(self, level):
         self.levels.append(level)
-    
-    def to_json(self) -> str:
-        ret:str = ""
-        
-        ret = ret +"{"
-        
-        ret = ret + f'"name":"{self.name}",'
-        ret = ret + f'"id":"{self.id}",'
-        
-        if self.balloon_addresses[0] != -1:
-            ret = ret + f'"balloon_addresses":['
-
-            for address in self.balloon_addresses[:-1]:
-                ret = ret + f'"{address}",'
-            ret = ret + f'"{self.balloon_addresses[-1]}"'
-            
-            ret = ret + "],"
-        
-        ret = ret + f'"text_offset":"{self.text_offset}",'
-        ret = ret + f'"total_gems":"{self.total_gems}",'
-        
-        ret = ret + f'gem_counter:' + self.gem_counter.to_json() + ","
-        
-        # TODO: Finish
-        
-        ret = ret + "}"
-        
-        return ret
 
 class SpyroLevel:
     def __init__(self):
@@ -96,23 +70,6 @@ class SpyroGameWorld:
 
     def add_hub(self, hub):
         self.hubs.append(hub)
-
-    def to_json(self) -> str:
-        ret:str = ""
-        
-        ret = ret + "{"
-        ret = ret + '"hubs": ['
-        
-        for hub in self.hubs[:-1]:
-            ret = ret + hub.to_json()
-            ret = ret + ","
-        
-        ret = ret + self.hubs[-1].to_json()
-        
-        ret = ret + "],"
-        ret = ret + "}"
-    
-        return ret
 
 NO_POINTER = -1
 
@@ -584,3 +541,5 @@ gnastys_loot.total_gems = 2000
 gnastys_loot.gem_counter = BHMemoryEntry(0x774a8, 2)
 gnastys_loot.portal.destination_address = 0xa69cc
 gnastys_world.add_level(gnastys_loot)
+
+print(jsonpickle.encode(world, unpicklable=False, indent=4))

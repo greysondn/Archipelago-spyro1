@@ -11,7 +11,7 @@ class BHMemoryEntry:
 
 class Portal:
     def __init__(self):
-        self.destination_address = None
+        self.destination_address:int = 0x0
 
 class AP:
     def __init__(self):
@@ -22,16 +22,16 @@ class AP:
 
 class SpyroHub:
     def __init__(self):
-        self.name = None
-        self.id = None
-        self.balloon_addresses = None
-        self.text_offset = None
-        self.total_gems = None
-        self.gem_counter = None
+        self.name:str = "ERR"
+        self.id:int = -1
+        self.balloon_addresses:tuple[int, int] = (0, 0)
+        self.text_offset = 0
+        self.total_gems = -1
+        self.gem_counter:BHMemoryEntry = BHMemoryEntry(0, 0)
         self.dragons = []
         self.eggs = []
         self.levels = []
-        self.statue_head_checks = None
+        self.statue_head_checks = []
 
     def add_dragon(self, name, address, value):
         self.dragons.append({'name': name, 'address': address, 'value': value})
@@ -44,12 +44,12 @@ class SpyroHub:
 
 class SpyroLevel:
     def __init__(self):
-        self.name = None
-        self.id = None
-        self.vortex_moby_pointer = None
-        self.text_offset = None
-        self.total_gems = None
-        self.gem_counter = None
+        self.name:str = "ERR"
+        self.id:int = 0x00
+        self.vortex_moby_pointer:int = 0x00
+        self.text_offset:int = 0x00
+        self.total_gems:int = -1
+        self.gem_counter:BHMemoryEntry = BHMemoryEntry(0, 0)
         self.dragons = []
         self.eggs = []
         self.portal = Portal()
@@ -69,7 +69,7 @@ class SpyroGameWorld:
     def add_hub(self, hub):
         self.hubs.append(hub)
 
-NO_POINTER = None
+NO_POINTER = -1
 
 
 world:SpyroGameWorld = SpyroGameWorld()

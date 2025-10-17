@@ -400,7 +400,7 @@ apdata_data_guard:Schema = Schema(
         },
         {
             "type": Literal["or"],
-            "next": Sequence[apdata_guard_terminal],
+            "next": [apdata_guard_terminal],
         },
     )
 )

@@ -1,7 +1,18 @@
 from aphelpers import APLocation
+
+import schema
+
+import schema
+from schema import (
+    And,
+    Or,
+    Schema,
+)
+
 from typing import List
 from typing import Literal
 from typing import Tuple
+from typing import Union
 
 BHEndianType = Literal["little", "big"]
 """String literal of data for memory"""
@@ -66,6 +77,36 @@ class BHMemoryEntryList(list):
             ret.append((item.address, item.length, item.region))
 
         return ret
+
+# define data file schemas
+bhdata_type_io = Literal["read", "write", "both", "none", None]
+
+bhdata_data_io:Schema = Schema(
+    {
+        "io": bhdata_type_io,
+        "data": Or (
+            {
+                "address" : int,
+                schema.Optional("length"): Literal[1],
+                "type": Literal["flag"],
+                "value": int,
+            },
+            {
+                "address" : int,
+                "length": int,
+                "type": Literal["int"],
+                "value": int,
+            },
+            {
+                "address" : int,
+                "length": int,
+                "type": Literal["string"],
+                "value": str,
+            }
+        ),
+        
+    }
+)
 
 # define everything for lazy import
 __all__ = [

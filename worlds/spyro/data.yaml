@@ -1,3 +1,590 @@
+game: "Spyro the Dragon"
+
+
+
+world:
+    bizhawk:
+        kaitai:
+            reads:
+            -
+                name: collectibles
+                address: 0x77900
+                length: 1231
+                guards: []
+    items:
+        # ----
+        # Hubs
+        # ----
+        - 
+            name: Artisans Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Artisans
+            groups:
+                - Hubs
+            bizhawk: # write
+                address:
+                value: []
+                domain:
+                guard:
+                    -
+                        address:
+                        expected_data: []
+                        domain:
+        -
+            name: Peace Keepers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Peace Keepers
+            groups:
+                - Hubs
+        -
+            name: Magic Crafters Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Magic Crafters
+            groups:
+                - Hubs
+        -
+            name: Beast Makers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Beast Makers
+            groups:
+                - Hubs
+        -
+            name: Dream Weavers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dream Weavers
+            groups:
+                - Hubs
+        -
+            name: Gnasty's World Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnasty's World
+            groups:
+                - Hubs
+
+        # ------
+        # Levels
+        # ------
+
+        # Artisans
+        -
+            name: Stone Hill Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Stone Hill
+            groups:
+                - Levels
+                - Artisans Levels
+        -
+            name: Dark Hollow Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dark Hollow
+            groups:
+                - Levels
+                - Artisans Levels
+        -
+            name: Town Square Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Town Square
+            groups:
+                - Levels
+                - Artisans Levels
+        -
+            name: Toasty Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Toasty
+            groups:
+                - Levels
+                - Artisans Levels
+                - Boss Levels
+        -
+            name: Sunny Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Sunny Flight
+            groups:
+                - Levels
+                - Artisans Levels
+                - Flight Levels
+
+        # Peace Keepers
+        -
+            name: Dry Canyon Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dry Canyon
+            groups:
+                - Levels
+                - Peace Keepers Levels
+        -
+            name: Cliff Town Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Cliff Town
+            groups:
+                - Levels
+                - Peace Keepers Levels
+        -
+            name: Ice Cavern Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Ice Cavern
+            groups:
+                - Levels
+                - Peace Keepers Levels
+        -
+            name: Doctor Shemp Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Doctor Shemp
+            groups:
+                - Levels
+                - Peace Keepers Levels
+                - Boss Levels
+        -
+            name: Night Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Night Flight
+            groups:
+                - Levels
+                - Peace Keepers Levels
+                - Flight Levels
+
+        # Magic Crafters
+        -
+            name: Alpine Ridge Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Alpine Ridge
+            groups:
+                - Levels
+                - Magic Crafters Levels
+        -
+            name: High Caves Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - High Caves
+            groups:
+                - Levels
+                - Magic Crafters Levels
+        -
+            name: Wizard Peak Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Wizard Peak
+            groups:
+                - Levels
+                - Magic Crafters Levels
+        -
+            name: Blowhard Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Blowhard
+            groups:
+                - Levels
+                - Magic Crafters Levels
+                - Boss Levels
+        -
+            name: Crystal Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Crystal Flight
+            groups:
+                - Levels
+                - Magic Crafters Levels
+                - Flight Levels
+
+        # Beast Makers
+        -
+            name: Terrace Village Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Terrace Village
+            groups:
+                - Levels
+                - Beast Makers Levels
+        -
+            name: Misty Bog Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Misty Bog
+            groups:
+                - Levels
+                - Beast Makers Levels
+        -
+            name: Tree Tops Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Tree Tops
+            groups:
+                - Levels
+                - Beast Makers Levels
+        -
+            name: Metalhead Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Metalhead
+            groups:
+                - Levels
+                - Beast Makers Levels
+                - Boss Levels
+        -
+            name: Wild Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Wild Flight
+            groups:
+                - Levels
+                - Beast Makers Levels
+                - Flight Levels
+
+        # Dream Weavers
+        -
+            name: Dark Passage Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dark Passage
+            groups:
+                - Levels
+                - Dream Weavers Levels
+        -
+            name: Lofty Castle Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Lofty Castle
+            groups:
+                - Levels
+                - Dream Weavers Levels
+        -
+            name: Haunted Towers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Haunted Towers
+            groups:
+                - Levels
+                - Dream Weavers Levels
+        -
+            name: Jacques Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Jacques
+            groups:
+                - Levels
+                - Dream Weavers Levels
+                - Boss Levels
+        -
+            name: Icy Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Icy Flight
+            groups:
+                - Levels
+                - Dream Weavers Levels
+                - Flight Levels
+
+        # Gnasty's World
+        -
+            name: Gnorc Cove Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnorc Cove
+            groups:
+                - Levels
+                - Gnasty's World Levels
+        -
+            name: Twilight Harbor Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Twilight Harbor
+            groups:
+                - Levels
+                - Gnasty's World Levels
+        -
+            name: Gnasty Gnorc Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnasty Gnorc
+            groups:
+                - Levels
+                - Gnasty's World Levels
+                - Boss Levels
+        -
+            name: Gnasty's Loot Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnasty's Loot
+            groups:
+                - Levels
+                - Gnasty's World Levels
+        
+        # ----------
+        # Boss Items
+        # ----------
+        -
+            name: Toasty's Stilts
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Shemp's Staff
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Blowhard's Beard
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Metalhead's Mohawk
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Jacques' Ribbon
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+
+        # ------------
+        # Filler Items
+        # ------------
+        -
+            name: Extra Life
+            count:
+                min:    0
+                max:    .inf
+                weight: 1
+            categories:
+                - filler
+            aliases: []
+            groups:
+                - Filler Items
+        -
+            name: Butterfly
+            count:
+                min:    0
+                max:    .inf
+                weight: 1
+            categories:
+                - filler
+            aliases: []
+            groups:
+                - Filler Items
+
+        # ----------
+        # Trap Items
+        # ----------
+        -
+            name: Flop Trap
+            count:
+                min:    0
+                max:    .inf
+                weight: 1
+            categories:
+                - trap
+            aliases: []
+            groups:
+                - Trap Items
+        -
+            name: Roll Trap
+            count:
+                min:    0
+                max:    .inf
+                weight: 1
+            categories:
+                - trap
+            aliases: []
+            groups:
+                - Trap Items
+        -
+            name: Faint Trap
+            count:
+                min:    0
+                max:    .inf
+                weight: 1
+            categories:
+                - trap
+            aliases: []
+            groups:
+                - Trap Items
+
+
+        # ----------
+        # Goal Items
+        # ----------
+        -
+            name: Victory
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Goal Items
+    entrance_rando:
+        enabled: false
+        groups:
+            entrances:
+                -
+                -
+                -
+            exits:
+                -
+                -
+        presets:
+            -
+                name:
+                mappings:
+                    -
+                        entrance:
+                        exits:
+                            -
+                            -
+                            -
+                            -
+                            -
+
+                            77d16
 hubs:
     -
         name: Artisans
@@ -10,24 +597,84 @@ hubs:
         gem_counter:
             address: 0x77420
             length: 2
-        dragons:
+        regions:
             -
-                name: Nestor
-                address: 0x77913
-                value: 0x01
-            -
-                name: Argus
-                address: 0x77913
-                value: 0x08
-            -
-                name: Delbin
-                address: 0x77919
-                value: 0x80
-            -
-                name: Tomas
-                address: 0x77913
-                value: 0x20
-        eggs: []
+                name: Artisans Start # must be distinct among all regions
+                locations:
+                    -
+                        name: Nestor
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            -
+                                io: read
+                                data:
+                                    address: 0x77913
+                                    type: flag
+                                    value: 0x01
+                                guards:
+                                    -
+                                        type: always
+                    -
+                        name: Argus
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77913
+                                type: flag
+                                value: 0x08
+                            guards:
+                                -
+                                    type: always
+                    -
+                        name: Delbin
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77919
+                                type: flag
+                                value: 0x80
+                            guards:
+                                -
+                                    type: always
+                    -
+                        name: Tomas
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77913
+                                type: flag
+                                value: 0x20
+                            guards:
+                                -
+                                    type: always
+                connections:
+                    -
+                        # no name
+                        destination:
+                        shuffle:
+                            enabled: false
+
+                        # guard types
+                        #   item
+                        #   and
+                        #   or
+                        #   always
+                        #   never
+                        forwards:
+                            guard:
+                                type:
+                                ...
+                        backwards:
+                            guard:
+                                type:
+                                ....
         levels:
             -
                 name: Stone Hill
@@ -38,28 +685,75 @@ hubs:
                 gem_counter:
                     address: 0x77424
                     length: 2
-                dragons:
+                regions:
                     -
-                        name: Lindar
-                        address: 0x77932
-                        value: 0x40
-                    -
-                        name: Gavin
-                        address: 0x7793d
-                        value: 0x04
-                    -
-                        name: Astor
-                        address: 0x7793a
-                        value: 0x01
-                    -
-                        name: Gildas
-                        address: 0x77939
-                        value: 0x20
-                eggs:
-                    -
-                        name: Egg 1 (Upper Area)
-                        address: 0x7793c
-                        value: 0x40
+                        name: Stone Hill Start
+                        locations:
+                            -
+                                name: Lindar
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77932
+                                        type: flag
+                                        value: 0x40
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Gavin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x7793d
+                                        type: flag
+                                        value: 0x04
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Astor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x7793a
+                                        type: flag
+                                        value: 0x01
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Gildas
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77939
+                                        type: flag
+                                        value: 0x20
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Egg 1 (Upper Area)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x7793c
+                                        type: flag
+                                        value: 0x40
+                                    guards:
+                                        -
+                                            type: always
                 portal:
                     destination_address: 0xc12b4
                 ap_groups: []
@@ -73,20 +767,49 @@ hubs:
                 gem_counter:
                     address: 0x77428
                     length: 2
-                dragons:
+                regions:
                     -
-                        name: Alban
-                        address: 0x77950
-                        value: 0x02
-                    -
-                        name: Oswin
-                        address: 0x77953
-                        value: 0x80
-                    -
-                        name: Darius
-                        address: 0x77955
-                        value: 0x80
-                eggs: []
+                        name: Dark Hollow Start
+                        locations:
+                            -
+                                name: Alban
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77950
+                                        type: flag
+                                        value: 0x02
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Oswin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77953
+                                        type: flag
+                                        value: 0x80
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Darius
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77955
+                                        type: flag
+                                        value: 0x80
+                                    guards:
+                                        -
+                                            type: always
                 portal:
                     destination_address: 0xc12a8
                 ap_groups: []
@@ -100,28 +823,75 @@ hubs:
                 gem_counter:
                     address: 0x7742c
                     length: 2
-                dragons:
+                regions:
                     -
-                        name: Nils
-                        address: 0x77969
-                        value: 0x10
-                    -
-                        name: Thor
-                        address: 0x77974
-                        value: 0x20
-                    -
-                        name: Alvar
-                        address: 0x7796e
-                        value: 0x02
-                    -
-                        name: Devlin
-                        address: 0x77969
-                        value: 0x20
-                eggs:
-                    -
-                        name: Egg 1 (Upper Area)
-                        address: 0x77973
-                        value: 0x01
+                        name: Town Square Start
+                        locations:
+                            -
+                                name: Nils
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77969
+                                        type: flag
+                                        value: 0x10
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Thor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77974
+                                        type: flag
+                                        value: 0x20
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Alvar
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x7796e
+                                        type: flag
+                                        value: 0x02
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Devlin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77969
+                                        type: flag
+                                        value: 0x20
+                                    guards:
+                                        -
+                                            type: always
+                            -
+                                name: Egg 1 (Upper Area)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77973
+                                        type: flag
+                                        value: 0x01
+                                    guards:
+                                        -
+                                            type: always
                 portal:
                     destination_address: 0xc12c0
                 ap_groups: []
@@ -144,7 +914,7 @@ hubs:
                 portal:
                     destination_address: 0xc129c
                 ap_groups:
-                        - Boss Levels
+                        - 
                 statue_head_checks: []
             -
                 name: Sunny Flight
@@ -759,6 +1529,11 @@ hubs:
                         name: Copano
                         address: 0x77c6f
                         value: 0x80
+
+                        # intflags
+                        # ints
+                        # strings
+                        # boolean
                 eggs: []
                 portal:
                     destination_address: 0xc5efc
@@ -806,7 +1581,7 @@ hubs:
                 statue_head_checks: []
         statue_head_checks: []
     -
-        name: Gnastys World
+        name: Gnasty's World
         id: 60
         balloon_addresses:
             - 0x7bb74

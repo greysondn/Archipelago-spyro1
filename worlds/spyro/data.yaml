@@ -3,14 +3,6 @@ game: "Spyro the Dragon"
 
 
 world:
-    bizhawk:
-        kaitai:
-            reads:
-            -
-                name: collectibles
-                address: 0x77900
-                length: 1231
-                guards: []
     items:
         # ----
         # Hubs
@@ -1529,11 +1521,6 @@ hubs:
                         name: Copano
                         address: 0x77c6f
                         value: 0x80
-
-                        # intflags
-                        # ints
-                        # strings
-                        # boolean
                 eggs: []
                 portal:
                     destination_address: 0xc5efc

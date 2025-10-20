@@ -34,9 +34,10 @@ from typing import (
     Union
 )
 
+from appetite.validate.bh.item import Item
 
 class Spyro_world(BaseModel):
-    items:Sequence[Bh_item]
+    items:Sequence[Item]
 
 class Spyro_root(BaseModel):
     game:Literal["Spyro the Dragon"]

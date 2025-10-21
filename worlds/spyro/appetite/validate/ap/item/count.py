@@ -15,6 +15,7 @@ except ImportError:
 from pydantic import (
     BaseModel,
     field_validator,
+    ValidationInfo,
 )
 
 from typing import (
@@ -27,9 +28,9 @@ from typing import (
 
 class Abs(BaseModel):
     abs:int
-    min:Optional[int]
-    max:Optional[int]
-    weight:Optional[Literal[0]]
+    min:Optional[int] = None
+    max:Optional[int] = None
+    weight:Optional[Literal[0]] = None
     
     @field_validator("abs", mode="after")
     def validate_abs(cls, value:int) -> int:
@@ -44,9 +45,11 @@ class Abs(BaseModel):
         return value
     
     @field_validator("min", "max", mode="after")
-    def validate_min_and_max(cls, value:int, values) -> int:
-        if value != values["abs"]:
-            raise ValueError("min and max must be omitted or equal to abs!")
+    def validate_min_and_max(cls, value:int, info:ValidationInfo) -> int:
+        swp = info.data.get("abs")
+        if swp is not None:
+            if value != swp:
+                raise ValueError(f"{info.field_name} must be omitted or equal to abs!")
         return value
     
 class Weighted(BaseModel):
@@ -67,9 +70,11 @@ class Weighted(BaseModel):
         return value
     
     @field_validator("max", mode="after")
-    def validate_max(cls, value:int, values) -> int:
-        if value < values["min"]:
-            raise ValueError("max must be greater than or equal to min")
+    def validate_max(cls, value:int, info:ValidationInfo) -> int:
+        swp = info.data.get("min")
+        if swp is not None:
+            if value < swp:
+                raise ValueError("max must be greater than or equal to min")
         return value
     
 Count = Union[

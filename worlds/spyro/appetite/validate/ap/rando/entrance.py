@@ -33,7 +33,7 @@ class Mapping(BaseModel):
     entrance:str
     exits:Sequence[str]
 
-class Preset:
+class Preset(BaseModel):
     name:str
     mappings:Sequence[Mapping]
 

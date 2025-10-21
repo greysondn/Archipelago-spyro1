@@ -7,6 +7,9 @@
 # archipelago distribution, because it's only used as a development library.
 #
 
+import argparse
+import yaml
+
 import sys
 
 try:
@@ -24,6 +27,7 @@ except ImportError:
 from pydantic import (
     BaseModel,
     field_validator,
+    ValidationError,
 )
 
 from typing import (
@@ -34,12 +38,161 @@ from typing import (
     Union
 )
 
-from appetite.validate.bh.item import Item
+from appetite.validate.ap.rando.entrance import Entrance
+from appetite.validate.bh.item import Item as BhItem
+from appetite.validate.bh.data import Data as BhData
+from appetite.validate.bh.region import Region as BhRegion
 
-class Spyro_world(BaseModel):
-    items:Sequence[Item]
+class SpyroWorld(BaseModel):
+    items:Sequence[BhItem]
+    entrance_rando:Entrance
 
-class Spyro_root(BaseModel):
+class SpyroLevel(BaseModel):
+    name:str
+    id:int
+    vortex_moby_pointer:BhData
+    text_offset:BhData
+    total_gems:int
+    gem_counter:BhData
+    regions:Sequence[BhRegion]
+    portal:BhData
+
+class SpyroHub(BaseModel):
+    name:str
+    id:int
+    balloon_addresses:Sequence[BhData]
+    text_offset:BhData
+    total_gems:int
+    gem_counter:BhData
+    regions:Sequence[BhRegion]
+    statue_head_checks:list[BhData]
+
+class SpyroRoot(BaseModel):
     game:Literal["Spyro the Dragon"]
     
-    world:Spyro_world
+    world:SpyroWorld
+    hubs:Sequence[SpyroHub]
+    
+def extra(data) -> bool:
+    ret = True
+    
+    # rule 1   - hubs and levels must have counique names
+    r1_set = set[str]()
+    
+    for hub in data["hubs"]:
+        if hub["name"] in r1_set:
+            ret = False
+            print(f"R1 violated: {hub["name"]}")
+        r1_set.add(hub["name"])
+        
+        for level in hub["levels"]:
+            if level["name"] in r1_set:
+                ret = False
+                print(f"R1 violated: {level["name"]}")
+            r1_set.add(level["name"])
+    
+    # rule 2   - categories for items must all be legal
+    # ERPS THIS IS VALIDATED ALREADY
+    
+    # rule 3   - entrance_rando - mappings must show up in groups in correct groups
+    r3_entrances = data["world"]["entrance_rando"]["groups"]["entrances"]
+    r3_exits     = data["world"]["entrance_rando"]["groups"]["exits"]
+
+    for preset in data["world"]["entrance_rando"]["presets"]:
+        for mapping in preset["mappings"]:
+            if mapping["entrance"] not in r3_entrances:
+                ret = False
+                print(f"R3 violated: {mapping["entrance"]}")
+            for exit in mapping["exits"]:
+                if exit not in r3_exits:
+                    ret = False
+                    print(f"R3 violated: {exit}")
+    
+    # rule 4   - every region must have a distinct name
+    r4_regions:set[str] = set()
+    
+    for hub in data["hubs"]:
+        for region in hub["regions"]:
+            if region["name"] in r4_regions:
+                ret = False
+                print(f"R4 violated: {region["name"]}")
+            r4_regions.add(region["name"])
+            
+        for level in hub["levels"]:
+            for region in level["regions"]:
+                if region["name"] in r4_regions:
+                    ret = False
+                    print(f"R4 violated: {region["name"]}")
+                r4_regions.add(region["name"])
+    
+    # rule 5   - every location must have a distinct name
+    print("WARNING! R5 IS UNIMPLEMENTED!")
+                
+    # rule 6   - region transitions must have legal groups
+    print("WARNING! R6 IS UNIMPLEMENTED!")
+    
+    # rule 7   - items must have unique names
+    print("WARNING! R7 IS UNIMPLEMENTED!")
+    
+    # rule 8   - locations can only be both
+    print("WARNING! R8 IS UNIMPLEMENTED!")
+    
+    # rule 9   - items can only be write
+    print("WARNING! R9 IS UNIMPLEMENTED!")
+    
+    # rule 10  - balloonist can only be write
+    print("WARNING! R10 IS UNIMPLEMENTED!")
+    
+    # rule 11  - hub and level ids must be unique 
+    print("WARNING! R11 IS UNIMPLEMENTED!")
+    
+    # rule 12  - text offset is write only
+    print("WARNING! R12 IS UNIMPLEMENTED!")
+    
+    # rule 13  - gem counter is read only
+    print("WARNING! R13 IS UNIMPLEMENTED!")
+    
+    # rule 14  - vortex_moby_pointer is read only
+    print("WARNING! R14 IS UNIMPLEMENTED!")
+    
+    # rule 15  - portal is write only
+    print("WARNING! R15 IS UNIMPLEMENTED!")
+    
+    # rule 16  - statue head checks are write only
+    print("WARNING! R16 IS UNIMPLEMENTED!")
+    
+    # rule 17  - memory domains must be legal
+    print("WARNING! R17 IS UNIMPLEMENTED!")
+    
+    # utility 1 - output all location groups
+    print("WARNING! U1 IS UNIMPLEMENTED!")
+    
+    # utility 2 - output all item groups 
+    print("WARNING! U2 IS UNIMPLEMENTED!")
+    
+    return ret
+    
+def validate(data):
+    try:
+        _ = SpyroRoot(
+                game=data["game"],
+                world=data["world"],
+                hubs=data["hubs"],
+            )
+    except ValidationError as e:
+        print(e)
+    
+    extra(data)
+    
+def main():
+    parser = argparse.ArgumentParser(description="simple validator for data.yaml")
+    parser.add_argument("path", help="path to data.yaml")
+    args = parser.parse_args()
+    
+    with open(args.path) as f:
+        data = yaml.load(f, yaml.loader.FullLoader)
+
+    validate(data)
+
+if __name__ == "__main__":
+    main()

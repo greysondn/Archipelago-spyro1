@@ -1,4 +1,12 @@
+
 game: "Spyro the Dragon"
+
+vars:
+    # the address the gamestate is stored in
+    - &addr_gamestate     0x757d8
+
+    # gamestate value for balloonist
+    - &vals_gs_balloonist 0x0c
 
 world:
     items:
@@ -16,14 +24,14 @@ world:
             groups:
                 - Hubs
             bizhawk: # write
-                address:
+                address: null
                 value: []
-                domain:
+                domain: null
                 guards:
                     -
-                        address:
+                        address: null
                         expected_data: []
-                        domain:
+                        domain: null
         -
             name: Peace Keepers Access
             count:
@@ -481,8 +489,8 @@ world:
         -
             name: Extra Life
             count:
-                min:    0
-                max:    .inf
+                min: 0
+                max: 999999
                 weight: 1
             categories:
                 - filler
@@ -492,8 +500,8 @@ world:
         -
             name: Butterfly
             count:
-                min:    0
-                max:    .inf
+                min: 0
+                max: 999999
                 weight: 1
             categories:
                 - filler
@@ -507,8 +515,8 @@ world:
         -
             name: Flop Trap
             count:
-                min:    0
-                max:    .inf
+                min: 0
+                max: 999999
                 weight: 1
             categories:
                 - trap
@@ -518,8 +526,8 @@ world:
         -
             name: Roll Trap
             count:
-                min:    0
-                max:    .inf
+                min: 0
+                max: 999999
                 weight: 1
             categories:
                 - trap
@@ -529,15 +537,14 @@ world:
         -
             name: Faint Trap
             count:
-                min:    0
-                max:    .inf
+                min: 0
+                max: 999999
                 weight: 1
             categories:
                 - trap
             aliases: []
             groups:
                 - Trap Items
-
 
         # ----------
         # Goal Items
@@ -555,33 +562,57 @@ world:
         enabled: false
         groups:
             entrances:
-                -
-                -
-                -
+                - stage_exit
+                - portal
             exits:
-                -
-                -
+                - hub_start
+                - stage_start
         presets:
             -
-                name:
+                name: vanilla
                 mappings:
                     -
-                        entrance:
+                        entrance: stage_exit
                         exits:
-                            -
-                            -
-                            -
-                            -
-                            -
-
-                            77d16
+                            - hub_start
+                    -
+                        entrance: portal
+                        exits:
+                            - stage_start
 hubs:
     -
         name: Artisans
         id: 10
         balloon_addresses:
-            - 0x7bc04
-            - 0x7bc08
+            -
+                io: write
+                data:
+                    address: 0x7bc04
+                    type: bytes
+                    value: 
+                        - 0x01
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7bc08
+                    type: bytes
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
         text_offset: 0x1006c
         total_gems: 100
         gem_counter:
@@ -589,7 +620,7 @@ hubs:
             length: 2
         regions:
             -
-                name: Artisans Start # must be distinct among all regions
+                name: Artisans Start
                 locations:
                     -
                         name: Nestor
@@ -616,7 +647,8 @@ hubs:
                                 type: flag
                                 value: 0x08
                             guards:
-                                type: always
+                                -
+                                    type: always
                     -
                         name: Delbin
                         groups:
@@ -645,25 +677,15 @@ hubs:
                                     type: always
                 connections:
                     -
-                        # no name
                         destination:
                         shuffle:
                             enabled: false
-
-                        # guard types
-                        #   item
-                        #   and
-                        #   or
-                        #   always
-                        #   never
                         forwards:
                             guard:
-                                type:
-                                ...
+                                type: null
                         backwards:
                             guard:
-                                type:
-                                ....
+                                type: null
         levels:
             -
                 name: Stone Hill
@@ -903,7 +925,7 @@ hubs:
                 portal:
                     destination_address: 0xc129c
                 ap_groups:
-                        - 
+                    - 
                 statue_head_checks: []
             -
                 name: Sunny Flight
@@ -919,7 +941,7 @@ hubs:
                 portal:
                     destination_address: 0xc12cc
                 ap_groups:
-                        - Flight Levels
+                    - Flight Levels
                 statue_head_checks: []
         statue_head_checks:
             - 0x7f48c
@@ -928,8 +950,35 @@ hubs:
         name: Peace Keepers
         id: 20
         balloon_addresses:
-            - 0x7c5dc
-            - 0x7c5e0
+            -
+                io: write
+                data:
+                    address: 0x7c5dc
+                    type: bytes
+                    value: 
+                        - 0x01
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c5e0
+                    type: bytes
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
         text_offset: 0x1005c
         total_gems: 200
         gem_counter:
@@ -1073,7 +1122,7 @@ hubs:
                 portal:
                     destination_address: 0xbfc6c
                 ap_groups:
-                        - Boss Levels
+                    - Boss Levels
                 statue_head_checks: []
             -
                 name: Night Flight
@@ -1089,15 +1138,42 @@ hubs:
                 portal:
                     destination_address: 0xbfc78
                 ap_groups:
-                        - Flight Levels
+                    - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
     -
         name: Magic Crafters
         id: 30
         balloon_addresses:
-            - 0x7c5d4
-            - 0x7c5d8
+            -
+                io: write
+                data:
+                    address: 0x7c5d4
+                    type: bytes
+                    value: 
+                        - 0x01
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c5d8
+                    type: bytes
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
         text_offset: 0x1004c
         total_gems: 300
         gem_counter:
@@ -1249,7 +1325,7 @@ hubs:
                 portal:
                     destination_address: 0xc6264
                 ap_groups:
-                        - Boss Levels
+                    - Boss Levels
                 statue_head_checks: []
             -
                 name: Crystal Flight
@@ -1265,15 +1341,42 @@ hubs:
                 portal:
                     destination_address: 0xc6270
                 ap_groups:
-                        - Flight Levels
+                    - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
     -
         name: Beast Makers
         id: 40
         balloon_addresses:
-            - 0x7c3c8
-            - 0x7c3cc
+            -
+                io: write
+                data:
+                    address: 0x7c3c8
+                    type: bytes
+                    value: 
+                        - 0x01
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c3cc
+                    type: bytes
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
         text_offset: 0x1003c
         total_gems: 300
         gem_counter:
@@ -1389,7 +1492,7 @@ hubs:
                 portal:
                     destination_address: 0xb5568
                 ap_groups:
-                        - Boss Levels
+                    - Boss Levels
                 statue_head_checks: []
             -
                 name: Wild Flight
@@ -1405,15 +1508,42 @@ hubs:
                 portal:
                     destination_address: 0xb5598
                 ap_groups:
-                        - Flight Levels
+                    - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
     -
         name: Dream Weavers
         id: 50
         balloon_addresses:
-            - 0x7c5fc
-            - 0x7c600
+            -
+                io: write
+                data:
+                    address: 0x7c5fc
+                    type: bytes
+                    value: 
+                        - 0x01
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c600
+                    type: bytes
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
         text_offset: 0x1002c
         total_gems: 300
         gem_counter:
@@ -1545,7 +1675,7 @@ hubs:
                 portal:
                     destination_address: 0xc5ed8
                 ap_groups:
-                        - Boss Levels
+                    - Boss Levels
                 statue_head_checks: []
             -
                 name: Icy Flight
@@ -1561,15 +1691,42 @@ hubs:
                 portal:
                     destination_address: 0xc5ef0
                 ap_groups:
-                        - Flight Levels
+                    - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
     -
         name: Gnasty's World
         id: 60
         balloon_addresses:
-            - 0x7bb74
-            - 0x7bb78
+            -
+                io: write
+                data:
+                    address: 0x7bb74
+                    type: bytes
+                    value: 
+                        - 0x01
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7bb78
+                    type: bytes
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guards:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gs_balloonist
         text_offset: 0x1001c
         total_gems: 200
         gem_counter:
@@ -1642,7 +1799,7 @@ hubs:
                 portal:
                     destination_address: 0xa69c0
                 ap_groups:
-                        - Boss Levels
+                    - Boss Levels
                 statue_head_checks: []
             -
                 name: Gnasty's Loot

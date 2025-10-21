@@ -33,7 +33,7 @@ MemoryDomain = Literal[
 
 class Flag(BaseModel):
     address:int
-    length:Optional[Literal[1]]
+    length:Optional[Literal[1]] = None
     type:Literal["flag"]
     domain:MemoryDomain
     value:Literal[0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80]

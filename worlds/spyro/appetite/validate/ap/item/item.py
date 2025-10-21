@@ -25,6 +25,8 @@ from typing import (
     Union,
 )
 
+from appetite.validate.ap.item.count import Count
+
 Category = Literal[
     "progression",
     "trap",
@@ -37,7 +39,7 @@ Category = Literal[
 
 class Item(BaseModel):
     name:str
-    # count:COMPLEX # TODO
+    count:Count
     categories:Sequence[Category]
     aliases:Sequence[str]
     groups:Sequence[str]

@@ -19,7 +19,7 @@ world:
                 address:
                 value: []
                 domain:
-                guard:
+                guards:
                     -
                         address:
                         expected_data: []
@@ -616,8 +616,7 @@ hubs:
                                 type: flag
                                 value: 0x08
                             guards:
-                                -
-                                    type: always
+                                type: always
                     -
                         name: Delbin
                         groups:

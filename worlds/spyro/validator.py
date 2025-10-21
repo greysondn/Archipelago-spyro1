@@ -38,13 +38,14 @@ from typing import (
     Union
 )
 
+from appetite.validate.ap.item.item import Item as ApItem
 from appetite.validate.ap.rando.entrance import Entrance
 from appetite.validate.bh.item import Item as BhItem
 from appetite.validate.bh.data import Data as BhData
 from appetite.validate.bh.region import Region as BhRegion
 
 class SpyroWorld(BaseModel):
-    items:Sequence[BhItem]
+    items:Sequence[Union[BhItem, ApItem]]
     entrance_rando:Entrance
 
 class SpyroLevel(BaseModel):
@@ -56,6 +57,7 @@ class SpyroLevel(BaseModel):
     gem_counter:BhData
     regions:Sequence[BhRegion]
     portal:BhData
+    groups:Sequence[str]
 
 class SpyroHub(BaseModel):
     name:str
@@ -173,14 +175,11 @@ def extra(data) -> bool:
     return ret
     
 def validate(data):
-    try:
-        _ = SpyroRoot(
-                game=data["game"],
-                world=data["world"],
-                hubs=data["hubs"],
-            )
-    except ValidationError as e:
-        print(e)
+    _ = SpyroRoot(
+            game=data["game"],
+            world=data["world"],
+            hubs=data["hubs"],
+        )
     
     extra(data)
     

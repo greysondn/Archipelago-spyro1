@@ -14,10 +14,20 @@ except ImportError:
     
 from pydantic import (
     BaseModel,
+    Discriminator,
+    Tag,
+    ValidationError,
     field_validator,
 )
 
+from pydantic_core import (
+    core_schema,
+)
+
 from typing import (
+    Annotated,
+    Any,
+    cast,
     List,
     Literal,
     Optional,
@@ -65,9 +75,35 @@ class Bytes(BaseModel):
     domain:MemoryDomain
     value:Sequence[int]
 
-DataType = Union[
-    Flag,
-    Int,
-    String,
-    Bytes,
+def discriminate_datatype(value:Any) -> Optional[str]:
+    ret:Optional[str] = None
+    
+    if isinstance(value, dict):
+        match value["type"]:
+            case "flag":
+                ret = "flag"
+            case "int":
+                ret = "int"
+            case "string":
+                ret = "string"
+            case "bytes":
+                ret = "bytes"
+            case _:
+                ret = None
+    
+    return ret
+
+DataType = Annotated[
+    Union[
+        Annotated[Flag, Tag("flag")],
+        Annotated[Int, Tag("int")],
+        Annotated[String, Tag("string")],
+        Annotated[Bytes, Tag("bytes")]
+    ],
+    Discriminator(
+        discriminate_datatype,
+        custom_error_type = "invalid_bh_datatype",
+        custom_error_message = "Invalid Bizhawk DataType",
+        custom_error_context = {"discriminator":"type"}
+    )
 ]

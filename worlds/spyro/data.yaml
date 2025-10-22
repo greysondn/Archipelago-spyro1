@@ -589,6 +589,7 @@ hubs:
                 data:
                     address: 0x7bc04
                     type: bytes
+                    length: 1
                     value: 
                         - 0x01
                 guards:
@@ -603,6 +604,7 @@ hubs:
                 data:
                     address: 0x7bc08
                     type: bytes
+                    length: 2
                     value:
                         - 0x0c
                         - 0xf0
@@ -955,6 +957,7 @@ hubs:
                 data:
                     address: 0x7c5dc
                     type: bytes
+                    length: 1
                     value: 
                         - 0x01
                 guards:
@@ -969,6 +972,7 @@ hubs:
                 data:
                     address: 0x7c5e0
                     type: bytes
+                    length: 2
                     value:
                         - 0x0c
                         - 0xf0
@@ -1150,6 +1154,7 @@ hubs:
                 data:
                     address: 0x7c5d4
                     type: bytes
+                    length: 1
                     value: 
                         - 0x01
                 guards:
@@ -1164,6 +1169,7 @@ hubs:
                 data:
                     address: 0x7c5d8
                     type: bytes
+                    length: 2
                     value:
                         - 0x0c
                         - 0xf0
@@ -1353,6 +1359,7 @@ hubs:
                 data:
                     address: 0x7c3c8
                     type: bytes
+                    length: 1
                     value: 
                         - 0x01
                 guards:
@@ -1367,6 +1374,7 @@ hubs:
                 data:
                     address: 0x7c3cc
                     type: bytes
+                    length: 2
                     value:
                         - 0x0c
                         - 0xf0
@@ -1520,6 +1528,7 @@ hubs:
                 data:
                     address: 0x7c5fc
                     type: bytes
+                    length: 1
                     value: 
                         - 0x01
                 guards:
@@ -1534,6 +1543,7 @@ hubs:
                 data:
                     address: 0x7c600
                     type: bytes
+                    length: 2
                     value:
                         - 0x0c
                         - 0xf0
@@ -1703,6 +1713,7 @@ hubs:
                 data:
                     address: 0x7bb74
                     type: bytes
+                    length: 1
                     value: 
                         - 0x01
                 guards:
@@ -1717,6 +1728,7 @@ hubs:
                 data:
                     address: 0x7bb78
                     type: bytes
+                    length: 2
                     value:
                         - 0x0c
                         - 0xf0

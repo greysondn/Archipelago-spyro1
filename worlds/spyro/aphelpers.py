@@ -12,13 +12,6 @@ from typing import Set
 from typing import Type
 from typing import TypeVar
 
-import schema
-from schema import (
-    And,
-    Or,
-    Schema,
-)
-
 # type aliases
 APLocationList = dict[str, int]
 """Archipelago requires locations be given in a specific format. This is that format.
@@ -374,33 +367,3 @@ class APBuildGroupAlgorithm():
         ret[0] = group_dict
         
         return ret
-
-# define data file schemas
-apdata_guard_terminal:Schema = Schema(
-    Or(
-        {
-            "type": Literal["always"],
-        },
-        {
-            "type": Literal["never"],
-        },
-        {
-            "type": Literal["item"],
-            "next": list[str]
-        },
-    )
-)
-
-apdata_data_guard:Schema = Schema(
-    Or(
-        apdata_guard_terminal,
-        {
-            "type": Literal["and"],
-            "next": [apdata_guard_terminal],
-        },
-        {
-            "type": Literal["or"],
-            "next": [apdata_guard_terminal],
-        },
-    )
-)

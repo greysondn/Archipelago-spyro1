@@ -11,6 +11,8 @@ import argparse
 import yaml
 
 import sys
+import pprint
+import textwrap
 
 try:
     import pydantic
@@ -26,11 +28,13 @@ except ImportError:
     
 from pydantic import (
     BaseModel,
+    ConfigDict,
     field_validator,
     ValidationError,
 )
 
 from typing import (
+    Any,
     List,
     Literal,
     Optional,
@@ -47,6 +51,10 @@ from appetite.validate.bh.region import Region as BhRegion
 class SpyroWorld(BaseModel):
     items:Sequence[Union[BhItem, ApItem]]
     entrance_rando:Entrance
+    
+    model_config = ConfigDict(
+        extra = "forbid",
+    )
 
 class SpyroLevel(BaseModel):
     name:str
@@ -58,6 +66,10 @@ class SpyroLevel(BaseModel):
     regions:Sequence[BhRegion]
     portal:BhData
     groups:Sequence[str]
+    
+    model_config = ConfigDict(
+        extra = "forbid",
+    )
 
 class SpyroHub(BaseModel):
     name:str
@@ -68,12 +80,20 @@ class SpyroHub(BaseModel):
     gem_counter:BhData
     regions:Sequence[BhRegion]
     statue_head_checks:list[BhData]
+    
+    model_config = ConfigDict(
+        extra = "forbid",
+    )
 
 class SpyroRoot(BaseModel):
     game:Literal["Spyro the Dragon"]
-    
+    vars:Sequence[Any]
     world:SpyroWorld
     hubs:Sequence[SpyroHub]
+    
+    model_config = ConfigDict(
+        extra = "forbid",
+    )
     
 def extra(data) -> bool:
     ret = True
@@ -175,13 +195,110 @@ def extra(data) -> bool:
     return ret
     
 def validate(data):
-    _ = SpyroRoot(
-            game=data["game"],
-            world=data["world"],
-            hubs=data["hubs"],
-        )
+    class _Err():
+        def __init__(self, type:str, loc:Any, msg:str, val:Any):
+            self.type:str = type
+            self.loc = loc
+            self.msg = msg
+            self.val = val
+        
+        def try_get(self, alternated_keys:Sequence[str], final_keys:Sequence[str]=[]) -> Any:
+            ret = None
+            total_len = len(alternated_keys) * 2 + len(final_keys)
+            
+            if len(self.loc) >= total_len:
+                swp = data
+                legal = True
+                
+                for akey_id in range(len(alternated_keys)):
+                    if self.loc[akey_id * 2] != alternated_keys[akey_id]:
+                        legal = False
+                
+                for fkey_id in range(len(final_keys) - 1):
+                    ind = (len(alternated_keys) * 2) + fkey_id
+                    if self.loc[ind] != final_keys[fkey_id]:
+                        legal = False
+                
+                if legal:
+                    for akey_id in range(len(alternated_keys)):
+                        base_id = akey_id * 2
+                        swp = swp[self.loc[base_id]]
+                        swp = swp[self.loc[base_id + 1]]
+                    
+                    for fkey in final_keys:
+                        swp = swp[fkey]
+                    
+                    ret = str(swp)
+                    
+            return ret
+        
+        def printed_try_get(self, prefix:str, alternated_keys:Sequence[str], final_keys:Sequence[str]=[]) -> None:
+            val:Any = self.try_get(alternated_keys, final_keys)
+            
+            if val is not None:
+                print(f"{prefix} : {val}")
+        
+        def print(self, width:int=79, indent:int=4):
+            print("-" * width)
+            print("Error!")
+            print(self.type)
+            print("-" * width)
+            
+            print("")
+            
+            print("Message")
+            for line in textwrap.wrap(self.msg, width=width):
+                print(line)
+            
+            print("")
+            
+            print("Given value (may be formatted wrong)")
+            pprint.pprint(self.val, indent=indent, width=width, depth=2)
+            
+            print("")
+            
+            print("Location")
+            pprint.pprint(self.loc, indent=indent, width=width, depth=2)
+            
+            print("")
+            
+            print("View attempt (may be blank or incomplete)")
+            self.printed_try_get("Hub Name", ["hubs"], ["name"])
+            self.printed_try_get("Region Name", ["hubs", "regions"], ["name"])
+            self.printed_try_get("Location Name", ["hubs", "regions", "locations"], ["name"])
+            
+        
+    errs:List[_Err] = []
     
-    extra(data)
+    try:
+        _ = SpyroRoot(
+                vars=data["vars"],
+                game=data["game"],
+                world=data["world"],
+                hubs=data["hubs"],
+            )
+    except ValidationError as e:
+        for err in e.errors():
+            swp:_Err = _Err(
+                err["type"],
+                err["loc"],
+                err["msg"],
+                err["input"],
+            )
+
+            errs.append(swp)
+
+    for err in errs:
+        print("")
+        print("")
+        err.print()
+    
+    print("")
+    print("")
+    print("Total errors")
+    print(len(errs))
+    
+    # extra(data)
     
 def main():
     parser = argparse.ArgumentParser(description="simple validator for data.yaml")

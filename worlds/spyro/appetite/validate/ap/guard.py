@@ -44,6 +44,7 @@ class And(BaseModel):
     next:Sequence[Terminal]
 
 class Or(BaseModel):
+    type:Literal["or"]
     next:Sequence[Terminal]
 
 Guard = Union [

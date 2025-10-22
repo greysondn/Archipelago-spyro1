@@ -39,4 +39,4 @@ IoType = Literal[
 class Data(BaseModel):
     io:IoType
     data:DataType
-    guard:Guard
+    guards:Sequence[Guard]

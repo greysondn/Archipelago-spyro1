@@ -6,7 +6,7 @@ vars:
     - &addr_gamestate     0x757d8
 
     # gamestate value for balloonist
-    - &vals_gs_balloonist 0x0c
+    - &vals_gamestate_balloonist 0x0c
 
 world:
     items:
@@ -599,7 +599,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -616,7 +616,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
         text_offset: 0x1006c
         total_gems: 100
         gem_counter:
@@ -969,7 +969,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -986,7 +986,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
         text_offset: 0x1005c
         total_gems: 200
         gem_counter:
@@ -1168,7 +1168,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -1185,7 +1185,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
         text_offset: 0x1004c
         total_gems: 300
         gem_counter:
@@ -1375,7 +1375,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -1392,7 +1392,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
         text_offset: 0x1003c
         total_gems: 300
         gem_counter:
@@ -1546,7 +1546,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -1563,7 +1563,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
         text_offset: 0x1002c
         total_gems: 300
         gem_counter:
@@ -1733,7 +1733,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -1750,7 +1750,7 @@ hubs:
                         length: 1
                         type: int
                         domain: MainRAM
-                        value: *vals_gs_balloonist
+                        value: *vals_gamestate_balloonist
         text_offset: 0x1001c
         total_gems: 200
         gem_counter:

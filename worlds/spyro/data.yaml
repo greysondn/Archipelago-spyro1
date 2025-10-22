@@ -588,6 +588,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7bc04
+                    domain: MainRAM
                     type: bytes
                     length: 1
                     value: 
@@ -603,6 +604,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7bc08
+                    domain: MainRAM
                     type: bytes
                     length: 2
                     value:
@@ -956,6 +958,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c5dc
+                    domain: MainRAM
                     type: bytes
                     length: 1
                     value: 
@@ -971,6 +974,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c5e0
+                    domain: MainRAM
                     type: bytes
                     length: 2
                     value:
@@ -1153,6 +1157,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c5d4
+                    domain: MainRAM
                     type: bytes
                     length: 1
                     value: 
@@ -1168,6 +1173,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c5d8
+                    domain: MainRAM
                     type: bytes
                     length: 2
                     value:
@@ -1358,6 +1364,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c3c8
+                    domain: MainRAM
                     type: bytes
                     length: 1
                     value: 
@@ -1373,6 +1380,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c3cc
+                    domain: MainRAM
                     type: bytes
                     length: 2
                     value:
@@ -1527,6 +1535,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c5fc
+                    domain: MainRAM
                     type: bytes
                     length: 1
                     value: 
@@ -1542,6 +1551,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7c600
+                    domain: MainRAM
                     type: bytes
                     length: 2
                     value:
@@ -1712,6 +1722,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7bb74
+                    domain: MainRAM
                     type: bytes
                     length: 1
                     value: 
@@ -1727,6 +1738,7 @@ hubs:
                 io: write
                 data:
                     address: 0x7bb78
+                    domain: MainRAM
                     type: bytes
                     length: 2
                     value:

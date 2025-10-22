@@ -5,8 +5,22 @@ vars:
     # the address the gamestate is stored in
     - &addr_gamestate     0x757d8
 
-    # gamestate value for balloonist
+    # gamestate values, self-descriptive
     - &vals_gamestate_balloonist 0x0c
+    - &vals_gamestate_credits 0x0f
+    - &vals_gamestate_cutscene 0x0e
+    - &vals_gamestate_death 0x04
+    - &vals_gamestate_dragon_cutscene 0x08
+    - &vals_gamestate_exiting_level 0x0a
+    - &vals_gamestate_fairy_textbox 0x0b
+    - &vals_gamestate_flight_menu 0x07
+    - &vals_gamestate_fly_in 0x09
+    - &vals_gamestate_game_over 0x05
+    - &vals_gamestate_gameplay 0x00
+    - &vals_gamestate_inventory 0x03
+    - &vals_gamestate_loading 0x01
+    - &vals_gamestate_paused 0x02
+    - &vals_gamestate_title_screen 0x0d
 
 world:
     items:

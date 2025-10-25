@@ -41,7 +41,7 @@ class Abs(BaseModel):
     @field_validator("weight", mode="after")
     def validate_weight(cls, value:Literal[0]) -> Literal[0]:
         if value != 0:
-            raise ValueError("weight must be 1 or omitted")
+            raise ValueError("weight must be 0 or omitted")
         return value
     
     @field_validator("min", "max", mode="after")

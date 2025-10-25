@@ -293,6 +293,12 @@ def validate(data):
         print("")
         err.print()
     
+    if len(errs) > 0:
+        print("")
+        print("")
+        print("first error again")
+        errs[0].print()
+    
     print("")
     print("")
     print("Total errors")

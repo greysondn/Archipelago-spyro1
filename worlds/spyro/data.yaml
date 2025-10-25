@@ -631,7 +631,36 @@ hubs:
                         type: int
                         domain: MainRAM
                         value: *vals_gamestate_balloonist
-        text_offset: 0x1006c
+        text_offset:
+            io: write
+            data:
+                address: 0x1006c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "A"
+            guards:
+                -
+                    type: or
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_gameplay
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_inventory
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_loading
         total_gems: 100
         gem_counter:
             address: 0x77420
@@ -709,7 +738,36 @@ hubs:
                 name: Stone Hill
                 id: 11
                 vortex_moby_pointer: 0x177330
-                text_offset: 0x101fc
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101fc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "S"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 200
                 gem_counter:
                     address: 0x77424
@@ -791,7 +849,36 @@ hubs:
                 name: Dark Hollow
                 id: 12
                 vortex_moby_pointer: 0x1339ac
-                text_offset: 0x101f0
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x101f0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 100
                 gem_counter:
                     address: 0x77428
@@ -847,7 +934,36 @@ hubs:
                 name: Town Square
                 id: 13
                 vortex_moby_pointer: 0x17d644
-                text_offset: 0x101e4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101e4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 200
                 gem_counter:
                     address: 0x7742c
@@ -929,7 +1045,36 @@ hubs:
                 name: Toasty
                 id: 14
                 vortex_moby_pointer: 0x1738ac
-                text_offset: 0x75570
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x75570
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 100
                 gem_counter:
                     address: 0x77430
@@ -949,7 +1094,36 @@ hubs:
                 name: Sunny Flight
                 id: 15
                 vortex_moby_pointer: -1
-                text_offset: 0x101d4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101d4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "S"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77434
@@ -1001,7 +1175,36 @@ hubs:
                         type: int
                         domain: MainRAM
                         value: *vals_gamestate_balloonist
-        text_offset: 0x1005c
+        text_offset:
+            io: write
+            data:
+                address: 0x1005c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "P"
+            guards:
+                -
+                    type: or
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_gameplay
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_inventory
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_loading
         total_gems: 200
         gem_counter:
             address: 0x77438
@@ -1029,7 +1232,36 @@ hubs:
                 name: Dry Canyon
                 id: 21
                 vortex_moby_pointer: 0x169444
-                text_offset: 0x101c8
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101c8
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x7743c
@@ -1064,7 +1296,36 @@ hubs:
                 name: Cliff Town
                 id: 22
                 vortex_moby_pointer: 0x16f978
-                text_offset: 0x101bc
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x101bc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "C"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77440
@@ -1095,7 +1356,36 @@ hubs:
                 name: Ice Cavern
                 id: 23
                 vortex_moby_pointer: 0x16b454
-                text_offset: 0x101b0
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x101b0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "I"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77444
@@ -1130,7 +1420,36 @@ hubs:
                 name: Doctor Shemp
                 id: 24
                 vortex_moby_pointer: 0x16ba44
-                text_offset: 0x101a0
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101a0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77448
@@ -1150,7 +1469,36 @@ hubs:
                 name: Night Flight
                 id: 25
                 vortex_moby_pointer: -1
-                text_offset: 0x10190
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10190
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "N"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x7744c
@@ -1200,7 +1548,36 @@ hubs:
                         type: int
                         domain: MainRAM
                         value: *vals_gamestate_balloonist
-        text_offset: 0x1004c
+        text_offset: 
+            io: write
+            data:
+                address: 0x1004c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "M"
+            guards:
+                -
+                    type: or
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_gameplay
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_inventory
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
             address: 0x77450
@@ -1232,7 +1609,36 @@ hubs:
                 name: Alpine Ridge
                 id: 31
                 vortex_moby_pointer: 0x17bbec
-                text_offset: 0x10180
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10180
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "A"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77454
@@ -1267,7 +1673,36 @@ hubs:
                 name: High Caves
                 id: 32
                 vortex_moby_pointer: 0x17e188
-                text_offset: 0x10174
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10174
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "H"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77458
@@ -1302,7 +1737,36 @@ hubs:
                 name: Wizard Peak
                 id: 33
                 vortex_moby_pointer: 0x179ce4
-                text_offset: 0x10168
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10168
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "W"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x7745c
@@ -1337,7 +1801,36 @@ hubs:
                 name: Blowhard
                 id: 34
                 vortex_moby_pointer: 0x1396e4
-                text_offset: 0x1015c
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1015c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "B"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77460
@@ -1357,7 +1850,36 @@ hubs:
                 name: Crystal Flight
                 id: 35
                 vortex_moby_pointer: -1
-                text_offset: 0x1014c
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1014c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "C"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77464
@@ -1407,7 +1929,36 @@ hubs:
                         type: int
                         domain: MainRAM
                         value: *vals_gamestate_balloonist
-        text_offset: 0x1003c
+        text_offset: 
+            io: write
+            data:
+                address: 0x1003c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "B"
+            guards:
+                -
+                    type: or
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_gameplay
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_inventory
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
             address: 0x77468
@@ -1427,7 +1978,36 @@ hubs:
                 name: Terrace Village
                 id: 41
                 vortex_moby_pointer: 0x179020
-                text_offset: 0x1013c
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1013c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x7746c
@@ -1450,7 +2030,36 @@ hubs:
                 name: Misty Bog
                 id: 42
                 vortex_moby_pointer: 0x17b68c
-                text_offset: 0x10130
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10130
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "M"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77470
@@ -1481,7 +2090,36 @@ hubs:
                 name: Tree Tops
                 id: 43
                 vortex_moby_pointer: 0x17ce24
-                text_offset: 0x10124
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10124
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77474
@@ -1508,7 +2146,36 @@ hubs:
                 name: Metalhead
                 id: 44
                 vortex_moby_pointer: 0x173fc4
-                text_offset: 0x10118
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10118
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "M"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77478
@@ -1528,7 +2195,36 @@ hubs:
                 name: Wild Flight
                 id: 45
                 vortex_moby_pointer: -1
-                text_offset: 0x1010c
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1010c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "W"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x7747c
@@ -1578,7 +2274,36 @@ hubs:
                         type: int
                         domain: MainRAM
                         value: *vals_gamestate_balloonist
-        text_offset: 0x1002c
+        text_offset:
+            io: write
+            data:
+                address: 0x1002c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "D"
+            guards:
+                -
+                    type: or
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_gameplay
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_inventory
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
             address: 0x77480
@@ -1602,7 +2327,36 @@ hubs:
                 name: Dark Passage
                 id: 51
                 vortex_moby_pointer: 0x178950
-                text_offset: 0x100fc
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100fc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77484
@@ -1637,7 +2391,36 @@ hubs:
                 name: Lofty Castle
                 id: 52
                 vortex_moby_pointer: 0x15a3d8
-                text_offset: 0x100ec
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100ec
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "L"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77488
@@ -1664,7 +2447,36 @@ hubs:
                 name: Haunted Towers
                 id: 53
                 vortex_moby_pointer: 0x176964
-                text_offset: 0x100dc
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100dc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "H"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x7748c
@@ -1691,7 +2503,36 @@ hubs:
                 name: Jacques
                 id: 54
                 vortex_moby_pointer: 0x16deb0
-                text_offset: 0x75568
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x75568
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "J"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77490
@@ -1715,7 +2556,36 @@ hubs:
                 name: Icy Flight
                 id: 55
                 vortex_moby_pointer: -1
-                text_offset: 0x100d0
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100d0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "I"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77494
@@ -1765,7 +2635,36 @@ hubs:
                         type: int
                         domain: MainRAM
                         value: *vals_gamestate_balloonist
-        text_offset: 0x1001c
+        text_offset:
+            io: write
+            data:
+                address: 0x1001c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "G"
+            guards:
+                -
+                    type: or
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_gameplay
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_inventory
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_loading
         total_gems: 200
         gem_counter:
             address: 0x77498
@@ -1781,7 +2680,36 @@ hubs:
                 name: Gnorc Cove
                 id: 61
                 vortex_moby_pointer: 0x174884
-                text_offset: 0x100b4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100b4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "G"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x7749c
@@ -1804,7 +2732,36 @@ hubs:
                 name: Twilight Harbor
                 id: 62
                 vortex_moby_pointer: 0x17c298
-                text_offset: 0x100a4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100a4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x774a0
@@ -1827,7 +2784,36 @@ hubs:
                 name: Gnasty Gnorc
                 id: 63
                 vortex_moby_pointer: -1
-                text_offset: 0x10094
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10094
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "G"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x774a4
@@ -1843,7 +2829,36 @@ hubs:
                 name: Gnasty's Loot
                 id: 64
                 vortex_moby_pointer: 0x14da14
-                text_offset: 0x10084
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x10084
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "G"
+                    guards:
+                        -
+                            type: or
+                            next:
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_gameplay
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_inventory
+                                -
+                                    address: *addr_gamestate
+                                    length: 1
+                                    type: int
+                                    domain: MainRAM
+                                    value: *vals_gamestate_loading
                 total_gems: 2000
                 gem_counter:
                     address: 0x774a8

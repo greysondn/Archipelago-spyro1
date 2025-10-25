@@ -37,15 +37,6 @@ world:
                 - Artisans
             groups:
                 - Hubs
-            bizhawk: # write
-                address: null
-                value: []
-                domain: null
-                guards:
-                    -
-                        address: null
-                        expected_data: []
-                        domain: null
         -
             name: Peace Keepers Access
             count:
@@ -607,13 +598,15 @@ hubs:
                     length: 1
                     value: 
                         - 0x01
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -624,13 +617,15 @@ hubs:
                     value:
                         - 0x0c
                         - 0xf0
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
         text_offset:
             io: write
             data:
@@ -639,28 +634,27 @@ hubs:
                 type: string
                 length: 1
                 value: "A"
-            guards:
-                -
-                    type: or
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_gameplay
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_inventory
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_loading
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
         total_gems: 100
         gem_counter:
             address: 0x77420
@@ -680,9 +674,8 @@ hubs:
                                     address: 0x77913
                                     type: flag
                                     value: 0x01
-                                guards:
-                                    -
-                                        type: always
+                                guard:
+                                    type: always
                     -
                         name: Argus
                         groups:
@@ -693,9 +686,8 @@ hubs:
                                 address: 0x77913
                                 type: flag
                                 value: 0x08
-                            guards:
-                                -
-                                    type: always
+                            guard:
+                                type: always
                     -
                         name: Delbin
                         groups:
@@ -706,9 +698,8 @@ hubs:
                                 address: 0x77919
                                 type: flag
                                 value: 0x80
-                            guards:
-                                -
-                                    type: always
+                            guard:
+                                type: always
                     -
                         name: Tomas
                         groups:
@@ -719,9 +710,8 @@ hubs:
                                 address: 0x77913
                                 type: flag
                                 value: 0x20
-                            guards:
-                                -
-                                    type: always
+                            guard:
+                                type: always
                 connections:
                     -
                         destination:
@@ -746,28 +736,27 @@ hubs:
                         type: string
                         length: 1
                         value: "S"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 200
                 gem_counter:
                     address: 0x77424
@@ -786,9 +775,8 @@ hubs:
                                         address: 0x77932
                                         type: flag
                                         value: 0x40
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Gavin
                                 groups:
@@ -799,9 +787,8 @@ hubs:
                                         address: 0x7793d
                                         type: flag
                                         value: 0x04
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Astor
                                 groups:
@@ -812,9 +799,8 @@ hubs:
                                         address: 0x7793a
                                         type: flag
                                         value: 0x01
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Gildas
                                 groups:
@@ -825,9 +811,8 @@ hubs:
                                         address: 0x77939
                                         type: flag
                                         value: 0x20
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Egg 1 (Upper Area)
                                 groups:
@@ -838,9 +823,8 @@ hubs:
                                         address: 0x7793c
                                         type: flag
                                         value: 0x40
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                 portal:
                     destination_address: 0xc12b4
                 ap_groups: []
@@ -857,28 +841,27 @@ hubs:
                         type: string
                         length: 1
                         value: "D"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 100
                 gem_counter:
                     address: 0x77428
@@ -897,9 +880,8 @@ hubs:
                                         address: 0x77950
                                         type: flag
                                         value: 0x02
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Oswin
                                 groups:
@@ -910,9 +892,8 @@ hubs:
                                         address: 0x77953
                                         type: flag
                                         value: 0x80
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Darius
                                 groups:
@@ -923,9 +904,8 @@ hubs:
                                         address: 0x77955
                                         type: flag
                                         value: 0x80
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                 portal:
                     destination_address: 0xc12a8
                 ap_groups: []
@@ -942,28 +922,27 @@ hubs:
                         type: string
                         length: 1
                         value: "T"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 200
                 gem_counter:
                     address: 0x7742c
@@ -982,9 +961,8 @@ hubs:
                                         address: 0x77969
                                         type: flag
                                         value: 0x10
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Thor
                                 groups:
@@ -995,9 +973,8 @@ hubs:
                                         address: 0x77974
                                         type: flag
                                         value: 0x20
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Alvar
                                 groups:
@@ -1008,9 +985,8 @@ hubs:
                                         address: 0x7796e
                                         type: flag
                                         value: 0x02
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Devlin
                                 groups:
@@ -1021,9 +997,8 @@ hubs:
                                         address: 0x77969
                                         type: flag
                                         value: 0x20
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                             -
                                 name: Egg 1 (Upper Area)
                                 groups:
@@ -1034,9 +1009,8 @@ hubs:
                                         address: 0x77973
                                         type: flag
                                         value: 0x01
-                                    guards:
-                                        -
-                                            type: always
+                                    guard:
+                                        type: always
                 portal:
                     destination_address: 0xc12c0
                 ap_groups: []
@@ -1053,28 +1027,27 @@ hubs:
                         type: string
                         length: 1
                         value: "T"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 100
                 gem_counter:
                     address: 0x77430
@@ -1102,28 +1075,27 @@ hubs:
                         type: string
                         length: 1
                         value: "S"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77434
@@ -1151,13 +1123,15 @@ hubs:
                     length: 1
                     value: 
                         - 0x01
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -1168,13 +1142,15 @@ hubs:
                     value:
                         - 0x0c
                         - 0xf0
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
         text_offset:
             io: write
             data:
@@ -1183,28 +1159,27 @@ hubs:
                 type: string
                 length: 1
                 value: "P"
-            guards:
-                -
-                    type: or
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_gameplay
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_inventory
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_loading
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
         total_gems: 200
         gem_counter:
             address: 0x77438
@@ -1240,28 +1215,27 @@ hubs:
                         type: string
                         length: 1
                         value: "D"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x7743c
@@ -1304,28 +1278,27 @@ hubs:
                         type: string
                         length: 1
                         value: "C"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77440
@@ -1364,28 +1337,27 @@ hubs:
                         type: string
                         length: 1
                         value: "I"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77444
@@ -1428,28 +1400,27 @@ hubs:
                         type: string
                         length: 1
                         value: "D"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77448
@@ -1477,28 +1448,27 @@ hubs:
                         type: string
                         length: 1
                         value: "N"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x7744c
@@ -1524,13 +1494,15 @@ hubs:
                     length: 1
                     value: 
                         - 0x01
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -1541,13 +1513,15 @@ hubs:
                     value:
                         - 0x0c
                         - 0xf0
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
         text_offset: 
             io: write
             data:
@@ -1556,28 +1530,27 @@ hubs:
                 type: string
                 length: 1
                 value: "M"
-            guards:
-                -
-                    type: or
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_gameplay
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_inventory
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_loading
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
             address: 0x77450
@@ -1617,28 +1590,27 @@ hubs:
                         type: string
                         length: 1
                         value: "A"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77454
@@ -1681,28 +1653,27 @@ hubs:
                         type: string
                         length: 1
                         value: "H"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77458
@@ -1745,28 +1716,27 @@ hubs:
                         type: string
                         length: 1
                         value: "W"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x7745c
@@ -1809,28 +1779,27 @@ hubs:
                         type: string
                         length: 1
                         value: "B"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77460
@@ -1858,28 +1827,27 @@ hubs:
                         type: string
                         length: 1
                         value: "C"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77464
@@ -1905,7 +1873,9 @@ hubs:
                     length: 1
                     value: 
                         - 0x01
-                guards:
+                guard:
+                type: and
+                next:
                     -
                         address: *addr_gamestate
                         length: 1
@@ -1922,13 +1892,15 @@ hubs:
                     value:
                         - 0x0c
                         - 0xf0
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
         text_offset: 
             io: write
             data:
@@ -1937,28 +1909,27 @@ hubs:
                 type: string
                 length: 1
                 value: "B"
-            guards:
-                -
-                    type: or
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_gameplay
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_inventory
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_loading
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
             address: 0x77468
@@ -1986,28 +1957,27 @@ hubs:
                         type: string
                         length: 1
                         value: "T"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x7746c
@@ -2038,28 +2008,27 @@ hubs:
                         type: string
                         length: 1
                         value: "M"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77470
@@ -2098,28 +2067,27 @@ hubs:
                         type: string
                         length: 1
                         value: "T"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77474
@@ -2154,28 +2122,27 @@ hubs:
                         type: string
                         length: 1
                         value: "M"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77478
@@ -2203,28 +2170,27 @@ hubs:
                         type: string
                         length: 1
                         value: "W"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x7747c
@@ -2250,13 +2216,15 @@ hubs:
                     length: 1
                     value: 
                         - 0x01
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -2267,13 +2235,15 @@ hubs:
                     value:
                         - 0x0c
                         - 0xf0
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
         text_offset:
             io: write
             data:
@@ -2282,28 +2252,27 @@ hubs:
                 type: string
                 length: 1
                 value: "D"
-            guards:
-                -
-                    type: or
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_gameplay
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_inventory
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_loading
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
             address: 0x77480
@@ -2335,28 +2304,27 @@ hubs:
                         type: string
                         length: 1
                         value: "D"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77484
@@ -2399,28 +2367,27 @@ hubs:
                         type: string
                         length: 1
                         value: "L"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x77488
@@ -2455,28 +2422,27 @@ hubs:
                         type: string
                         length: 1
                         value: "H"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x7748c
@@ -2511,28 +2477,27 @@ hubs:
                         type: string
                         length: 1
                         value: "J"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x77490
@@ -2564,28 +2529,27 @@ hubs:
                         type: string
                         length: 1
                         value: "I"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
                     address: 0x77494
@@ -2611,13 +2575,15 @@ hubs:
                     length: 1
                     value: 
                         - 0x01
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
             -
                 io: write
                 data:
@@ -2628,13 +2594,15 @@ hubs:
                     value:
                         - 0x0c
                         - 0xf0
-                guards:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
         text_offset:
             io: write
             data:
@@ -2643,28 +2611,27 @@ hubs:
                 type: string
                 length: 1
                 value: "G"
-            guards:
-                -
-                    type: or
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_gameplay
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_inventory
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_loading
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
         total_gems: 200
         gem_counter:
             address: 0x77498
@@ -2688,28 +2655,27 @@ hubs:
                         type: string
                         length: 1
                         value: "G"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x7749c
@@ -2740,28 +2706,27 @@ hubs:
                         type: string
                         length: 1
                         value: "T"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
                     address: 0x774a0
@@ -2792,28 +2757,27 @@ hubs:
                         type: string
                         length: 1
                         value: "G"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
                     address: 0x774a4
@@ -2837,28 +2801,27 @@ hubs:
                         type: string
                         length: 1
                         value: "G"
-                    guards:
-                        -
-                            type: or
-                            next:
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_gameplay
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_inventory
-                                -
-                                    address: *addr_gamestate
-                                    length: 1
-                                    type: int
-                                    domain: MainRAM
-                                    value: *vals_gamestate_loading
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
                 total_gems: 2000
                 gem_counter:
                     address: 0x774a8

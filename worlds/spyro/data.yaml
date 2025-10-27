@@ -680,9 +680,12 @@ hubs:
                                 data:
                                     address: 0x77913
                                     type: flag
+                                    domain: MainRAM
                                     value: 0x01
                                 guard:
                                     type: always
+                        guard:
+                            type: always
                     -
                         name: Argus
                         groups:
@@ -695,6 +698,8 @@ hubs:
                                 value: 0x08
                             guard:
                                 type: always
+                        guard:
+                            type: always
                     -
                         name: Delbin
                         groups:
@@ -707,6 +712,8 @@ hubs:
                                 value: 0x80
                             guard:
                                 type: always
+                        guard:
+                            type: always
                     -
                         name: Tomas
                         groups:
@@ -719,6 +726,8 @@ hubs:
                                 value: 0x20
                             guard:
                                 type: always
+                        guard:
+                            type: always
                 connections:
                     -
                         destination:

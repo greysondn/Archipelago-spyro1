@@ -849,9 +849,12 @@ hubs:
                                     data:
                                         address: 0x77932
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x40
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Gavin
                                 groups:
@@ -861,9 +864,12 @@ hubs:
                                     data:
                                         address: 0x7793d
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x04
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Astor
                                 groups:
@@ -873,9 +879,12 @@ hubs:
                                     data:
                                         address: 0x7793a
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x01
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Gildas
                                 groups:
@@ -885,9 +894,12 @@ hubs:
                                     data:
                                         address: 0x77939
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x20
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Egg 1 (Upper Area)
                                 groups:
@@ -897,11 +909,25 @@ hubs:
                                     data:
                                         address: 0x7793c
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x40
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
-                    destination_address: 0xc12b4
+                    io: write
+                    data:
+                        address: 0xc12b4
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -989,7 +1015,15 @@ hubs:
                                     guard:
                                         type: always
                 portal:
-                    destination_address: 0xc12a8
+                    io: write
+                    data:
+                        address: 0xc12a8
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1101,7 +1135,15 @@ hubs:
                                     guard:
                                         type: always
                 portal:
-                    destination_address: 0xc12c0
+                    io: write
+                    data:
+                        address: 0xc12c0
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1155,7 +1197,15 @@ hubs:
                         value: 0x01
                 eggs: []
                 portal:
-                    destination_address: 0xc129c
+                    io: write
+                    data:
+                        address: 0xc129c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - 
                 statue_head_checks: []
@@ -1206,7 +1256,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xc12cc
+                    io: write
+                    data:
+                        address: 0xc12cc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Flight Levels
                 statue_head_checks: []
@@ -1398,7 +1456,15 @@ hubs:
                         address: 0x779f2
                         value: 0x80
                 portal:
-                    destination_address: 0xbfc48
+                    io: write
+                    data:
+                        address: 0xbfc48
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1464,7 +1530,15 @@ hubs:
                         address: 0x77a1a
                         value: 0x04
                 portal:
-                    destination_address: 0xbfc54
+                    io: write
+                    data:
+                        address: 0xbfc54
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1534,7 +1608,15 @@ hubs:
                         value: 0x40
                 eggs: []
                 portal:
-                    destination_address: 0xbfc60
+                    io: write
+                    data:
+                        address: 0xbfc60
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1588,7 +1670,15 @@ hubs:
                         value: 0x08
                 eggs: []
                 portal:
-                    destination_address: 0xbfc6c
+                    io: write
+                    data:
+                        address: 0xbfc6c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Boss Levels
                 statue_head_checks: []
@@ -1639,7 +1729,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xbfc78
+                    io: write
+                    data:
+                        address: 0xbfc78
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Flight Levels
                 statue_head_checks: []
@@ -1815,7 +1913,15 @@ hubs:
                         address: 0x77aad
                         value: 0x08
                 portal:
-                    destination_address: 0xc627c
+                    io: write
+                    data:
+                        address: 0xc627c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1885,7 +1991,15 @@ hubs:
                         address: 0x77aca
                         value: 0x02
                 portal:
-                    destination_address: 0xc6294
+                    io: write
+                    data:
+                        address: 0xc6294
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -1955,7 +2069,15 @@ hubs:
                         address: 0x77aeb
                         value: 0x04
                 portal:
-                    destination_address: 0xc6288
+                    io: write
+                    data:
+                        address: 0xc6288
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2009,7 +2131,15 @@ hubs:
                         value: 0x04
                 eggs: []
                 portal:
-                    destination_address: 0xc6264
+                    io: write
+                    data:
+                        address: 0xc6264
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Boss Levels
                 statue_head_checks: []
@@ -2060,7 +2190,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xc6270
+                    io: write
+                    data:
+                        address: 0xc6270
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Flight Levels
                 statue_head_checks: []
@@ -2212,7 +2350,15 @@ hubs:
                         value: 0x80
                 eggs: []
                 portal:
-                    destination_address: 0xb558c
+                    io: write
+                    data:
+                        address: 0xb558c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2278,7 +2424,15 @@ hubs:
                         value: 0x40
                 eggs: []
                 portal:
-                    destination_address: 0xb5574
+                    io: write
+                    data:
+                        address: 0xb5574
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2340,7 +2494,15 @@ hubs:
                         value: 0x20
                 eggs: []
                 portal:
-                    destination_address: 0xb5580
+                    io: write
+                    data:
+                        address: 0xb5580
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2394,7 +2556,15 @@ hubs:
                         value: 0x08
                 eggs: []
                 portal:
-                    destination_address: 0xb5568
+                    io: write
+                    data:
+                        address: 0xb5568
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Boss Levels
                 statue_head_checks: []
@@ -2445,7 +2615,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xb5598
+                    io: write
+                    data:
+                        address: 0xb5598
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Flight Levels
                 statue_head_checks: []
@@ -2613,7 +2791,15 @@ hubs:
                         value: 0x01
                 eggs: []
                 portal:
-                    destination_address: 0xc5ecc
+                    io: write
+                    data:
+                        address: 0xc5ecc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2675,7 +2861,15 @@ hubs:
                         value: 0x01
                 eggs: []
                 portal:
-                    destination_address: 0xc5ee4
+                    io: write
+                    data:
+                        address: 0xc5ee4
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2737,7 +2931,15 @@ hubs:
                         value: 0x80
                 eggs: []
                 portal:
-                    destination_address: 0xc5efc
+                    io: write
+                    data:
+                        address: 0xc5efc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -2795,7 +2997,15 @@ hubs:
                         value: 0x80
                 eggs: []
                 portal:
-                    destination_address: 0xc5ed8
+                    io: write
+                    data:
+                        address: 0xc5ed8
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Boss Levels
                 statue_head_checks: []
@@ -2846,7 +3056,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xc5ef0
+                    io: write
+                    data:
+                        address: 0xc5ef0
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Flight Levels
                 statue_head_checks: []
@@ -2994,7 +3212,15 @@ hubs:
                         value: 0x40
                 eggs: []
                 portal:
-                    destination_address: 0xa69d8
+                    io: write
+                    data:
+                        address: 0xa69d8
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -3052,7 +3278,15 @@ hubs:
                         value: 0x10
                 eggs: []
                 portal:
-                    destination_address: 0xa69b4
+                    io: write
+                    data:
+                        address: 0xa69b4
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
             -
@@ -3102,7 +3336,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xa69c0
+                    io: write
+                    data:
+                        address: 0xa69c0
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups:
                     - Boss Levels
                 statue_head_checks: []
@@ -3153,7 +3395,15 @@ hubs:
                 dragons: []
                 eggs: []
                 portal:
-                    destination_address: 0xa69cc
+                    io: write
+                    data:
+                        address: 0xa69cc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 ap_groups: []
                 statue_head_checks: []
         statue_head_checks:

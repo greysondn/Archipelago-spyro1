@@ -79,6 +79,7 @@ class SpyroHub(BaseModel):
     total_gems:int
     gem_counter:BhData
     regions:Sequence[BhRegion]
+    levels:Sequence[SpyroLevel]
     statue_head_checks:list[BhData]
     
     model_config = ConfigDict(

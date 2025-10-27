@@ -929,7 +929,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Dark Hollow
                 id: *vals_env_id_level_dark_hollow
@@ -1025,7 +1024,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Town Square
                 id: *vals_env_id_level_town_square
@@ -1145,7 +1143,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Toasty
                 id: *vals_env_id_level_toasty
@@ -1208,7 +1205,6 @@ hubs:
                         type: always
                 groups:
                     - Boss Levels
-                statue_head_checks: []
             -
                 name: Sunny Flight
                 id: *vals_env_id_level_sunny_flight
@@ -1267,7 +1263,6 @@ hubs:
                         type: always
                 groups:
                     - Flight Levels
-                statue_head_checks: []
         statue_head_checks:
             -
                 io: write
@@ -1466,7 +1461,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Cliff Town
                 id: *vals_env_id_level_cliff_town
@@ -1540,7 +1534,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Ice Cavern
                 id: *vals_env_id_level_ice_cavern
@@ -1618,7 +1611,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Doctor Shemp
                 id: *vals_env_id_level_doctor_shemp
@@ -1681,7 +1673,6 @@ hubs:
                         type: always
                 groups:
                     - Boss Levels
-                statue_head_checks: []
             -
                 name: Night Flight
                 id: *vals_env_id_level_night_flight
@@ -1740,7 +1731,6 @@ hubs:
                         type: always
                 groups:
                     - Flight Levels
-                statue_head_checks: []
         statue_head_checks: []
     -
         name: Magic Crafters
@@ -1923,7 +1913,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: High Caves
                 id: *vals_env_id_level_high_caves
@@ -2001,7 +1990,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Wizard Peak
                 id: *vals_env_id_level_wizard_peak
@@ -2079,7 +2067,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Blowhard
                 id: *vals_env_id_level_blowhard
@@ -2142,7 +2129,6 @@ hubs:
                         type: always
                 groups:
                     - Boss Levels
-                statue_head_checks: []
             -
                 name: Crystal Flight
                 id: *vals_env_id_level_crystal_flight
@@ -2201,7 +2187,6 @@ hubs:
                         type: always
                 groups:
                     - Flight Levels
-                statue_head_checks: []
         statue_head_checks: []
     -
         name: Beast Makers
@@ -2360,7 +2345,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Misty Bog
                 id: *vals_env_id_level_misty_bog
@@ -2434,7 +2418,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Tree Tops
                 id: *vals_env_id_level_tree_tops
@@ -2504,7 +2487,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Metalhead
                 id: *vals_env_id_level_metalhead
@@ -2567,7 +2549,6 @@ hubs:
                         type: always
                 groups:
                     - Boss Levels
-                statue_head_checks: []
             -
                 name: Wild Flight
                 id: *vals_env_id_level_wild_flight
@@ -2626,7 +2607,6 @@ hubs:
                         type: always
                 groups:
                     - Flight Levels
-                statue_head_checks: []
         statue_head_checks: []
     -
         name: Dream Weavers
@@ -2801,7 +2781,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Lofty Castle
                 id: *vals_env_id_level_lofty_castle
@@ -2871,7 +2850,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Haunted Towers
                 id: *vals_env_id_level_haunted_towers
@@ -2941,7 +2919,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Jacques
                 id: *vals_env_id_level_jacques
@@ -3008,7 +2985,6 @@ hubs:
                         type: always
                 groups:
                     - Boss Levels
-                statue_head_checks: []
             -
                 name: Icy Flight
                 id: *vals_env_id_level_icy_flight
@@ -3067,7 +3043,6 @@ hubs:
                         type: always
                 groups:
                     - Flight Levels
-                statue_head_checks: []
         statue_head_checks: []
     -
         name: Gnasty's World
@@ -3222,7 +3197,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Twilight Harbor
                 id: *vals_env_id_level_twilight_harbor
@@ -3288,7 +3262,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
             -
                 name: Gnasty Gnorc
                 id: *vals_env_id_level_gnasty_gnorc
@@ -3347,7 +3320,6 @@ hubs:
                         type: always
                 groups:
                     - Boss Levels
-                statue_head_checks: []
             -
                 name: Gnasty's Loot
                 id: *vals_env_id_level_gnastys_loot
@@ -3405,7 +3377,6 @@ hubs:
                     guard:
                         type: always
                 groups: []
-                statue_head_checks: []
         statue_head_checks:
             -
                 io: write

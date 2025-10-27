@@ -986,9 +986,12 @@ hubs:
                                     data:
                                         address: 0x77950
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x02
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Oswin
                                 groups:
@@ -998,9 +1001,12 @@ hubs:
                                     data:
                                         address: 0x77953
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x80
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Darius
                                 groups:
@@ -1010,9 +1016,15 @@ hubs:
                                     data:
                                         address: 0x77955
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x80
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:

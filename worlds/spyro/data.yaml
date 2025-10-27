@@ -2,8 +2,50 @@
 game: "Spyro the Dragon"
 
 vars:
+
+    # id of the current world environment - hub/level
+    # 1 byte, int
+    - &addr_env_id        0x7596c
+
     # the address the gamestate is stored in
+    # 1 byte, int
     - &addr_gamestate     0x757d8
+
+    # environemnt id values, self-descriptive
+    - &vals_env_id_hub_artisans             10
+    - &vals_env_id_hub_beast_makers         40
+    - &vals_env_id_hub_dream_weavers        50
+    - &vals_env_id_hub_gnastys_world        60
+    - &vals_env_id_hub_magic_crafters       30
+    - &vals_env_id_hub_peace_keepers        20
+    - &vals_env_id_level_alpine_ridge       31
+    - &vals_env_id_level_blowhard           34
+    - &vals_env_id_level_cliff_town         22
+    - &vals_env_id_level_crystal_flight     35
+    - &vals_env_id_level_dark_hollow        12
+    - &vals_env_id_level_dark_passage       51
+    - &vals_env_id_level_doctor_shemp       24
+    - &vals_env_id_level_dry_canyon         21
+    - &vals_env_id_level_gnasty_gnorc       63
+    - &vals_env_id_level_gnastys_loot       64
+    - &vals_env_id_level_gnorc_cove         61
+    - &vals_env_id_level_haunted_towers     53
+    - &vals_env_id_level_high_caves         32
+    - &vals_env_id_level_ice_cavern         23
+    - &vals_env_id_level_icy_flight         55
+    - &vals_env_id_level_jacques            54
+    - &vals_env_id_level_lofty_castle       52
+    - &vals_env_id_level_metalhead          44
+    - &vals_env_id_level_misty_bog          42
+    - &vals_env_id_level_stone_hill         11
+    - &vals_env_id_level_sunny_flight       15
+    - &vals_env_id_level_terrace_village    41
+    - &vals_env_id_level_toasty             14
+    - &vals_env_id_level_town_square        13
+    - &vals_env_id_level_tree_tops          43
+    - &vals_env_id_level_twilight_harbor    62
+    - &vals_env_id_level_wild_flight        45
+    - &vals_env_id_level_wizard_peak        33
 
     # gamestate values, self-descriptive
     - &vals_gamestate_balloonist 0x0c
@@ -587,7 +629,7 @@ world:
 hubs:
     -
         name: Artisans
-        id: 10
+        id: *vals_env_id_hub_artisans
         balloon_addresses:
             -
                 io: write
@@ -736,7 +778,7 @@ hubs:
         levels:
             -
                 name: Stone Hill
-                id: 11
+                id: *vals_env_id_level_stone_hill
                 vortex_moby_address: 0x177330
                 text_offset:
                     io: write
@@ -848,7 +890,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Dark Hollow
-                id: 12
+                id: *vals_env_id_level_dark_hollow
                 vortex_moby_address: 0x1339ac
                 text_offset: 
                     io: write
@@ -936,7 +978,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Town Square
-                id: 13
+                id: *vals_env_id_level_town_square
                 vortex_moby_address: 0x17d644
                 text_offset:
                     io: write
@@ -1048,7 +1090,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Toasty
-                id: 14
+                id: *vals_env_id_level_toasty
                 vortex_moby_address: 0x1738ac
                 text_offset:
                     io: write
@@ -1103,7 +1145,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Sunny Flight
-                id: 15
+                id: *vals_env_id_level_sunny_flight
                 vortex_moby_address: -1
                 text_offset:
                     io: write
@@ -1175,7 +1217,7 @@ hubs:
                     type: always
     -
         name: Peace Keepers
-        id: 20
+        id: *vals_env_id_hub_peace_keepers
         balloon_addresses:
             -
                 io: write
@@ -1275,7 +1317,7 @@ hubs:
         levels:
             -
                 name: Dry Canyon
-                id: 21
+                id: *vals_env_id_level_dry_canyon
                 vortex_moby_address: 0x169444
                 text_offset:
                     io: write
@@ -1345,7 +1387,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Cliff Town
-                id: 22
+                id: *vals_env_id_level_cliff_town
                 vortex_moby_address: 0x16f978
                 text_offset: 
                     io: write
@@ -1411,7 +1453,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Ice Cavern
-                id: 23
+                id: *vals_env_id_level_ice_cavern
                 vortex_moby_address: 0x16b454
                 text_offset: 
                     io: write
@@ -1481,7 +1523,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Doctor Shemp
-                id: 24
+                id: *vals_env_id_level_doctor_shemp
                 vortex_moby_address: 0x16ba44
                 text_offset:
                     io: write
@@ -1588,7 +1630,7 @@ hubs:
         statue_head_checks: []
     -
         name: Magic Crafters
-        id: 30
+        id: *vals_env_id_hub_magic_crafters
         balloon_addresses:
             -
                 io: write
@@ -1692,7 +1734,7 @@ hubs:
         levels:
             -
                 name: Alpine Ridge
-                id: 31
+                id: *vals_env_id_level_alpine_ridge
                 vortex_moby_address: 0x17bbec
                 text_offset:
                     io: write
@@ -1762,7 +1804,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: High Caves
-                id: 32
+                id: *vals_env_id_level_high_caves
                 vortex_moby_address: 0x17e188
                 text_offset:
                     io: write
@@ -1832,7 +1874,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Wizard Peak
-                id: 33
+                id: *vals_env_id_level_wizard_peak
                 vortex_moby_address: 0x179ce4
                 text_offset:
                     io: write
@@ -1902,7 +1944,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Blowhard
-                id: 34
+                id: *vals_env_id_level_blowhard
                 vortex_moby_address: 0x1396e4
                 text_offset:
                     io: write
@@ -1957,7 +1999,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Crystal Flight
-                id: 35
+                id: *vals_env_id_level_crystal_flight
                 vortex_moby_address: -1
                 text_offset:
                     io: write
@@ -2009,7 +2051,7 @@ hubs:
         statue_head_checks: []
     -
         name: Beast Makers
-        id: 40
+        id: *vals_env_id_hub_beast_makers
         balloon_addresses:
             -
                 io: write
@@ -2101,7 +2143,7 @@ hubs:
         levels:
             -
                 name: Terrace Village
-                id: 41
+                id: *vals_env_id_level_terrace_village
                 vortex_moby_address: 0x179020
                 text_offset:
                     io: write
@@ -2159,7 +2201,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Misty Bog
-                id: 42
+                id: *vals_env_id_level_misty_bog
                 vortex_moby_address: 0x17b68c
                 text_offset:
                     io: write
@@ -2225,7 +2267,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Tree Tops
-                id: 43
+                id: *vals_env_id_level_tree_tops
                 vortex_moby_address: 0x17ce24
                 text_offset:
                     io: write
@@ -2287,7 +2329,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Metalhead
-                id: 44
+                id: *vals_env_id_level_metalhead
                 vortex_moby_address: 0x173fc4
                 text_offset:
                     io: write
@@ -2342,7 +2384,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Wild Flight
-                id: 45
+                id: *vals_env_id_level_wild_flight
                 vortex_moby_address: -1
                 text_offset:
                     io: write
@@ -2394,7 +2436,7 @@ hubs:
         statue_head_checks: []
     -
         name: Dream Weavers
-        id: 50
+        id: *vals_env_id_hub_dream_weavers
         balloon_addresses:
             -
                 io: write
@@ -2490,7 +2532,7 @@ hubs:
         levels:
             -
                 name: Dark Passage
-                id: 51
+                id: *vals_env_id_level_dark_passage
                 vortex_moby_address: 0x178950
                 text_offset:
                     io: write
@@ -2560,7 +2602,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Lofty Castle
-                id: 52
+                id: *vals_env_id_level_lofty_castle
                 vortex_moby_address: 0x15a3d8
                 text_offset:
                     io: write
@@ -2622,7 +2664,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Haunted Towers
-                id: 53
+                id: *vals_env_id_level_haunted_towers
                 vortex_moby_address: 0x176964
                 text_offset:
                     io: write
@@ -2684,7 +2726,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Jacques
-                id: 54
+                id: *vals_env_id_level_jacques
                 vortex_moby_address: 0x16deb0
                 text_offset:
                     io: write
@@ -2743,7 +2785,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Icy Flight
-                id: 55
+                id: *vals_env_id_level_icy_flight
                 vortex_moby_address: -1
                 text_offset:
                     io: write
@@ -2795,7 +2837,7 @@ hubs:
         statue_head_checks: []
     -
         name: Gnasty's World
-        id: 60
+        id: *vals_env_id_hub_gnastys_world
         balloon_addresses:
             -
                 io: write
@@ -2883,7 +2925,7 @@ hubs:
         levels:
             -
                 name: Gnorc Cove
-                id: 61
+                id: *vals_env_id_level_gnorc_cove
                 vortex_moby_address: 0x174884
                 text_offset:
                     io: write
@@ -2941,7 +2983,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Twilight Harbor
-                id: 62
+                id: *vals_env_id_level_twilight_harbor
                 vortex_moby_address: 0x17c298
                 text_offset:
                     io: write
@@ -2999,7 +3041,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Gnasty Gnorc
-                id: 63
+                id: *vals_env_id_level_gnasty_gnorc
                 vortex_moby_address: -1
                 text_offset:
                     io: write
@@ -3050,7 +3092,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Gnasty's Loot
-                id: 64
+                id: *vals_env_id_level_gnastys_loot
                 vortex_moby_address: 0x14da14
                 text_offset: 
                     io: write

@@ -1153,8 +1153,26 @@ hubs:
                     - Flight Levels
                 statue_head_checks: []
         statue_head_checks:
-            - 0x7f48c
-            - 0x7f4c8
+            -
+                io: write
+                data:
+                    address: 0x7f48c
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x7f4c8
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
     -
         name: Peace Keepers
         id: 20
@@ -3081,9 +3099,63 @@ hubs:
                 ap_groups: []
                 statue_head_checks: []
         statue_head_checks:
-            - 0x817fc
-            - 0x81810
-            - 0x81848
-            - 0x81884
-            - 0x8189c
-            - 0x818b4
+            -
+                io: write
+                data:
+                    address: 0x817fc
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x81810
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x81848
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x81884
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x8189c
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x818b4
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always

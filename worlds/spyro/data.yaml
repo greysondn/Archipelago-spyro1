@@ -737,7 +737,7 @@ hubs:
             -
                 name: Stone Hill
                 id: 11
-                vortex_moby_pointer: 0x177330
+                vortex_moby_address: 0x177330
                 text_offset:
                     io: write
                     data:
@@ -849,7 +849,7 @@ hubs:
             -
                 name: Dark Hollow
                 id: 12
-                vortex_moby_pointer: 0x1339ac
+                vortex_moby_address: 0x1339ac
                 text_offset: 
                     io: write
                     data:
@@ -937,7 +937,7 @@ hubs:
             -
                 name: Town Square
                 id: 13
-                vortex_moby_pointer: 0x17d644
+                vortex_moby_address: 0x17d644
                 text_offset:
                     io: write
                     data:
@@ -1049,7 +1049,7 @@ hubs:
             -
                 name: Toasty
                 id: 14
-                vortex_moby_pointer: 0x1738ac
+                vortex_moby_address: 0x1738ac
                 text_offset:
                     io: write
                     data:
@@ -1104,7 +1104,7 @@ hubs:
             -
                 name: Sunny Flight
                 id: 15
-                vortex_moby_pointer: -1
+                vortex_moby_address: -1
                 text_offset:
                     io: write
                     data:
@@ -1276,7 +1276,7 @@ hubs:
             -
                 name: Dry Canyon
                 id: 21
-                vortex_moby_pointer: 0x169444
+                vortex_moby_address: 0x169444
                 text_offset:
                     io: write
                     data:
@@ -1346,7 +1346,7 @@ hubs:
             -
                 name: Cliff Town
                 id: 22
-                vortex_moby_pointer: 0x16f978
+                vortex_moby_address: 0x16f978
                 text_offset: 
                     io: write
                     data:
@@ -1412,7 +1412,7 @@ hubs:
             -
                 name: Ice Cavern
                 id: 23
-                vortex_moby_pointer: 0x16b454
+                vortex_moby_address: 0x16b454
                 text_offset: 
                     io: write
                     data:
@@ -1482,7 +1482,7 @@ hubs:
             -
                 name: Doctor Shemp
                 id: 24
-                vortex_moby_pointer: 0x16ba44
+                vortex_moby_address: 0x16ba44
                 text_offset:
                     io: write
                     data:
@@ -1537,7 +1537,7 @@ hubs:
             -
                 name: Night Flight
                 id: 25
-                vortex_moby_pointer: -1
+                vortex_moby_address: -1
                 text_offset:
                     io: write
                     data:
@@ -1693,7 +1693,7 @@ hubs:
             -
                 name: Alpine Ridge
                 id: 31
-                vortex_moby_pointer: 0x17bbec
+                vortex_moby_address: 0x17bbec
                 text_offset:
                     io: write
                     data:
@@ -1763,7 +1763,7 @@ hubs:
             -
                 name: High Caves
                 id: 32
-                vortex_moby_pointer: 0x17e188
+                vortex_moby_address: 0x17e188
                 text_offset:
                     io: write
                     data:
@@ -1833,7 +1833,7 @@ hubs:
             -
                 name: Wizard Peak
                 id: 33
-                vortex_moby_pointer: 0x179ce4
+                vortex_moby_address: 0x179ce4
                 text_offset:
                     io: write
                     data:
@@ -1903,7 +1903,7 @@ hubs:
             -
                 name: Blowhard
                 id: 34
-                vortex_moby_pointer: 0x1396e4
+                vortex_moby_address: 0x1396e4
                 text_offset:
                     io: write
                     data:
@@ -1958,7 +1958,7 @@ hubs:
             -
                 name: Crystal Flight
                 id: 35
-                vortex_moby_pointer: -1
+                vortex_moby_address: -1
                 text_offset:
                     io: write
                     data:
@@ -2102,7 +2102,7 @@ hubs:
             -
                 name: Terrace Village
                 id: 41
-                vortex_moby_pointer: 0x179020
+                vortex_moby_address: 0x179020
                 text_offset:
                     io: write
                     data:
@@ -2160,7 +2160,7 @@ hubs:
             -
                 name: Misty Bog
                 id: 42
-                vortex_moby_pointer: 0x17b68c
+                vortex_moby_address: 0x17b68c
                 text_offset:
                     io: write
                     data:
@@ -2226,7 +2226,7 @@ hubs:
             -
                 name: Tree Tops
                 id: 43
-                vortex_moby_pointer: 0x17ce24
+                vortex_moby_address: 0x17ce24
                 text_offset:
                     io: write
                     data:
@@ -2288,7 +2288,7 @@ hubs:
             -
                 name: Metalhead
                 id: 44
-                vortex_moby_pointer: 0x173fc4
+                vortex_moby_address: 0x173fc4
                 text_offset:
                     io: write
                     data:
@@ -2343,7 +2343,7 @@ hubs:
             -
                 name: Wild Flight
                 id: 45
-                vortex_moby_pointer: -1
+                vortex_moby_address: -1
                 text_offset:
                     io: write
                     data:
@@ -2491,7 +2491,7 @@ hubs:
             -
                 name: Dark Passage
                 id: 51
-                vortex_moby_pointer: 0x178950
+                vortex_moby_address: 0x178950
                 text_offset:
                     io: write
                     data:
@@ -2561,7 +2561,7 @@ hubs:
             -
                 name: Lofty Castle
                 id: 52
-                vortex_moby_pointer: 0x15a3d8
+                vortex_moby_address: 0x15a3d8
                 text_offset:
                     io: write
                     data:
@@ -2623,7 +2623,7 @@ hubs:
             -
                 name: Haunted Towers
                 id: 53
-                vortex_moby_pointer: 0x176964
+                vortex_moby_address: 0x176964
                 text_offset:
                     io: write
                     data:
@@ -2685,7 +2685,7 @@ hubs:
             -
                 name: Jacques
                 id: 54
-                vortex_moby_pointer: 0x16deb0
+                vortex_moby_address: 0x16deb0
                 text_offset:
                     io: write
                     data:
@@ -2744,7 +2744,7 @@ hubs:
             -
                 name: Icy Flight
                 id: 55
-                vortex_moby_pointer: -1
+                vortex_moby_address: -1
                 text_offset:
                     io: write
                     data:
@@ -2884,7 +2884,7 @@ hubs:
             -
                 name: Gnorc Cove
                 id: 61
-                vortex_moby_pointer: 0x174884
+                vortex_moby_address: 0x174884
                 text_offset:
                     io: write
                     data:
@@ -2942,7 +2942,7 @@ hubs:
             -
                 name: Twilight Harbor
                 id: 62
-                vortex_moby_pointer: 0x17c298
+                vortex_moby_address: 0x17c298
                 text_offset:
                     io: write
                     data:
@@ -3000,7 +3000,7 @@ hubs:
             -
                 name: Gnasty Gnorc
                 id: 63
-                vortex_moby_pointer: -1
+                vortex_moby_address: -1
                 text_offset:
                     io: write
                     data:
@@ -3051,7 +3051,7 @@ hubs:
             -
                 name: Gnasty's Loot
                 id: 64
-                vortex_moby_pointer: 0x14da14
+                vortex_moby_address: 0x14da14
                 text_offset: 
                     io: write
                     data:

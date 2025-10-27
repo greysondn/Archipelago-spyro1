@@ -59,7 +59,7 @@ class SpyroWorld(BaseModel):
 class SpyroLevel(BaseModel):
     name:str
     id:int
-    vortex_moby_pointer:BhData
+    vortex_moby_address:int
     text_offset:BhData
     total_gems:int
     gem_counter:BhData

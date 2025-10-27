@@ -35,6 +35,7 @@ from pydantic import (
 
 from typing import (
     Any,
+    Dict,
     List,
     Literal,
     Optional,
@@ -86,9 +87,13 @@ class SpyroHub(BaseModel):
         extra = "forbid",
     )
 
+class SpyroVar(BaseModel):
+    address:BhData
+    values:Dict[str,Any]
+
 class SpyroRoot(BaseModel):
     game:Literal["Spyro the Dragon"]
-    vars:Sequence[Any]
+    vars:Dict[str, SpyroVar]
     world:SpyroWorld
     hubs:Sequence[SpyroHub]
     

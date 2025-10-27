@@ -2,67 +2,83 @@
 game: "Spyro the Dragon"
 
 vars:
-
     # id of the current world environment - hub/level
-    # 1 byte, int
-    - &addr_env_id        0x7596c
+    env_id:
+        address:
+            io: read
+            data:
+                address: &addr_env_id 0x7596c
+                length: 1
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        values:
+            Alpine Ridge:       &vals_env_id_level_alpine_ridge         31
+            Artisans:           &vals_env_id_hub_artisans               10
+            Beast Makers:       &vals_env_id_hub_beast_makers           40
+            Blowhard:           &vals_env_id_level_blowhard             34
+            Cliff Town:         &vals_env_id_level_cliff_town           22
+            Crystal Flight:     &vals_env_id_level_crystal_flight       35
+            Dark Hollow:        &vals_env_id_level_dark_hollow          12
+            Dark Passage:       &vals_env_id_level_dark_passage         51
+            Doctor Shemp:       &vals_env_id_level_doctor_shemp         24
+            Dry Canyon:         &vals_env_id_level_dry_canyon           21
+            Dream Weavers:      &vals_env_id_hub_dream_weavers          50
+            Gnasty Gnorc:       &vals_env_id_level_gnasty_gnorc         63
+            Gnasty's Loot:      &vals_env_id_level_gnastys_loot         64
+            Gnasty's World:     &vals_env_id_hub_gnastys_world          60
+            Gnorc Cove:         &vals_env_id_level_gnorc_cove           61
+            Haunted Towers:     &vals_env_id_level_haunted_towers       53
+            High Caves:         &vals_env_id_level_high_caves           32
+            Ice Cavern:         &vals_env_id_level_ice_cavern           23
+            Icy Flight:         &vals_env_id_level_icy_flight           55
+            Jacques:            &vals_env_id_level_jacques              54
+            Lofty Castle:       &vals_env_id_level_lofty_castle         52
+            Magic Crafters:     &vals_env_id_hub_magic_crafters         30
+            Metalhead:          &vals_env_id_level_metalhead            44
+            Misty Bog:          &vals_env_id_level_misty_bog            42
+            Night Flight:       &vals_env_id_level_night_flight         25
+            Peace Keepers:      &vals_env_id_hub_peace_keepers          20
+            Stone Hill:         &vals_env_id_level_stone_hill           11
+            Sunny Flight:       &vals_env_id_level_sunny_flight         15
+            Terrace Village:    &vals_env_id_level_terrace_village      41
+            Toasty:             &vals_env_id_level_toasty               14
+            Town Square:        &vals_env_id_level_town_square          13
+            Tree Tops:          &vals_env_id_level_tree_tops            43
+            Twilight Harbor:    &vals_env_id_level_twilight_harbor      62
+            Wild Flight:        &vals_env_id_level_wild_flight          45
+            Wizard Peak:        &vals_env_id_level_wizard_peak          33
 
-    # the address the gamestate is stored in
-    # 1 byte, int
-    - &addr_gamestate     0x757d8
-
-    # environemnt id values, self-descriptive
-    - &vals_env_id_hub_artisans             10
-    - &vals_env_id_hub_beast_makers         40
-    - &vals_env_id_hub_dream_weavers        50
-    - &vals_env_id_hub_gnastys_world        60
-    - &vals_env_id_hub_magic_crafters       30
-    - &vals_env_id_hub_peace_keepers        20
-    - &vals_env_id_level_alpine_ridge       31
-    - &vals_env_id_level_blowhard           34
-    - &vals_env_id_level_cliff_town         22
-    - &vals_env_id_level_crystal_flight     35
-    - &vals_env_id_level_dark_hollow        12
-    - &vals_env_id_level_dark_passage       51
-    - &vals_env_id_level_doctor_shemp       24
-    - &vals_env_id_level_dry_canyon         21
-    - &vals_env_id_level_gnasty_gnorc       63
-    - &vals_env_id_level_gnastys_loot       64
-    - &vals_env_id_level_gnorc_cove         61
-    - &vals_env_id_level_haunted_towers     53
-    - &vals_env_id_level_high_caves         32
-    - &vals_env_id_level_ice_cavern         23
-    - &vals_env_id_level_icy_flight         55
-    - &vals_env_id_level_jacques            54
-    - &vals_env_id_level_lofty_castle       52
-    - &vals_env_id_level_metalhead          44
-    - &vals_env_id_level_misty_bog          42
-    - &vals_env_id_level_stone_hill         11
-    - &vals_env_id_level_sunny_flight       15
-    - &vals_env_id_level_terrace_village    41
-    - &vals_env_id_level_toasty             14
-    - &vals_env_id_level_town_square        13
-    - &vals_env_id_level_tree_tops          43
-    - &vals_env_id_level_twilight_harbor    62
-    - &vals_env_id_level_wild_flight        45
-    - &vals_env_id_level_wizard_peak        33
-
-    # gamestate values, self-descriptive
-    - &vals_gamestate_balloonist 0x0c
-    - &vals_gamestate_credits 0x0f
-    - &vals_gamestate_cutscene 0x0e
-    - &vals_gamestate_death 0x04
-    - &vals_gamestate_dragon_cutscene 0x08
-    - &vals_gamestate_exiting_level 0x0a
-    - &vals_gamestate_fairy_textbox 0x0b
-    - &vals_gamestate_flight_menu 0x07
-    - &vals_gamestate_fly_in 0x09
-    - &vals_gamestate_game_over 0x05
-    - &vals_gamestate_gameplay 0x00
-    - &vals_gamestate_inventory 0x03
-    - &vals_gamestate_loading 0x01
-    - &vals_gamestate_paused 0x02
-    - &vals_gamestate_title_screen 0x0d
+    # the current gamestate
+    gamestate:
+        address:
+            io: read
+            data:
+                address: &addr_gamestate 0x757d8
+                length: 1
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        values:
+            ballonist:          &vals_gamestate_balloonist          0x0c
+            credits:            &vals_gamestate_credits             0x0f
+            cutscene:           &vals_gamestate_cutscene            0x0e
+            death:              &vals_gamestate_death               0x04
+            dragon cutscene:    &vals_gamestate_dragon_cutscene     0x08
+            exiting level:      &vals_gamestate_exiting_level       0x0a
+            fairy textbox:      &vals_gamestate_fairy_textbox       0x0b
+            flight menu:        &vals_gamestate_flight_menu         0x07
+            fly in:             &vals_gamestate_fly_in              0x09
+            game over:          &vals_gamestate_game_over           0x05
+            gameplay:           &vals_gamestate_gameplay            0x00
+            inventory:          &vals_gamestate_inventory           0x03
+            loading:            &vals_gamestate_loading             0x01
+            paused:             &vals_gamestate_paused              0x02
+            title screen:       &vals_gamestate_title_screen        0x0d
 
 world:
     items:
@@ -1578,7 +1594,7 @@ hubs:
                 statue_head_checks: []
             -
                 name: Night Flight
-                id: 25
+                id: *vals_env_id_level_night_flight
                 vortex_moby_address: -1
                 text_offset:
                     io: write

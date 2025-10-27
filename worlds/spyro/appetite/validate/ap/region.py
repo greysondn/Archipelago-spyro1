@@ -38,6 +38,7 @@ class ConnectionGuards(BaseModel):
 class Connection(BaseModel):
     # source is always "this"
     dst:str
+    shuffle:bool
     guard:ConnectionGuards
     group:ConnectionGroups
     

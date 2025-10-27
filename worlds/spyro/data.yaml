@@ -730,17 +730,9 @@ hubs:
                                 type: always
                         guard:
                             type: always
-                connections:
-                    -
-                        destination:
-                        shuffle:
-                            enabled: false
-                        forwards:
-                            guard:
-                                type: null
-                        backwards:
-                            guard:
-                                type: null
+                guard:
+                    type: always
+                connections: []
         levels:
             -
                 name: Stone Hill

@@ -657,8 +657,15 @@ hubs:
                         value: *vals_gamestate_loading
         total_gems: 100
         gem_counter:
-            address: 0x77420
-            length: 2
+            io: read
+            data: 
+                address: 0x77420
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
         regions:
             -
                 name: Artisans Start
@@ -759,8 +766,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 200
                 gem_counter:
-                    address: 0x77424
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77424
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 regions:
                     -
                         name: Stone Hill Start
@@ -864,8 +878,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 100
                 gem_counter:
-                    address: 0x77428
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77428
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 regions:
                     -
                         name: Dark Hollow Start
@@ -945,8 +966,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 200
                 gem_counter:
-                    address: 0x7742c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7742c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 regions:
                     -
                         name: Town Square Start
@@ -1050,8 +1078,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 100
                 gem_counter:
-                    address: 0x77430
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77430
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Nevin
@@ -1098,8 +1133,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
-                    address: 0x77434
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77434
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:
@@ -1182,8 +1224,15 @@ hubs:
                         value: *vals_gamestate_loading
         total_gems: 200
         gem_counter:
-            address: 0x77438
-            length: 2
+            io: read
+            data: 
+                address: 0x77438
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
         dragons:
             -
                 name: Titan
@@ -1238,8 +1287,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x7743c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7743c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Conan
@@ -1301,8 +1357,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x77440
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77440
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Halvor
@@ -1360,8 +1423,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x77444
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77444
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Ulric
@@ -1423,8 +1493,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
-                    address: 0x77448
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77448
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Trondo
@@ -1471,8 +1548,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
-                    address: 0x7744c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7744c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:
@@ -1553,8 +1637,15 @@ hubs:
                         value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
-            address: 0x77450
-            length: 2
+            io: read
+            data: 
+                address: 0x77450
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
         dragons:
             -
                 name: Cosmos
@@ -1613,8 +1704,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77454
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77454
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Zane
@@ -1676,8 +1774,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77458
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77458
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Cyrus
@@ -1739,8 +1844,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x7745c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7745c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Jarvis
@@ -1802,8 +1914,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x77460
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77460
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Altair
@@ -1850,8 +1969,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
-                    address: 0x77464
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77464
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:
@@ -1932,8 +2058,15 @@ hubs:
                         value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
-            address: 0x77468
-            length: 2
+            io: read
+            data: 
+                address: 0x77468
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
         dragons:
             -
                 name: Bruno
@@ -1980,8 +2113,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x7746c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7746c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Claude
@@ -2031,8 +2171,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77470
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77470
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Rosco
@@ -2090,8 +2237,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77474
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77474
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Lyle
@@ -2145,8 +2299,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77478
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77478
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Sadiki
@@ -2193,8 +2354,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
-                    address: 0x7747c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7747c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:
@@ -2275,8 +2443,15 @@ hubs:
                         value: *vals_gamestate_loading
         total_gems: 300
         gem_counter:
-            address: 0x77480
-            length: 2
+            io: read
+            data: 
+                address: 0x77480
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
         dragons:
             -
                 name: Mazi
@@ -2327,8 +2502,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77484
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77484
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Kasiya
@@ -2390,8 +2572,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x77488
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77488
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Mudada
@@ -2445,8 +2634,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x7748c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7748c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Kosoko
@@ -2500,8 +2696,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x77490
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77490
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Unika
@@ -2552,8 +2755,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 300
                 gem_counter:
-                    address: 0x77494
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x77494
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:
@@ -2634,8 +2844,15 @@ hubs:
                         value: *vals_gamestate_loading
         total_gems: 200
         gem_counter:
-            address: 0x77498
-            length: 2
+            io: read
+            data: 
+                address: 0x77498
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
         dragons:
             -
                 name: Delbin/Magnus
@@ -2678,8 +2895,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x7749c
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x7749c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Lateef
@@ -2729,8 +2953,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 400
                 gem_counter:
-                    address: 0x774a0
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x774a0
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons:
                     -
                         name: Cosmos
@@ -2780,8 +3011,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 500
                 gem_counter:
-                    address: 0x774a4
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x774a4
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:
@@ -2824,8 +3062,15 @@ hubs:
                                 value: *vals_gamestate_loading
                 total_gems: 2000
                 gem_counter:
-                    address: 0x774a8
-                    length: 2
+                    io: read
+                    data: 
+                        address: 0x774a8
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
                 dragons: []
                 eggs: []
                 portal:

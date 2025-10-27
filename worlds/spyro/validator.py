@@ -270,10 +270,15 @@ def validate(data):
             
             print("View attempt (may be blank or incomplete)")
             self.printed_try_get("Hub Name", ["hubs"], ["name"])
+            
+            # directly on the hub
             self.printed_try_get("Region Name", ["hubs", "regions"], ["name"])
             self.printed_try_get("Location Name", ["hubs", "regions", "locations"], ["name"])
             
-        
+            # in a level
+            self.printed_try_get("Level Name", ["hubs", "levels"], ["name"])
+            self.printed_try_get("Region Name", ["hubs", "levels", "regions"], ["name"])
+            self.printed_try_get("Location Name", ["hubs", "levels", "regions", "locations"], ["name"])
     errs:List[_Err] = []
     
     try:

@@ -1093,9 +1093,12 @@ hubs:
                                     data:
                                         address: 0x77969
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x10
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Thor
                                 groups:
@@ -1105,9 +1108,12 @@ hubs:
                                     data:
                                         address: 0x77974
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x20
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Alvar
                                 groups:
@@ -1117,9 +1123,12 @@ hubs:
                                     data:
                                         address: 0x7796e
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x02
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Devlin
                                 groups:
@@ -1129,9 +1138,12 @@ hubs:
                                     data:
                                         address: 0x77969
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x20
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
                             -
                                 name: Egg 1 (Upper Area)
                                 groups:
@@ -1141,9 +1153,15 @@ hubs:
                                     data:
                                         address: 0x77973
                                         type: flag
+                                        domain: MainRAM
                                         value: 0x01
                                     guard:
                                         type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:

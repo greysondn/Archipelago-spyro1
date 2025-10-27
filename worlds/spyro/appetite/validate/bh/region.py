@@ -30,7 +30,7 @@ from appetite.validate.ap.region import Location as ApLocation
 from appetite.validate.bh.data import Data
 
 class Location(ApLocation):
-    bizhawk:Sequence[Data]
+    bizhawk:Data
 
 class Region(ApRegion):
     locations:Sequence[Location]

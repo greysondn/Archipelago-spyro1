@@ -675,15 +675,14 @@ hubs:
                         groups:
                             - Dragons
                         bizhawk:
-                            -
-                                io: read
-                                data:
-                                    address: 0x77913
-                                    type: flag
-                                    domain: MainRAM
-                                    value: 0x01
-                                guard:
-                                    type: always
+                            io: read
+                            data:
+                                address: 0x77913
+                                type: flag
+                                domain: MainRAM
+                                value: 0x01
+                            guard:
+                                type: always
                         guard:
                             type: always
                     -
@@ -695,6 +694,7 @@ hubs:
                             data:
                                 address: 0x77913
                                 type: flag
+                                domain: MainRAM
                                 value: 0x08
                             guard:
                                 type: always
@@ -709,6 +709,7 @@ hubs:
                             data:
                                 address: 0x77919
                                 type: flag
+                                domain: MainRAM
                                 value: 0x80
                             guard:
                                 type: always
@@ -723,6 +724,7 @@ hubs:
                             data:
                                 address: 0x77913
                                 type: flag
+                                domain: MainRAM
                                 value: 0x20
                             guard:
                                 type: always

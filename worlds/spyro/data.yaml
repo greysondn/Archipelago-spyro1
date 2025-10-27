@@ -928,7 +928,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Dark Hollow
@@ -1024,7 +1024,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Town Square
@@ -1144,7 +1144,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Toasty
@@ -1206,8 +1206,8 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
-                    - 
+                groups:
+                    - Boss Levels
                 statue_head_checks: []
             -
                 name: Sunny Flight
@@ -1265,7 +1265,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Flight Levels
                 statue_head_checks: []
         statue_head_checks:
@@ -1465,7 +1465,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Cliff Town
@@ -1539,7 +1539,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Ice Cavern
@@ -1617,7 +1617,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Doctor Shemp
@@ -1679,7 +1679,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Boss Levels
                 statue_head_checks: []
             -
@@ -1738,7 +1738,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
@@ -1922,7 +1922,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: High Caves
@@ -2000,7 +2000,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Wizard Peak
@@ -2078,7 +2078,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Blowhard
@@ -2140,7 +2140,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Boss Levels
                 statue_head_checks: []
             -
@@ -2199,7 +2199,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
@@ -2359,7 +2359,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Misty Bog
@@ -2433,7 +2433,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Tree Tops
@@ -2503,7 +2503,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Metalhead
@@ -2565,7 +2565,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Boss Levels
                 statue_head_checks: []
             -
@@ -2624,7 +2624,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
@@ -2800,7 +2800,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Lofty Castle
@@ -2870,7 +2870,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Haunted Towers
@@ -2940,7 +2940,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Jacques
@@ -3006,7 +3006,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Boss Levels
                 statue_head_checks: []
             -
@@ -3065,7 +3065,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Flight Levels
                 statue_head_checks: []
         statue_head_checks: []
@@ -3221,7 +3221,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Twilight Harbor
@@ -3287,7 +3287,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
             -
                 name: Gnasty Gnorc
@@ -3345,7 +3345,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups:
+                groups:
                     - Boss Levels
                 statue_head_checks: []
             -
@@ -3404,7 +3404,7 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                ap_groups: []
+                groups: []
                 statue_head_checks: []
         statue_head_checks:
             -

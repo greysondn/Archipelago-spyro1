@@ -1217,12 +1217,28 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Nevin
-                        address: 0x7798b
-                        value: 0x01
-                eggs: []
+                        name: Toasty Start
+                        locations:
+                            -
+                                name: Nevin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x7798b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:

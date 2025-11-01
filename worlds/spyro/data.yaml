@@ -1295,8 +1295,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Sunny Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -1411,24 +1416,73 @@ hubs:
                 value: 0
             guard:
                 type: always
-        dragons:
+        regions:
             -
-                name: Titan
-                address: 0x779cf
-                value: 0x02
-            -
-                name: Magnus
-                address: 0x779cf
-                value: 0x20
-            -
-                name: Gunnar
-                address: 0x779cf
-                value: 0x08
-        eggs:
-            -
-                name: Egg 1 (Pool)
-                address: 0x779cd
-                value: 0x10
+                name: Peace Keepers Start
+                locations:
+                    -
+                        name: Titan
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x779cf
+                                type: flag
+                                domain: MainRAM
+                                value: 0x02
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Magnus
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x779cf
+                                type: flag
+                                domain: MainRAM
+                                value: 0x20
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Gunnar
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x779cf
+                                type: flag
+                                domain: MainRAM
+                                value: 0x08
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Egg 1 (Pool)
+                        groups:
+                            - Eggs
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x779cd
+                                type: flag
+                                domain: MainRAM
+                                value: 0x10
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
         levels:
             -
                 name: Dry Canyon
@@ -1474,28 +1528,88 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Conan
-                        address: 0x779fc
-                        value: 0x20
-                    -
-                        name: Boris
-                        address: 0x779f2
-                        value: 0x01
-                    -
-                        name: Maximos
-                        address: 0x779f2
-                        value: 0x20
-                    -
-                        name: Ivor
-                        address: 0x779f2
-                        value: 0x04
-                eggs:
-                    -
-                        name: Egg 1 (Starting Area)
-                        address: 0x779f2
-                        value: 0x80
+                        name: Dry Canyon Start
+                        locations:
+                            -
+                                name: Conan
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x779fc
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Boris
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Maximos
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ivor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 1 (Starting Area)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -1551,24 +1665,73 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Halvor
-                        address: 0x77a1b
-                        value: 0x80
-                    -
-                        name: Enzo
-                        address: 0x77a0f
-                        value: 0x08
-                    -
-                        name: Marco
-                        address: 0x77a0f
-                        value: 0x02
-                eggs:
-                    -
-                        name: Egg 1 (Square Building Past Bridge)
-                        address: 0x77a1a
-                        value: 0x04
+                        name: Cliff Town Start
+                        locations:
+                            -
+                                name: Halvor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a1b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Enzo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a0f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Marco
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a0f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 1 (Square Building Past Bridge)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a1a
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -1624,28 +1787,88 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Ulric
-                        address: 0x77a37
-                        value: 0x08
-                    -
-                        name: Todor
-                        address: 0x77a41
-                        value: 0x04
-                    -
-                        name: Andor
-                        address: 0x77a2b
-                        value: 0x40
-                    -
-                        name: Asher
-                        address: 0x77a42
-                        value: 0x08
-                    -
-                        name: Ragnar
-                        address: 0x77a30
-                        value: 0x40
-                eggs: []
+                        name: Ice Cavern Start
+                        locations:
+                            -
+                                name: Ulric
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a37
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Todor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a41
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Andor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a2b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Asher
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a42
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ragnar
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a30
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -1701,12 +1924,28 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Trondo
-                        address: 0x77a50
-                        value: 0x08
-                eggs: []
+                        name: Doctor Shemp Start
+                        locations:
+                            -
+                                name: Trondo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77a50
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -1763,8 +2002,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Night Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -1859,28 +2103,88 @@ hubs:
                 value: 0
             guard:
                 type: always
-        dragons:
+        regions:
             -
-                name: Cosmos
-                address: 0x77a88
-                value: 0x40
-            -
-                name: Zantor
-                address: 0x77a8a
-                value: 0x40
-            -
-                name: Boldar
-                address: 0x77a8b
-                value: 0x01
-        eggs:
-            -
-                name: Egg 1 (Entry)
-                address: 0x77a88
-                value: 0x01
-            -
-                name: Egg 2 (Courtyard)
-                address: 0x77a89
-                value: 0x40
+                name: Magic Crafters Start
+                locations:
+                    -
+                        name: Cosmos
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77a88
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Zantor
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77a8a
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Boldar
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77a8b
+                                type: flag
+                                domain: MainRAM
+                                value: 0x01
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Egg 1 (Entry)
+                        groups:
+                            - Eggs
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77a88
+                                type: flag
+                                domain: MainRAM
+                                value: 0x01
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Egg 2 (Courtyard)
+                        groups:
+                            - Eggs
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77a89
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
         levels:
             -
                 name: Alpine Ridge
@@ -1926,28 +2230,88 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Zane
-                        address: 0x77aa9
-                        value: 0x02
-                    -
-                        name: Eldrid
-                        address: 0x77aaa
-                        value: 0x20
-                    -
-                        name: Zander
-                        address: 0x77abd
-                        value: 0x10
-                    -
-                        name: Kelvin
-                        address: 0x77aac
-                        value: 0x01
-                eggs:
-                    -
-                        name: Egg 1 (Distant Cave)
-                        address: 0x77aad
-                        value: 0x08
+                        name: Alpine Ridge Start
+                        locations:
+                            -
+                                name: Zane
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aa9
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Eldrid
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aaa
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Zander
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77abd
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Kelvin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aac
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 1 (Distant Cave)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aad
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2003,28 +2367,88 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Cyrus
-                        address: 0x77acf
-                        value: 0x08
-                    -
-                        name: Cedric
-                        address: 0x77ad9
-                        value: 0x80
-                    -
-                        name: Ajax
-                        address: 0x77ad1
-                        value: 0x04
-                eggs:
-                    -
-                        name: Egg 1 (Distant Pool)
-                        address: 0x77ad8
-                        value: 0x40
-                    -
-                        name: Egg 2 (Cave)
-                        address: 0x77aca
-                        value: 0x02
+                        name: High Caves Start
+                        locations:
+                            -
+                                name: Cyrus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77acf
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Cedric
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77ad9
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ajax
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77ad1
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 1 (Distant Pool)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77ad8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 2 (Cave)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aca
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2080,28 +2504,88 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Jarvis
-                        address: 0x77aef
-                        value: 0x80
-                    -
-                        name: Hexus
-                        address: 0x77aef
-                        value: 0x40
-                    -
-                        name: Lucas
-                        address: 0x77ae8
-                        value: 0x01
-                eggs:
-                    -
-                        name: Egg 1 (Quad-wizard Ramp)
-                        address: 0x77af9
-                        value: 0x08
-                    -
-                        name: Egg 2 (End Area Pool)
-                        address: 0x77aeb
-                        value: 0x04
+                        name: Wizard Peak Start
+                        locations:
+                            -
+                                name: Jarvis
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aef
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Hexus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aef
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Lucas
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77ae8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 1 (Quad Wizard Ramp)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77af9
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Egg 2 (End Area Pool)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77aeb
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2157,12 +2641,28 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Altair
-                        address: 0x77b0b
-                        value: 0x04
-                eggs: []
+                        name: Blowhard Start
+                        locations:
+                            -
+                                name: Altair
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b0b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2219,8 +2719,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Crystal Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2248,8 +2753,8 @@ hubs:
                     value: 
                         - 0x01
                 guard:
-                type: and
-                next:
+                    type: and
+                    next:
                     -
                         address: *addr_gamestate
                         length: 1
@@ -2315,16 +2820,43 @@ hubs:
                 value: 0
             guard:
                 type: always
-        dragons:
+        regions:
             -
-                name: Bruno
-                address: 0x77b48
-                value: 0x40
-            -
-                name: Cleetus
-                address: 0x77b49
-                value: 0x20
-        eggs: []
+                name: Beast Makers Start
+                locations:
+                    -
+                        name: Bruno
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77b48
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Cleetus
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: read
+                            data:
+                                address: 0x77b49
+                                type: flag
+                                domain: MainRAM
+                                value: 0x20
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
         levels:
             -
                 name: Terrace Village
@@ -2370,16 +2902,43 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Claude
-                        address: 0x77b6d
-                        value: 0x20
-                    -
-                        name: Cyprin
-                        address: 0x77b6d
-                        value: 0x80
-                eggs: []
+                        name: Terrace Village Start
+                        locations:
+                            -
+                                name: Claude
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b6d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Cyprin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b6d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2435,24 +2994,73 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Rosco
-                        address: 0x77b93
-                        value: 0x04
-                    -
-                        name: Damon
-                        address: 0x77b93
-                        value: 0x10
-                    -
-                        name: Zeke
-                        address: 0x77b97
-                        value: 0x08
-                    -
-                        name: Bubba
-                        address: 0x77b93
-                        value: 0x40
-                eggs: []
+                        name: Misty Bog Start
+                        locations:
+                            -
+                                name: Rosco
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b93
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Damon
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b93
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Zeke
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b97
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Bubba
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77b93
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2508,20 +3116,59 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Lyle
-                        address: 0x77bb6
-                        value: 0x80
-                    -
-                        name: Jed
-                        address: 0x77bb7
-                        value: 0x02
-                    -
-                        name: Isaak
-                        address: 0x77bb6
-                        value: 0x20
-                eggs: []
+                        name: Tree Tops Start
+                        locations:
+                            -
+                                name: Lyle
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77bb6
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Jed
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77bb7
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Isaak
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77bb6
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2577,12 +3224,28 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Sadiki
-                        address: 0x77bcc
-                        value: 0x08
-                eggs: []
+                        name: Metalhead Start
+                        locations:
+                            -
+                                name: Sadiki
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77bcc
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2639,8 +3302,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Wild Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2735,20 +3403,58 @@ hubs:
                 value: 0
             guard:
                 type: always
-        dragons:
+        regions:
             -
-                name: Mazi
-                address: 0x77c08
-                value: 0x80
-            -
-                name: Lateef
-                address: 0x77c19
-                value: 0x02
-            -
-                name: Zikomo
-                address: 0x77c08
-                value: 0x20
-        eggs: []
+                name: Dream Weavers Start
+                locations:
+                -
+                                name: Mazi
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c08
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                -
+                                name: Lateef
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c19
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                -
+                                name: Zikomo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c08
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                guard:
+                    type: always
+                connections: []
         levels:
             -
                 name: Dark Passage
@@ -2794,28 +3500,88 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Kasiya
-                        address: 0x77c28
-                        value: 0x04
-                    -
-                        name: Azizi
-                        address: 0x77c28
-                        value: 0x20
-                    -
-                        name: Bakari
-                        address: 0x77c28
-                        value: 0x40
-                    -
-                        name: Apara
-                        address: 0x77c30
-                        value: 0x20
-                    -
-                        name: Obasi
-                        address: 0x77c36
-                        value: 0x01
-                eggs: []
+                        name: Dark Passage Start
+                        locations:
+                            -
+                                name: Kasiya
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c28
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Azizi
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c28
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Bakari
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c28
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Apara
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c30
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Obasi
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c36
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2871,20 +3637,58 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Mudada
-                        address: 0x77c4f
-                        value: 0x01
-                    -
-                        name: Baruti
-                        address: 0x77c49
-                        value: 0x04
-                    -
-                        name: Useni
-                        address: 0x77c49
-                        value: 0x01
-                eggs: []
+                        name: Lofty Castle Start
+                        locations:
+                            -
+                                name: Mudada
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c4f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Baruti
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c49
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Useni
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c49
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -2940,20 +3744,58 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Kosoko
-                        address: 0x77c6f
-                        value: 0x20
-                    -
-                        name: Lutalo
-                        address: 0x77c70
-                        value: 0x02
-                    -
-                        name: Copano
-                        address: 0x77c6f
-                        value: 0x80
-                eggs: []
+                        name: Haunted Towers Start
+                        locations:
+                            -
+                                name: Kosoko
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c6f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Lutalo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c70
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Copano
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c6f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -3009,16 +3851,43 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Unika
-                        address: 0x77c8b
-                        value: 0x80
-                    -
-                        name: Revilo
-                        address: 0x77c8d
-                        value: 0x80
-                eggs: []
+                        name: Jacques Start
+                        locations:
+                            -
+                                name: Unika
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c8b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Revilo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77c8d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -3075,8 +3944,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Icy Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -3171,12 +4045,28 @@ hubs:
                 value: 0
             guard:
                 type: always
-        dragons:
+        regions:
             -
-                name: Delbin/Magnus
-                address: 0x77cc8
-                value: 0x01
-        eggs: []
+                name: Gnasty's World Start
+                locations:
+                    -
+                                name: Delbin/Magnus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77cc8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                guard:
+                    type: always
+                connections: []
         levels:
             -
                 name: Gnorc Cove
@@ -3222,16 +4112,43 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Lateef
-                        address: 0x77cf0
-                        value: 0x20
-                    -
-                        name: Tomas
-                        address: 0x77ce8
-                        value: 0x40
-                eggs: []
+                        name: Gnorc Cove Start
+                        locations:
+                            -
+                                name: Lateef
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77cf0
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Tomas
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77ce8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -3287,16 +4204,43 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons:
+                regions:
                     -
-                        name: Cosmos
-                        address: 0x77d09
-                        value: 0x04
-                    -
-                        name: Cleetus
-                        address: 0x77d16
-                        value: 0x10
-                eggs: []
+                        name: Twilight Harbor Start
+                        locations:
+                            -
+                                name: Cosmos
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77d09
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Cleetus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: read
+                                    data:
+                                        address: 0x77d16
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -3352,8 +4296,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Gnasty Gnorc Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:
@@ -3410,8 +4359,13 @@ hubs:
                         value: 0
                     guard:
                         type: always
-                dragons: []
-                eggs: []
+                regions:
+                    -
+                        name: Gnasty's Loot Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
                 portal:
                     io: write
                     data:

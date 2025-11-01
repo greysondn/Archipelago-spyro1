@@ -729,11 +729,11 @@ hubs:
                 name: Artisans Start
                 locations:
                     -
-                        name: Nestor
+                        name: Artisans - Nestor
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77913
                                 type: flag
@@ -744,11 +744,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Argus
+                        name: Artisans - Argus
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77913
                                 type: flag
@@ -759,11 +759,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Delbin
+                        name: Artisans - Delbin
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77919
                                 type: flag
@@ -774,11 +774,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Tomas
+                        name: Artisans - Tomas
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77913
                                 type: flag
@@ -841,11 +841,11 @@ hubs:
                         name: Stone Hill Start
                         locations:
                             -
-                                name: Lindar
+                                name: Stone Hill - Lindar
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77932
                                         type: flag
@@ -856,11 +856,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Gavin
+                                name: Stone Hill - Gavin
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x7793d
                                         type: flag
@@ -871,11 +871,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Astor
+                                name: Stone Hill - Astor
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x7793a
                                         type: flag
@@ -886,11 +886,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Gildas
+                                name: Stone Hill - Gildas
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77939
                                         type: flag
@@ -901,11 +901,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Upper Area)
+                                name: Stone Hill - Egg 1 (Upper Area)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x7793c
                                         type: flag
@@ -978,11 +978,11 @@ hubs:
                         name: Dark Hollow Start
                         locations:
                             -
-                                name: Alban
+                                name: Dark Hollow - Alban
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77950
                                         type: flag
@@ -993,11 +993,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Oswin
+                                name: Dark Hollow - Oswin
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77953
                                         type: flag
@@ -1008,11 +1008,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Darius
+                                name: Dark Hollow - Darius
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77955
                                         type: flag
@@ -1085,11 +1085,11 @@ hubs:
                         name: Town Square Start
                         locations:
                             -
-                                name: Nils
+                                name: Town Square - Nils
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77969
                                         type: flag
@@ -1100,11 +1100,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Thor
+                                name: Town Square - Thor
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77974
                                         type: flag
@@ -1115,11 +1115,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Alvar
+                                name: Town Square - Alvar
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x7796e
                                         type: flag
@@ -1130,11 +1130,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Devlin
+                                name: Town Square - Devlin
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77969
                                         type: flag
@@ -1145,11 +1145,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Upper Area)
+                                name: Town Square - Egg 1 (Upper Area)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77973
                                         type: flag
@@ -1222,11 +1222,11 @@ hubs:
                         name: Toasty Start
                         locations:
                             -
-                                name: Nevin
+                                name: Toasty - Nevin
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x7798b
                                         type: flag
@@ -1421,11 +1421,11 @@ hubs:
                 name: Peace Keepers Start
                 locations:
                     -
-                        name: Titan
+                        name: Peace Keepers - Titan
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x779cf
                                 type: flag
@@ -1436,11 +1436,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Magnus
+                        name: Peace Keepers - Magnus
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x779cf
                                 type: flag
@@ -1451,11 +1451,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Gunnar
+                        name: Peace Keepers - Gunnar
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x779cf
                                 type: flag
@@ -1466,11 +1466,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Egg 1 (Pool)
+                        name: Peace Keepers - Egg 1 (Pool)
                         groups:
                             - Eggs
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x779cd
                                 type: flag
@@ -1533,11 +1533,11 @@ hubs:
                         name: Dry Canyon Start
                         locations:
                             -
-                                name: Conan
+                                name: Dry Canyon - Conan
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x779fc
                                         type: flag
@@ -1548,11 +1548,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Boris
+                                name: Dry Canyon - Boris
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x779f2
                                         type: flag
@@ -1563,11 +1563,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Maximos
+                                name: Dry Canyon - Maximos
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x779f2
                                         type: flag
@@ -1578,11 +1578,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Ivor
+                                name: Dry Canyon - Ivor
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x779f2
                                         type: flag
@@ -1593,11 +1593,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Starting Area)
+                                name: Dry Canyon - Egg 1 (Starting Area)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x779f2
                                         type: flag
@@ -1670,11 +1670,11 @@ hubs:
                         name: Cliff Town Start
                         locations:
                             -
-                                name: Halvor
+                                name: Cliff Town - Halvor
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a1b
                                         type: flag
@@ -1685,11 +1685,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Enzo
+                                name: Cliff Town - Enzo
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a0f
                                         type: flag
@@ -1700,11 +1700,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Marco
+                                name: Cliff Town - Marco
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a0f
                                         type: flag
@@ -1715,11 +1715,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Square Building Past Bridge)
+                                name: Cliff Town - Egg 1 (Square Building Past Bridge)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a1a
                                         type: flag
@@ -1792,11 +1792,11 @@ hubs:
                         name: Ice Cavern Start
                         locations:
                             -
-                                name: Ulric
+                                name: Ice Cavern - Ulric
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a37
                                         type: flag
@@ -1807,11 +1807,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Todor
+                                name: Ice Cavern - Todor
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a41
                                         type: flag
@@ -1822,11 +1822,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Andor
+                                name: Ice Cavern - Andor
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a2b
                                         type: flag
@@ -1837,11 +1837,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Asher
+                                name: Ice Cavern - Asher
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a42
                                         type: flag
@@ -1852,11 +1852,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Ragnar
+                                name: Ice Cavern - Ragnar
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a30
                                         type: flag
@@ -1929,11 +1929,11 @@ hubs:
                         name: Doctor Shemp Start
                         locations:
                             -
-                                name: Trondo
+                                name: Doctor Shemp - Trondo
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77a50
                                         type: flag
@@ -2108,11 +2108,11 @@ hubs:
                 name: Magic Crafters Start
                 locations:
                     -
-                        name: Cosmos
+                        name: Magic Crafters - Cosmos
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77a88
                                 type: flag
@@ -2123,11 +2123,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Zantor
+                        name: Magic Crafters - Zantor
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77a8a
                                 type: flag
@@ -2138,11 +2138,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Boldar
+                        name: Magic Crafters - Boldar
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77a8b
                                 type: flag
@@ -2153,11 +2153,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Egg 1 (Entry)
+                        name: Magic Crafters - Egg 1 (Entry)
                         groups:
                             - Eggs
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77a88
                                 type: flag
@@ -2168,11 +2168,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Egg 2 (Courtyard)
+                        name: Magic Crafters - Egg 2 (Courtyard)
                         groups:
                             - Eggs
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77a89
                                 type: flag
@@ -2235,11 +2235,11 @@ hubs:
                         name: Alpine Ridge Start
                         locations:
                             -
-                                name: Zane
+                                name: Alpine Ridge - Zane
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aa9
                                         type: flag
@@ -2250,11 +2250,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Eldrid
+                                name: Alpine Ridge - Eldrid
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aaa
                                         type: flag
@@ -2265,11 +2265,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Zander
+                                name: Alpine Ridge - Zander
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77abd
                                         type: flag
@@ -2280,11 +2280,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Kelvin
+                                name: Alpine Ridge - Kelvin
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aac
                                         type: flag
@@ -2295,11 +2295,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Distant Cave)
+                                name: Alpine Ridge - Egg 1 (Distant Cave)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aad
                                         type: flag
@@ -2372,11 +2372,11 @@ hubs:
                         name: High Caves Start
                         locations:
                             -
-                                name: Cyrus
+                                name: High Caves - Cyrus
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77acf
                                         type: flag
@@ -2387,11 +2387,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Cedric
+                                name: High Caves - Cedric
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77ad9
                                         type: flag
@@ -2402,11 +2402,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Ajax
+                                name: High Caves - Ajax
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77ad1
                                         type: flag
@@ -2417,11 +2417,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Distant Pool)
+                                name: High Caves - Egg 1 (Distant Pool)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77ad8
                                         type: flag
@@ -2432,11 +2432,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 2 (Cave)
+                                name: High Caves - Egg 2 (Cave)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aca
                                         type: flag
@@ -2509,11 +2509,11 @@ hubs:
                         name: Wizard Peak Start
                         locations:
                             -
-                                name: Jarvis
+                                name: Wizard Peak - Jarvis
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aef
                                         type: flag
@@ -2524,11 +2524,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Hexus
+                                name: Wizard Peak - Hexus
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aef
                                         type: flag
@@ -2539,11 +2539,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Lucas
+                                name: Wizard Peak - Lucas
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77ae8
                                         type: flag
@@ -2554,11 +2554,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 1 (Quad Wizard Ramp)
+                                name: Wizard Peak - Egg 1 (Quad Wizard Ramp)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77af9
                                         type: flag
@@ -2569,11 +2569,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Egg 2 (End Area Pool)
+                                name: Wizard Peak - Egg 2 (End Area Pool)
                                 groups:
                                     - Eggs
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77aeb
                                         type: flag
@@ -2646,11 +2646,11 @@ hubs:
                         name: Blowhard Start
                         locations:
                             -
-                                name: Altair
+                                name: Blowhard - Altair
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b0b
                                         type: flag
@@ -2825,11 +2825,11 @@ hubs:
                 name: Beast Makers Start
                 locations:
                     -
-                        name: Bruno
+                        name: Beast Makers - Bruno
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77b48
                                 type: flag
@@ -2840,11 +2840,11 @@ hubs:
                         guard:
                             type: always
                     -
-                        name: Cleetus
+                        name: Beast Makers - Cleetus
                         groups:
                             - Dragons
                         bizhawk:
-                            io: read
+                            io: both
                             data:
                                 address: 0x77b49
                                 type: flag
@@ -2907,11 +2907,11 @@ hubs:
                         name: Terrace Village Start
                         locations:
                             -
-                                name: Claude
+                                name: Terrace Village - Claude
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b6d
                                         type: flag
@@ -2922,11 +2922,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Cyprin
+                                name: Terrace Village - Cyprin
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b6d
                                         type: flag
@@ -2999,11 +2999,11 @@ hubs:
                         name: Misty Bog Start
                         locations:
                             -
-                                name: Rosco
+                                name: Misty Bog - Rosco
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b93
                                         type: flag
@@ -3014,11 +3014,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Damon
+                                name: Misty Bog - Damon
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b93
                                         type: flag
@@ -3029,11 +3029,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Zeke
+                                name: Misty Bog - Zeke
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b97
                                         type: flag
@@ -3044,11 +3044,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Bubba
+                                name: Misty Bog - Bubba
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77b93
                                         type: flag
@@ -3121,11 +3121,11 @@ hubs:
                         name: Tree Tops Start
                         locations:
                             -
-                                name: Lyle
+                                name: Tree Tops - Lyle
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77bb6
                                         type: flag
@@ -3136,11 +3136,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Jed
+                                name: Tree Tops - Jed
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77bb7
                                         type: flag
@@ -3151,11 +3151,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Isaak
+                                name: Tree Tops - Isaak
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77bb6
                                         type: flag
@@ -3229,11 +3229,11 @@ hubs:
                         name: Metalhead Start
                         locations:
                             -
-                                name: Sadiki
+                                name: Metalhead - Sadiki
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77bcc
                                         type: flag
@@ -3408,11 +3408,11 @@ hubs:
                 name: Dream Weavers Start
                 locations:
                 -
-                                name: Mazi
+                                name: Dream Weavers - Mazi
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c08
                                         type: flag
@@ -3423,11 +3423,11 @@ hubs:
                                 guard:
                                     type: always
                 -
-                                name: Lateef
+                                name: Dream Weavers - Lateef
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c19
                                         type: flag
@@ -3438,11 +3438,11 @@ hubs:
                                 guard:
                                     type: always
                 -
-                                name: Zikomo
+                                name: Dream Weavers - Zikomo
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c08
                                         type: flag
@@ -3505,11 +3505,11 @@ hubs:
                         name: Dark Passage Start
                         locations:
                             -
-                                name: Kasiya
+                                name: Dark Passage - Kasiya
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c28
                                         type: flag
@@ -3520,11 +3520,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Azizi
+                                name: Dark Passage - Azizi
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c28
                                         type: flag
@@ -3535,11 +3535,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Bakari
+                                name: Dark Passage - Bakari
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c28
                                         type: flag
@@ -3550,11 +3550,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Apara
+                                name: Dark Passage - Apara
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c30
                                         type: flag
@@ -3565,11 +3565,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Obasi
+                                name: Dark Passage - Obasi
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c36
                                         type: flag
@@ -3642,11 +3642,11 @@ hubs:
                         name: Lofty Castle Start
                         locations:
                             -
-                                name: Mudada
+                                name: Lofty Castle - Mudada
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c4f
                                         type: flag
@@ -3657,11 +3657,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Baruti
+                                name: Lofty Castle - Baruti
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c49
                                         type: flag
@@ -3672,11 +3672,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Useni
+                                name: Lofty Castle - Useni
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c49
                                         type: flag
@@ -3749,11 +3749,11 @@ hubs:
                         name: Haunted Towers Start
                         locations:
                             -
-                                name: Kosoko
+                                name: Haunted Towers - Kosoko
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c6f
                                         type: flag
@@ -3764,11 +3764,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Lutalo
+                                name: Haunted Towers - Lutalo
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c70
                                         type: flag
@@ -3779,11 +3779,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Copano
+                                name: Haunted Towers - Copano
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c6f
                                         type: flag
@@ -3856,11 +3856,11 @@ hubs:
                         name: Jacques Start
                         locations:
                             -
-                                name: Unika
+                                name: Jacques - Unika
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c8b
                                         type: flag
@@ -3871,11 +3871,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Revilo
+                                name: Jacques - Revilo
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77c8d
                                         type: flag
@@ -4050,11 +4050,11 @@ hubs:
                 name: Gnasty's World Start
                 locations:
                     -
-                                name: Delbin/Magnus
+                                name: Gnasty's World - Delbin/Magnus
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77cc8
                                         type: flag
@@ -4117,11 +4117,11 @@ hubs:
                         name: Gnorc Cove Start
                         locations:
                             -
-                                name: Lateef
+                                name: Gnorc Cove - Lateef
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77cf0
                                         type: flag
@@ -4132,11 +4132,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Tomas
+                                name: Gnorc Cove - Tomas
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77ce8
                                         type: flag
@@ -4209,11 +4209,11 @@ hubs:
                         name: Twilight Harbor Start
                         locations:
                             -
-                                name: Cosmos
+                                name: Twilight Harbor - Cosmos
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77d09
                                         type: flag
@@ -4224,11 +4224,11 @@ hubs:
                                 guard:
                                     type: always
                             -
-                                name: Cleetus
+                                name: Twilight Harbor - Cleetus
                                 groups:
                                     - Dragons
                                 bizhawk:
-                                    io: read
+                                    io: both
                                     data:
                                         address: 0x77d16
                                         type: flag

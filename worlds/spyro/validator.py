@@ -100,105 +100,272 @@ class SpyroRoot(BaseModel):
     model_config = ConfigDict(
         extra = "forbid",
     )
-    
-def extra(data) -> bool:
-    ret = True
+
+def extra_error(txt:str):
+    print(f"\033[91mERROR\033[0m : {txt}\n")
+
+def extra_error_rule(rule:int, location:str, info:str):
+    extra_error(f"SPYRO R{rule:03d} VIOLATED AT: {location}\n{info}")
+
+def extra_warning(txt:str):
+    print(f"\033[93mWARNING\033[0m : {txt}\n")
+
+def extra_utility_unimplemented(utility:int):
+    extra_warning(f"SPYRO U{utility:03d} IS UNIMPLEMENTED")
+
+def extra_warning_unimplemented(rule:int):
+    extra_warning(f"SPYRO R{rule:03d} IS UNIMPLEMENTED")
+
+def extra(data) -> tuple[bool, int]:
+    ret_bool = True
+    ret_int  = 0
     
     # rule 1   - hubs and levels must have counique names
+    # 
+    # Reason:
+    # unknown. Presumably for confusion reasons?
     r1_set = set[str]()
     
     for hub in data["hubs"]:
         if hub["name"] in r1_set:
-            ret = False
-            print(f"R1 violated: {hub["name"]}")
+            ret_bool = False
+            ret_int = ret_int + 1
+            print(f"R01 violated: {hub["name"]}")
         r1_set.add(hub["name"])
         
         for level in hub["levels"]:
             if level["name"] in r1_set:
-                ret = False
-                print(f"R1 violated: {level["name"]}")
+                ret_bool = False
+                ret_int = ret_int + 1
+                print(f"R01 violated: {level["name"]}")
             r1_set.add(level["name"])
     
     # rule 2   - categories for items must all be legal
-    # ERPS THIS IS VALIDATED ALREADY
+    # 
+    # Reason:
+    # There are specific categories in archipelago.
+    # We should only use those categories.
+    # print("R02 - removed because pydantic handles it")
     
     # rule 3   - entrance_rando - mappings must show up in groups in correct groups
+    #
+    # Reason:
+    # Entrance rando is a pain. Mapping things correctly from the getgo assures
+    # us that we've not gone off the rails. Entrances are entrances; exits are
+    # exits.
     r3_entrances = data["world"]["entrance_rando"]["groups"]["entrances"]
     r3_exits     = data["world"]["entrance_rando"]["groups"]["exits"]
 
     for preset in data["world"]["entrance_rando"]["presets"]:
         for mapping in preset["mappings"]:
             if mapping["entrance"] not in r3_entrances:
-                ret = False
-                print(f"R3 violated: {mapping["entrance"]}")
+                ret_bool = False
+                ret_int = ret_int + 1
+                extra_error_rule(3, mapping["entrance"], "mappings must show up in correct groups")
             for exit in mapping["exits"]:
                 if exit not in r3_exits:
-                    ret = False
-                    print(f"R3 violated: {exit}")
+                    ret_bool = False
+                    ret_int = ret_int + 1
+                    extra_error_rule(3, mapping["exit"], "mappings must show up in correct groups")
     
-    # rule 4   - every region must have a distinct name
+    # rule 4   - every region must have a unique name
+    #
+    # Reason:
+    # This is an archipelago restriction. But even then, it'd be impossible to
+    # deterministically form region to region connections without this anyway.
     r4_regions:set[str] = set()
     
     for hub in data["hubs"]:
         for region in hub["regions"]:
             if region["name"] in r4_regions:
-                ret = False
-                print(f"R4 violated: {region["name"]}")
+                ret_bool = False
+                ret_int = ret_int + 1
+                extra_error_rule(4, region["name"], "every region must have a unique name")
             r4_regions.add(region["name"])
             
         for level in hub["levels"]:
             for region in level["regions"]:
                 if region["name"] in r4_regions:
-                    ret = False
-                    print(f"R4 violated: {region["name"]}")
+                    ret_bool = False
+                    ret_int = ret_int + 1
+                    extra_error_rule(4, region["name"], "every region must have a unique name")
                 r4_regions.add(region["name"])
     
-    # rule 5   - every location must have a distinct name
-    print("WARNING! R5 IS UNIMPLEMENTED!")
+    # rule 5   - every location must have a unique name
+    #
+    # Reason
+    # Archipelago restriction again. But this is also necessary to neatly map
+    # items to locations in the randomizer.
+    r5_locations:set[str] = set()
+    
+    for hub in data["hubs"]:
+        for region in hub["regions"]:
+            for location in region["locations"]:
+                if location["name"] in r5_locations:
+                    ret_bool = False
+                    ret_int = ret_int + 1
+                    extra_error_rule(5, location["name"], "every location must have a unique name")
+            r5_locations.add(location["name"])
+            
+        for level in hub["levels"]:
+            for region in level["regions"]:
+                for location in region["locations"]:
+                    if location["name"] in r5_locations:
+                        ret_bool = False
+                        ret_int = ret_int + 1
+                        extra_error_rule(5, location["name"], "every location must have a unique name")
+                    r5_locations.add(location["name"])
                 
     # rule 6   - region transitions must have legal groups
-    print("WARNING! R6 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # This is literally what make
+    # s entrance rando work
+    extra_warning_unimplemented(6)
     
     # rule 7   - items must have unique names
-    print("WARNING! R7 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # Duplicates should be a count of the item, not another item.
+    r7_items:set[str] = set()
+    
+    for item in data["world"]["items"]:
+        if item["name"] in r7_items:
+            ret_bool = False
+            ret_int = ret_int + 1
+            extra_error_rule(7, item["name"], "every item must have a unique name")
+        r7_items.add(item["name"])
     
     # rule 8   - locations can only be both
-    print("WARNING! R8 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # read is straightforward - to check the locaton.
+    # write is for collect/release to work later on.
+    for hub in data["hubs"]:
+        for region in hub["regions"]:
+            for location in region["locations"]:
+                if location["bizhawk"]["io"] != "both":
+                    ret_bool = False
+                    ret_int = ret_int + 1
+                    extra_error_rule(8, location["name"], "location io must be 'both'")
+            
+        for level in hub["levels"]:
+            for region in level["regions"]:
+                for location in region["locations"]:
+                    if location["bizhawk"]["io"] != "both":
+                        ret_bool = False
+                        ret_int = ret_int + 1
+                        extra_error_rule(8, location["name"], "location io must be 'both'")
     
     # rule 9   - items can only be write
-    print("WARNING! R9 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # There is no situation in which ownership of an item needs read anywhere
+    # but the archipelago server. So we only write to it anyway.
+    extra_warning_unimplemented(9)
     
     # rule 10  - balloonist can only be write
-    print("WARNING! R10 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # We don't actually care what is in the baloonist menu. We just rewrite the
+    # whole thing.
+    extra_warning_unimplemented(10)
     
     # rule 11  - hub and level ids must be unique 
-    print("WARNING! R11 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # These map to the underlaying data. The underlying data is also unique.
+    # More of a sanity check than anything.
+    extra_warning_unimplemented(11)
     
     # rule 12  - text offset is write only
-    print("WARNING! R12 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # We only ever write to the text offset. We already know what it says.
+    extra_warning_unimplemented(12)
     
     # rule 13  - gem counter is read only
-    print("WARNING! R13 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # No, we won't be giving the player one gem at a time as a collectible from
+    # the multiworld, omfg.
+    extra_warning_unimplemented(13)
     
     # rule 14  - vortex_moby_pointer is read only
-    print("WARNING! R14 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # this was removed because the moby pointer is a value, not an address like
+    # you'd go and read. Originally the assumption was that we'd only read that
+    # address, but that's not how that works so... yeet.
+    # print("R14 - removed for incorrect assumptions")
     
     # rule 15  - portal is write only
-    print("WARNING! R15 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # We already know where vanilla portals go. We write to them to make
+    # entrance randomization and the locks for level-entrance items work.
+    extra_warning_unimplemented(15)
     
     # rule 16  - statue head checks are write only
-    print("WARNING! R16 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # Long story short, the state doesn't matter, we want them open all the
+    # time.
+    extra_warning_unimplemented(16)
     
     # rule 17  - memory domains must be legal
-    print("WARNING! R17 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # Making bizhawk choke is not, in fact, a good thing.
+    # TODO: See if pydantic already does this for us.
+    extra_warning_unimplemented(17)
+    
+    # rule 18 - locations are named "environment - location"
+    #
+    # reason:
+    # consistency, and the fact I kept screwing it up when I was typing them in.
+    for hub in data["hubs"]:
+        for region in hub["regions"]:
+            for location in region["locations"]:
+                splts = location["name"].split(" - ")
+                if (len(splts) < 2) or (splts[0] != hub["name"]):
+                    ret_bool = False
+                    ret_int = ret_int + 1
+                    extra_error_rule(18, location["name"], "location name must be 'environment - location'")
+                
+        for level in hub["levels"]:
+            for region in level["regions"]:
+                for location in region["locations"]:
+                    splts = location["name"].split(" - ")
+                    if (len(splts) < 2) or (splts[0] != level["name"]):
+                        ret_bool = False
+                        ret_int = ret_int + 1
+                        extra_error_rule(18, location["name"], "location name must be 'environment - location'")
+    
+    # rule 19 - Text offset initial character should match initial character of
+    #           base title.
+    #
+    # reason:
+    # This is aggressively written to. It should be done cleanly -
+    # no change until we willfully make one.
+    extra_warning_unimplemented(19)
+    
     
     # utility 1 - output all location groups
-    print("WARNING! U1 IS UNIMPLEMENTED!")
+    #
+    # reason:
+    # Getting eyes on it helps, and it also helps to make sure there's not a
+    # typo somewhere.
+    extra_utility_unimplemented(1)
     
-    # utility 2 - output all item groups 
-    print("WARNING! U2 IS UNIMPLEMENTED!")
+    # utility 2 - output all item groups
+    #
+    # reason:
+    # Getting eyes on it helps, and also helps us understand how we've
+    # structured this in practice to make sure it's right. 
+    extra_utility_unimplemented(2)
     
-    return ret
+    return (ret_bool, ret_int)
     
 def validate(data):
     class _Err():
@@ -307,15 +474,23 @@ def validate(data):
     if len(errs) > 0:
         print("")
         print("")
-        print("first error again")
+        print("first pydantic  error again")
         errs[0].print()
+        
+    pydantic_errs = len(errs)
     
     print("")
     print("")
-    print("Total errors")
-    print(len(errs))
     
-    # extra(data)
+    extra_errs = extra(data)
+    
+    had_errors = ((pydantic_errs > 0) or (not extra_errs[0]))
+    
+    if had_errors:
+        print("\033[91mERRORS FOUND\033[0m")
+        print(f"{pydantic_errs + extra_errs[1]}")
+    else:
+        print("\033[92mNO ERRORS! WAY TO GO!\033[0m")
     
 def main():
     parser = argparse.ArgumentParser(description="simple validator for data.yaml")

@@ -1254,7 +1254,7 @@ hubs:
             -
                 name: Sunny Flight
                 id: *vals_env_id_level_sunny_flight
-                vortex_moby_address: -1
+                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -1961,7 +1961,7 @@ hubs:
             -
                 name: Night Flight
                 id: *vals_env_id_level_night_flight
-                vortex_moby_address: -1
+                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -2678,7 +2678,7 @@ hubs:
             -
                 name: Crystal Flight
                 id: *vals_env_id_level_crystal_flight
-                vortex_moby_address: -1
+                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -3261,7 +3261,7 @@ hubs:
             -
                 name: Wild Flight
                 id: *vals_env_id_level_wild_flight
-                vortex_moby_address: -1
+                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -3903,7 +3903,7 @@ hubs:
             -
                 name: Icy Flight
                 id: *vals_env_id_level_icy_flight
-                vortex_moby_address: -1
+                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -4255,7 +4255,7 @@ hubs:
             -
                 name: Gnasty Gnorc
                 id: *vals_env_id_level_gnasty_gnorc
-                vortex_moby_address: -1
+                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:

@@ -17,6 +17,10 @@ from appetite.ap.core import (
     ItemClassification as APItemClassification,
 )
 
+from appetite.ap.manager import (
+    IndexManager as APIndexManager,
+)
+
 # type vars
 APContainerType = TypeVar("APContainerType", bound="APContainer", default="APContainer", covariant=True)
 APParentContainerType = TypeVar("APParentContainerType", bound="APContainer", default="APContainer", covariant=True)
@@ -130,41 +134,6 @@ class APGameWorld[APContainerType, APPlayerType]:
         self._game = game
         self._roots:dict[str, APContainerType] = {}
         self._player:APPlayerType | None = None
-        
-class APIndexManager(object):
-    _instance:"APIndexManager | None" = None
-    """The only instance of this class"""
-
-    def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super(APIndexManager, cls).__new__(cls)
-        return cls._instance
-    
-    def __init__(self):
-        # We would like to present to you some forbidden, black magic that will
-        # make you scream "NO! THAT NOT ONLY DOESN'T GO THERE, BUT IT SHOULDN'T
-        # EVER WORK! NO! NO! NO! NO!"
-        if not hasattr(self, "_initialized"):
-            # do init
-            self._initialized:bool = True
-            """Whether or not this has been initialized."""
-            
-            self._current:dict[str,int] = {}
-    
-    def get_next(self, game:str) -> int:
-        """Get the next valid int out of this manager.
-        
-        The manager maintains per-game indexes based on their names. Two games
-        will have two different indexes.
-        
-        Args:
-            game: Which game this is for. 
-        """
-        ret:int = self._current.get(game, 1)
-        
-        self._current[game] = ret + 1
-        
-        return ret
 
 class APItem():
     def __init__(self, game:str):

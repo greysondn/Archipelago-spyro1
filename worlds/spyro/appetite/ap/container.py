@@ -5,21 +5,40 @@ You can think of these as the overarching structural pieces - worlds, games, and
 levels.
 """
 
-class APContainer(Generic[APParentContainerType | None, APContainerType, APRegionType, APDoorType, APItemType, APLocationType, APConfigType]):
+from appetite.ap.item import (
+    ItemType,
+)
+
+from typing import (
+    Generic,
+    Protocol,
+    TypeVar,
+)
+
+T = TypeVar("T", covariant=True)
+"""Fundamental type stored in a sequence"""
+
+S = TypeVar("S", covariant=True)
+"""type of a sequence"""
+
+R = TypeVar("R")
+"""Return type of a method"""
+
+class APContainer(Generic[APParentContainerType | None, APContainerType, APRegionType, APDoorType, ItemType, APLocationType, APConfigType]):
     def __init__(self, name:str, game:str):
         self._game:str = game
         self._parent:APParentContainerType | None = None
         self._children:list[APContainerType] = []
         self._regions:list[APRegionType] = []
         self._doors:list[APDoorType] = []
-        self._items:list[APItemType] = []
+        self._items:list[ItemType] = []
         self._locations:list[APLocationType] = []
         self._configs:list[APConfigType] = []  
         self._name:str = name
         self._id:int = APIndexManager().get_next(game)
         
     @property
-    def items(self) -> list[APItemType]:
+    def items(self) -> list[ItemType]:
         return self._items
         
     @property
@@ -43,12 +62,12 @@ class APContainer(Generic[APParentContainerType | None, APContainerType, APRegio
         
         return ret
 
-    def find_item_by_name(self, name:str, recurse:bool, include_virtual:bool) -> APItemType:
-        algorithm:SearchPropertyAlgorithm[APItemType] = SearchPropertyAlgorithm("name", name)
+    def find_item_by_name(self, name:str, recurse:bool, include_virtual:bool) -> ItemType:
+        algorithm:SearchPropertyAlgorithm[ItemType] = SearchPropertyAlgorithm("name", name)
         return self._traverse(algorithm, "items", recurse, include_virtual)[0]
     
-    def find_item_by_id(self, id:int, recurse:bool, include_virtual:bool) -> APItemType:
-        algorithm:SearchPropertyAlgorithm[APItemType] = SearchPropertyAlgorithm("id", id)
+    def find_item_by_id(self, id:int, recurse:bool, include_virtual:bool) -> ItemType:
+        algorithm:SearchPropertyAlgorithm[ItemType] = SearchPropertyAlgorithm("id", id)
         return self._traverse(algorithm, "items", recurse, include_virtual)[0]
     
     def find_location_by_name(self, name:str, recurse:bool, include_virtual:bool) -> APLocationType:

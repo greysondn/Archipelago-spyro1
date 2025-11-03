@@ -21,13 +21,8 @@ from typing import (
 # -----
 # Enums
 # -----
-class ItemClassification(IntFlag):
-    filler         = auto()
-    progression    = auto()
-    useful         = auto()
-    trap           = auto()
-    skip_balancing = auto()
-    deprioritized  = auto()
+
+# none here, maybe remove after refactor?
 
 # ---------
 # protocols

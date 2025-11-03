@@ -9,6 +9,10 @@ from appetite.ap.item import (
     ItemType,
 )
 
+from appetite.ap.manager import (
+    IndexManager,
+)
+
 from typing import (
     Generic,
     Protocol,
@@ -24,19 +28,29 @@ S = TypeVar("S", covariant=True)
 R = TypeVar("R")
 """Return type of a method"""
 
-class APContainer(Generic[APParentContainerType | None, APContainerType, APRegionType, APDoorType, ItemType, APLocationType, APConfigType]):
+ContainerType = TypeVar("ContainerType", bound="Container", default="Container", covariant=True)
+"""The type of an AP Container"""
+
+ParentContainerType = TypeVar("ParentContainerType", bound="Container", default="Container", covariant=True)
+"""The type of an AP Container, but this one's the parent!"""
+
+class Container(Generic[ParentContainerType, ContainerType, APRegionType, APDoorType, ItemType, APLocationType, APConfigType]):
     def __init__(self, name:str, game:str):
         self._game:str = game
-        self._parent:APParentContainerType | None = None
-        self._children:list[APContainerType] = []
+        self._parent:ParentContainerType | None = None
+        self._children:list[ContainerType] = []
         self._regions:list[APRegionType] = []
         self._doors:list[APDoorType] = []
         self._items:list[ItemType] = []
         self._locations:list[APLocationType] = []
         self._configs:list[APConfigType] = []  
         self._name:str = name
-        self._id:int = APIndexManager().get_next(game)
+        self._id:int = IndexManager().get_next(self.game)
         
+    @property
+    def game(self) -> str:
+        return self._game
+    
     @property
     def items(self) -> list[ItemType]:
         return self._items
@@ -95,7 +109,7 @@ class APContainer(Generic[APParentContainerType | None, APContainerType, APRegio
         return self._traverse(algorithm, "items", True, False)[0]
     
 class APTraversalAlgorithm(Protocol[R]):
-    def __call__(self, node:APContainer, seq:str, results_so_far:list[R], include_virtual:bool) -> list[R]:
+    def __call__(self, node:Container, seq:str, results_so_far:list[R], include_virtual:bool) -> list[R]:
         ...
 
 class SearchAlgorithm(Generic[R]):
@@ -109,7 +123,7 @@ class SearchAlgorithm(Generic[R]):
         self.value:object = value
         """Value we're searching for in sequences"""
 
-    def __call__(self, node:APContainer, seq:str, results_so_far:list[R], include_virtual:bool) -> list[R]:
+    def __call__(self, node:Container, seq:str, results_so_far:list[R], include_virtual:bool) -> list[R]:
         ret:list[R] = results_so_far
         container:list[R] = getattr(node, seq)
         
@@ -139,7 +153,7 @@ class SearchPropertyAlgorithm(Generic[R]):
         self.value:object = value
         """The value we want that property to have"""
         
-    def __call__(self, node:APContainer, seq:str, results_so_far:list[R], include_virtual:bool) -> list[R]:
+    def __call__(self, node:Container, seq:str, results_so_far:list[R], include_virtual:bool) -> list[R]:
         ret:list[R] = results_so_far
         container:list[R] = getattr(node, seq)
         
@@ -156,7 +170,7 @@ class SearchPropertyAlgorithm(Generic[R]):
         return ret
     
 class APBuildNameToIdListAlgorithm():
-    def __call__(self, node:APContainer, seq:str, results_so_far:list[dict[int, str]], include_virtual:bool) -> list[dict[int, str]]:
+    def __call__(self, node:Container, seq:str, results_so_far:list[dict[int, str]], include_virtual:bool) -> list[dict[int, str]]:
         ret:list[dict[int, str]] = results_so_far
         
         if len(ret) < 1:
@@ -175,7 +189,7 @@ class APBuildNameToIdListAlgorithm():
         return ret
 
 class APBuildGroupAlgorithm():
-    def __call__(self, node:APContainer, seq:str, results_so_far:list[dict[str, set[str]]], include_virtual:bool) -> list[dict[str, set[str]]]:
+    def __call__(self, node:Container, seq:str, results_so_far:list[dict[str, set[str]]], include_virtual:bool) -> list[dict[str, set[str]]]:
         ret:list[dict[str, set[str]]] = results_so_far
         
         if len(ret) < 1:

@@ -20,10 +20,7 @@ from appetite.ap.manager import (
     IndexManager as APIndexManager,
 )
 
-# type vars
-APContainerType = TypeVar("APContainerType", bound="APContainer", default="APContainer", covariant=True)
-APParentContainerType = TypeVar("APParentContainerType", bound="APContainer", default="APContainer", covariant=True)
-APRegionType = TypeVar("APRegionType", bound="APRegion", default="APRegion", covariant=True)
+# type varsAPRegionType = TypeVar("APRegionType", bound="APRegion", default="APRegion", covariant=True)
 APRegionTypeLeft = TypeVar("APRegionTypeLeft", bound="APRegion", default="APRegion", covariant=True)
 APRegionTypeRight = TypeVar("APRegionTypeRight", bound="APRegion", default="APRegion", covariant=True)
 APDoorType = TypeVar("APDoorType", bound="APDoor", default="APDoor", covariant=True)

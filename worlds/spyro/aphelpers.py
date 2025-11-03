@@ -12,18 +12,10 @@ from typing import Set
 from typing import Type
 from typing import TypeVar
 
-# type aliases
-APLocationList = dict[str, int]
-"""Archipelago requires locations be given in a specific format. This is that format.
-
-This is a mapping from name to internal id.
-"""
-
-APLocationGroups = dict[str, set[str]]
-"""Archipelago requires location groups be given in a specific format. This is that format.
-
-This is a mapping from the name of the group to a set of the location names in that group.
-"""
+from appetite.ap.core import (
+    CollectionState as APCoreCollectionState,
+    ItemClassification as APItemClassification,
+)
 
 # type vars
 APContainerType = TypeVar("APContainerType", bound="APContainer", default="APContainer", covariant=True)
@@ -45,15 +37,6 @@ S = TypeVar("S", covariant=True)
 
 R = TypeVar("R")
 """Return type of a method"""
-
-# protocols for fragments of ap core
-class APCoreLocation(Protocol):
-    game: str
-    address: Optional[int]
-    
-class APCoreCollectionState(Protocol):
-    prog_items: Dict[int, Counter[str]]
-    locations_checked: Set[APCoreLocation]
 
 # actual classes (except traversal algorithms)
 
@@ -142,8 +125,6 @@ class APDoor[APRegionTypeLeft, APRegionTypeRight]():
         self._guard_forwards:Callable[[APCoreCollectionState], bool] = lambda state: True
         self._guard_backwards:Callable[[APCoreCollectionState], bool] = lambda state: True
     
-    
-    
 class APGameWorld[APContainerType, APPlayerType]:
     def __int__(self, game:str):
         self._game = game
@@ -214,14 +195,6 @@ class APItem():
     @property
     def groups(self) -> set[str]:
         return self._groups
-
-class APItemClassification(IntFlag):
-    filler         = auto()
-    progression    = auto()
-    useful         = auto()
-    trap           = auto()
-    skip_balancing = auto()
-    deprioritized  = auto()
 
 class APLocation():
     def __init__(self, game:str):

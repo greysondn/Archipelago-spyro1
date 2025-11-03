@@ -10,8 +10,19 @@ from typing import (
 )
 
 ItemType = TypeVar("ItemType", bound="Item", default="Item", covariant=True)
+"""TypeVar for AP Item types.
+
+It's anticipated that maybe we'd need to retrieve the underlying type of an
+inherited item in our object structure, so a typevar became necessary to specify
+the constraints.
+"""
+
 
 class ItemClassification(IntFlag):
+    """
+    Archipelago uses bitwised Item classifications, so this is a way to
+    represent that structure.
+    """
     filler         = auto()
     progression    = auto()
     useful         = auto()
@@ -20,6 +31,8 @@ class ItemClassification(IntFlag):
     deprioritized  = auto()
 
 class Item():
+    """An item, compatible with Archipelago.
+    """
     def __init__(self, game:str):
         self._active:bool = True
         self._classification:ItemClassification = ItemClassification(0)

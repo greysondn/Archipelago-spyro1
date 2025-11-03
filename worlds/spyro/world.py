@@ -25,7 +25,6 @@ from .regions import create_regions, ENTRANCE_OUT, ENTRANCE_IN
 from .rules import set_rules
 from .addresses import RAM, Environment
 
-
 class SlotDataTypes(TypedDict):
     goal: str
     starting_world: int

@@ -11,6 +11,7 @@ from appetite.ap.manager import (
 )
 
 from typing import (
+    Any,
     Callable,
     TypeVar,
 )

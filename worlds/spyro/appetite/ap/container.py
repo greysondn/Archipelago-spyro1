@@ -26,6 +26,7 @@ from appetite.ap.region import (
 )
 
 from typing import (
+    Any,
     Generic,
     Protocol,
     TypeVar,
@@ -56,7 +57,14 @@ class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType
         self._locations:list[LocationType] = []
         self._configs:list[ConfigType] = []  
         self._name:str = name
-        self._id:int = IndexManager().get_next(self.game)
+    
+    def set_from_data_yaml(self, data:dict[str, Any]) -> None:
+        """Set data on this object from the expected strucutre in data.yaml
+
+        Args:
+            data: The parsed data.yaml structure
+        """
+        self.name = data["name"]
         
     @property
     def game(self) -> str:
@@ -69,6 +77,14 @@ class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType
     @property
     def locations(self) -> list[LocationType]:
         return self._locations
+    
+    @property
+    def name(self) -> str:
+        return self._name
+    
+    @name.setter
+    def name(self, val:str) -> None:
+        self._name = val
     
     def _traverse(
         self,

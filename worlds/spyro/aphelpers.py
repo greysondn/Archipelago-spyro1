@@ -20,10 +20,7 @@ from appetite.ap.manager import (
     IndexManager as APIndexManager,
 )
 
-# type varsAPRegionType = TypeVar("APRegionType", bound="APRegion", default="APRegion", covariant=True)
-APRegionTypeLeft = TypeVar("APRegionTypeLeft", bound="APRegion", default="APRegion", covariant=True)
-APRegionTypeRight = TypeVar("APRegionTypeRight", bound="APRegion", default="APRegion", covariant=True)
-APDoorType = TypeVar("APDoorType", bound="APDoor", default="APDoor", covariant=True)
+# type vars
 APLocationType = TypeVar("APLocationType", bound="APLocation", default="APLocation", covariant=True)
 APConfigType = TypeVar("APConfigType", bound="APConfig", default="APConfig", covariant=True)
 APPlayerType = TypeVar("APPlayerType", bound="APPlayer", default="APPlayer", covariant=True)
@@ -47,15 +44,7 @@ class APConfig(): # probably a template of some type
 
 
 
-class APDoor[APRegionTypeLeft, APRegionTypeRight]():
-    def __init__(self, left:APRegionTypeLeft, right:APRegionTypeRight, game:str):
-        self._name:str = ""
-        self._index:int = APIndexManager().get_next(game)
-        self._left:APRegionTypeLeft = left
-        self._right:APRegionTypeRight = right
-        self._guard_forwards:Callable[[APCoreCollectionState], bool] = lambda state: True
-        self._guard_backwards:Callable[[APCoreCollectionState], bool] = lambda state: True
-    
+
 class APGameWorld[APContainerType, APPlayerType]:
     def __int__(self, game:str):
         self._game = game
@@ -100,10 +89,3 @@ class APPlayer[APItemType]():
         self._name:str = ""
         self._inventory:list[APItemType] = []
 
-class APRegion[APDoorType]():
-    def __init__(self, game:str):
-        self._name:str = ""
-        self._index:int = APIndexManager().get_next(game)
-        self._entrances:list[APDoorType] = []
-        self._exits:list[APDoorType] = []
-        guard:Callable[[APCoreCollectionState], bool] = lambda state: True

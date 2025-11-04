@@ -13,6 +13,10 @@ from appetite.ap.manager import (
     IndexManager,
 )
 
+from appetite.ap.region import (
+    RegionType,
+)
+
 from typing import (
     Generic,
     Protocol,
@@ -34,13 +38,12 @@ ContainerType = TypeVar("ContainerType", bound="Container", default="Container",
 ParentContainerType = TypeVar("ParentContainerType", bound="Container", default="Container", covariant=True)
 """The type of an AP Container, but this one's the parent!"""
 
-class Container(Generic[ParentContainerType, ContainerType, APRegionType, APDoorType, ItemType, APLocationType, APConfigType]):
+class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType, APLocationType, APConfigType]):
     def __init__(self, name:str, game:str):
         self._game:str = game
         self._parent:ParentContainerType | None = None
         self._children:list[ContainerType] = []
-        self._regions:list[APRegionType] = []
-        self._doors:list[APDoorType] = []
+        self._regions:list[RegionType] = []
         self._items:list[ItemType] = []
         self._locations:list[APLocationType] = []
         self._configs:list[APConfigType] = []  

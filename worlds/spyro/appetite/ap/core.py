@@ -18,12 +18,6 @@ from typing import (
     Set,
 )
 
-# -----
-# Enums
-# -----
-
-# none here, maybe remove after refactor?
-
 # ---------
 # protocols
 # ---------

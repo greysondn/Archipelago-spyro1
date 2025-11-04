@@ -1,15 +1,65 @@
 # pure python version of Spyro stuff goes here
-class GameWorld():
+import appetite.ap as ap
+
+
+class Config(ap.Config):
     pass
 
-class GameLevel():
+class Connection(
+    ap.Connection[
+        "Region"
+    ]
+):
     pass
 
-class GameHub():
+class Hub(
+    ap.Container[
+        "Hub", # but not really
+        "Level",
+        "Region",
+        "Item",
+        "Location",
+        Config
+    ]
+):
     pass
 
-class GameVar():
+class Item(ap.Item):
     pass
 
-class GameRoot():
+class Level(
+    ap.Container[
+        "Hub",
+        "Level", # but not really
+        "Region",
+        Item,
+        "Location",
+        Config
+    ]
+):
+    pass
+
+class Location(ap.Location):
+    pass
+
+class Player(
+    ap.Player[
+        Item
+    ]
+):
+    pass
+
+class Region(
+    ap.Region[
+        Connection
+    ]
+):
+    pass
+
+class World(
+    ap.GameWorld[
+        Hub,
+        Player
+    ]
+):
     pass

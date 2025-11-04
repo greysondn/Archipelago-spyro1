@@ -36,8 +36,18 @@ class ConnectionGuards(BaseModel):
     dst:Guard
 
 class Connection(BaseModel):
-    # source is always "this"
+    name:str
+    
+    # in the case of None, src is meant to be containing region.
+    src:Optional[str]
+    
     dst:str
+    
+    # These two names are to specify the name to give the half-connections.
+    # when absent, it is meant to be the full connection's name + src/dst .
+    src_name:Optional[str] 
+    dst_name:Optional[str]
+    
     shuffle:bool
     guard:ConnectionGuards
     group:ConnectionGroups

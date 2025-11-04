@@ -5,6 +5,10 @@ You can think of these as the overarching structural pieces - worlds, games, and
 levels.
 """
 
+from appetite.ap.config import (
+    ConfigType,
+)
+
 from appetite.ap.item import (
     ItemType,
 )
@@ -42,7 +46,7 @@ ContainerType = TypeVar("ContainerType", bound="Container", default="Container",
 ParentContainerType = TypeVar("ParentContainerType", bound="Container", default="Container", covariant=True)
 """The type of an AP Container, but this one's the parent!"""
 
-class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType, LocationType, APConfigType]):
+class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType, LocationType, ConfigType]):
     def __init__(self, name:str, game:str):
         self._game:str = game
         self._parent:ParentContainerType | None = None
@@ -50,7 +54,7 @@ class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType
         self._regions:list[RegionType] = []
         self._items:list[ItemType] = []
         self._locations:list[LocationType] = []
-        self._configs:list[APConfigType] = []  
+        self._configs:list[ConfigType] = []  
         self._name:str = name
         self._id:int = IndexManager().get_next(self.game)
         

@@ -12,7 +12,7 @@ from appetite.ap.player import (
     PlayerType,
 )
 
-class APGameWorld[ContainerType, PlayerType]:
+class GameWorld[ContainerType, PlayerType]:
     def __int__(self, game:str):
         self._game = game
         self._roots:dict[str, ContainerType] = {}

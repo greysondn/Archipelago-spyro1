@@ -9,6 +9,10 @@ from appetite.ap.item import (
     ItemType,
 )
 
+from appetite.ap.location import (
+    LocationType,
+)
+
 from appetite.ap.manager import (
     IndexManager,
 )
@@ -38,14 +42,14 @@ ContainerType = TypeVar("ContainerType", bound="Container", default="Container",
 ParentContainerType = TypeVar("ParentContainerType", bound="Container", default="Container", covariant=True)
 """The type of an AP Container, but this one's the parent!"""
 
-class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType, APLocationType, APConfigType]):
+class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType, LocationType, APConfigType]):
     def __init__(self, name:str, game:str):
         self._game:str = game
         self._parent:ParentContainerType | None = None
         self._children:list[ContainerType] = []
         self._regions:list[RegionType] = []
         self._items:list[ItemType] = []
-        self._locations:list[APLocationType] = []
+        self._locations:list[LocationType] = []
         self._configs:list[APConfigType] = []  
         self._name:str = name
         self._id:int = IndexManager().get_next(self.game)
@@ -59,7 +63,7 @@ class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType
         return self._items
         
     @property
-    def locations(self) -> list[APLocationType]:
+    def locations(self) -> list[LocationType]:
         return self._locations
     
     def _traverse(
@@ -87,12 +91,12 @@ class Container(Generic[ParentContainerType, ContainerType, RegionType, ItemType
         algorithm:SearchPropertyAlgorithm[ItemType] = SearchPropertyAlgorithm("id", id)
         return self._traverse(algorithm, "items", recurse, include_virtual)[0]
     
-    def find_location_by_name(self, name:str, recurse:bool, include_virtual:bool) -> APLocationType:
-        algorithm:SearchPropertyAlgorithm[APLocationType] = SearchPropertyAlgorithm("name", name)
+    def find_location_by_name(self, name:str, recurse:bool, include_virtual:bool) -> LocationType:
+        algorithm:SearchPropertyAlgorithm[LocationType] = SearchPropertyAlgorithm("name", name)
         return self._traverse(algorithm, "locations", recurse, include_virtual)[0]
     
-    def find_location_by_id(self, id:int, recurse:bool, include_virtual:bool) -> APLocationType:
-        algorithm:SearchPropertyAlgorithm[APLocationType] = SearchPropertyAlgorithm("id", id)
+    def find_location_by_id(self, id:int, recurse:bool, include_virtual:bool) -> LocationType:
+        algorithm:SearchPropertyAlgorithm[LocationType] = SearchPropertyAlgorithm("id", id)
         return self._traverse(algorithm, "locations", recurse, include_virtual)[0]
 
     def build_ap_location_list(self):

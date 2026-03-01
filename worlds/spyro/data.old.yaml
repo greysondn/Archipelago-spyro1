@@ -1,0 +1,4439 @@
+game: "Spyro the Dragon"
+
+vars:
+    # id of the current world environment - hub/level
+    env_id:
+        address:
+            io: read
+            data:
+                address: &addr_env_id 0x7596c
+                length: 1
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        values:
+            Alpine Ridge:       &vals_env_id_level_alpine_ridge         31
+            Artisans:           &vals_env_id_hub_artisans               10
+            Beast Makers:       &vals_env_id_hub_beast_makers           40
+            Blowhard:           &vals_env_id_level_blowhard             34
+            Cliff Town:         &vals_env_id_level_cliff_town           22
+            Crystal Flight:     &vals_env_id_level_crystal_flight       35
+            Dark Hollow:        &vals_env_id_level_dark_hollow          12
+            Dark Passage:       &vals_env_id_level_dark_passage         51
+            Doctor Shemp:       &vals_env_id_level_doctor_shemp         24
+            Dry Canyon:         &vals_env_id_level_dry_canyon           21
+            Dream Weavers:      &vals_env_id_hub_dream_weavers          50
+            Gnasty Gnorc:       &vals_env_id_level_gnasty_gnorc         63
+            Gnasty's Loot:      &vals_env_id_level_gnastys_loot         64
+            Gnasty's World:     &vals_env_id_hub_gnastys_world          60
+            Gnorc Cove:         &vals_env_id_level_gnorc_cove           61
+            Haunted Towers:     &vals_env_id_level_haunted_towers       53
+            High Caves:         &vals_env_id_level_high_caves           32
+            Ice Cavern:         &vals_env_id_level_ice_cavern           23
+            Icy Flight:         &vals_env_id_level_icy_flight           55
+            Jacques:            &vals_env_id_level_jacques              54
+            Lofty Castle:       &vals_env_id_level_lofty_castle         52
+            Magic Crafters:     &vals_env_id_hub_magic_crafters         30
+            Metalhead:          &vals_env_id_level_metalhead            44
+            Misty Bog:          &vals_env_id_level_misty_bog            42
+            Night Flight:       &vals_env_id_level_night_flight         25
+            Peace Keepers:      &vals_env_id_hub_peace_keepers          20
+            Stone Hill:         &vals_env_id_level_stone_hill           11
+            Sunny Flight:       &vals_env_id_level_sunny_flight         15
+            Terrace Village:    &vals_env_id_level_terrace_village      41
+            Toasty:             &vals_env_id_level_toasty               14
+            Town Square:        &vals_env_id_level_town_square          13
+            Tree Tops:          &vals_env_id_level_tree_tops            43
+            Twilight Harbor:    &vals_env_id_level_twilight_harbor      62
+            Wild Flight:        &vals_env_id_level_wild_flight          45
+            Wizard Peak:        &vals_env_id_level_wizard_peak          33
+
+    # the current gamestate
+    gamestate:
+        address:
+            io: read
+            data:
+                address: &addr_gamestate 0x757d8
+                length: 1
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        values:
+            ballonist:          &vals_gamestate_balloonist          0x0c
+            credits:            &vals_gamestate_credits             0x0f
+            cutscene:           &vals_gamestate_cutscene            0x0e
+            death:              &vals_gamestate_death               0x04
+            dragon cutscene:    &vals_gamestate_dragon_cutscene     0x08
+            exiting level:      &vals_gamestate_exiting_level       0x0a
+            fairy textbox:      &vals_gamestate_fairy_textbox       0x0b
+            flight menu:        &vals_gamestate_flight_menu         0x07
+            fly in:             &vals_gamestate_fly_in              0x09
+            game over:          &vals_gamestate_game_over           0x05
+            gameplay:           &vals_gamestate_gameplay            0x00
+            inventory:          &vals_gamestate_inventory           0x03
+            loading:            &vals_gamestate_loading             0x01
+            paused:             &vals_gamestate_paused              0x02
+            title screen:       &vals_gamestate_title_screen        0x0d
+
+world:
+    items:
+        # ----
+        # Hubs
+        # ----
+        - 
+            name: Artisans Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Artisans
+            groups:
+                - Hubs
+        -
+            name: Peace Keepers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Peace Keepers
+            groups:
+                - Hubs
+        -
+            name: Magic Crafters Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Magic Crafters
+            groups:
+                - Hubs
+        -
+            name: Beast Makers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Beast Makers
+            groups:
+                - Hubs
+        -
+            name: Dream Weavers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dream Weavers
+            groups:
+                - Hubs
+        -
+            name: Gnasty's World Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnasty's World
+            groups:
+                - Hubs
+
+        # ------
+        # Levels
+        # ------
+
+        # Artisans
+        -
+            name: Stone Hill Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Stone Hill
+            groups:
+                - Levels
+                - Artisans Levels
+        -
+            name: Dark Hollow Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dark Hollow
+            groups:
+                - Levels
+                - Artisans Levels
+        -
+            name: Town Square Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Town Square
+            groups:
+                - Levels
+                - Artisans Levels
+        -
+            name: Toasty Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Toasty
+            groups:
+                - Levels
+                - Artisans Levels
+                - Boss Levels
+        -
+            name: Sunny Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Sunny Flight
+            groups:
+                - Levels
+                - Artisans Levels
+                - Flight Levels
+
+        # Peace Keepers
+        -
+            name: Dry Canyon Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dry Canyon
+            groups:
+                - Levels
+                - Peace Keepers Levels
+        -
+            name: Cliff Town Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Cliff Town
+            groups:
+                - Levels
+                - Peace Keepers Levels
+        -
+            name: Ice Cavern Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Ice Cavern
+            groups:
+                - Levels
+                - Peace Keepers Levels
+        -
+            name: Doctor Shemp Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Doctor Shemp
+            groups:
+                - Levels
+                - Peace Keepers Levels
+                - Boss Levels
+        -
+            name: Night Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Night Flight
+            groups:
+                - Levels
+                - Peace Keepers Levels
+                - Flight Levels
+
+        # Magic Crafters
+        -
+            name: Alpine Ridge Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Alpine Ridge
+            groups:
+                - Levels
+                - Magic Crafters Levels
+        -
+            name: High Caves Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - High Caves
+            groups:
+                - Levels
+                - Magic Crafters Levels
+        -
+            name: Wizard Peak Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Wizard Peak
+            groups:
+                - Levels
+                - Magic Crafters Levels
+        -
+            name: Blowhard Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Blowhard
+            groups:
+                - Levels
+                - Magic Crafters Levels
+                - Boss Levels
+        -
+            name: Crystal Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Crystal Flight
+            groups:
+                - Levels
+                - Magic Crafters Levels
+                - Flight Levels
+
+        # Beast Makers
+        -
+            name: Terrace Village Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Terrace Village
+            groups:
+                - Levels
+                - Beast Makers Levels
+        -
+            name: Misty Bog Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Misty Bog
+            groups:
+                - Levels
+                - Beast Makers Levels
+        -
+            name: Tree Tops Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Tree Tops
+            groups:
+                - Levels
+                - Beast Makers Levels
+        -
+            name: Metalhead Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Metalhead
+            groups:
+                - Levels
+                - Beast Makers Levels
+                - Boss Levels
+        -
+            name: Wild Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Wild Flight
+            groups:
+                - Levels
+                - Beast Makers Levels
+                - Flight Levels
+
+        # Dream Weavers
+        -
+            name: Dark Passage Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Dark Passage
+            groups:
+                - Levels
+                - Dream Weavers Levels
+        -
+            name: Lofty Castle Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Lofty Castle
+            groups:
+                - Levels
+                - Dream Weavers Levels
+        -
+            name: Haunted Towers Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Haunted Towers
+            groups:
+                - Levels
+                - Dream Weavers Levels
+        -
+            name: Jacques Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Jacques
+            groups:
+                - Levels
+                - Dream Weavers Levels
+                - Boss Levels
+        -
+            name: Icy Flight Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Icy Flight
+            groups:
+                - Levels
+                - Dream Weavers Levels
+                - Flight Levels
+
+        # Gnasty's World
+        -
+            name: Gnorc Cove Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnorc Cove
+            groups:
+                - Levels
+                - Gnasty's World Levels
+        -
+            name: Twilight Harbor Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Twilight Harbor
+            groups:
+                - Levels
+                - Gnasty's World Levels
+        -
+            name: Gnasty Gnorc Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnasty Gnorc
+            groups:
+                - Levels
+                - Gnasty's World Levels
+                - Boss Levels
+        -
+            name: Gnasty's Loot Access
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases:
+                - Gnasty's Loot
+            groups:
+                - Levels
+                - Gnasty's World Levels
+        
+        # ----------
+        # Boss Items
+        # ----------
+        -
+            name: Toasty's Stilts
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Shemp's Staff
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Blowhard's Beard
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Metalhead's Mohawk
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+        -
+            name: Jacques' Ribbon
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Boss Items
+                - MacGuffins
+
+        # ------------
+        # Filler Items
+        # ------------
+        -
+            name: Extra Life
+            count:
+                min: 0
+                max: 999999
+                weight: 1
+            categories:
+                - filler
+            aliases: []
+            groups:
+                - Filler Items
+        -
+            name: Butterfly
+            count:
+                min: 0
+                max: 999999
+                weight: 1
+            categories:
+                - filler
+            aliases: []
+            groups:
+                - Filler Items
+
+        # ----------
+        # Trap Items
+        # ----------
+        -
+            name: Flop Trap
+            count:
+                min: 0
+                max: 999999
+                weight: 1
+            categories:
+                - trap
+            aliases: []
+            groups:
+                - Trap Items
+        -
+            name: Roll Trap
+            count:
+                min: 0
+                max: 999999
+                weight: 1
+            categories:
+                - trap
+            aliases: []
+            groups:
+                - Trap Items
+        -
+            name: Faint Trap
+            count:
+                min: 0
+                max: 999999
+                weight: 1
+            categories:
+                - trap
+            aliases: []
+            groups:
+                - Trap Items
+
+        # ----------
+        # Goal Items
+        # ----------
+        -
+            name: Victory
+            count:
+                abs: 1
+            categories:
+                - progression
+            aliases: []
+            groups:
+                - Goal Items
+    entrance_rando:
+        enabled: false
+        groups:
+            entrances:
+                - stage_exit
+                - portal
+            exits:
+                - hub_start
+                - stage_start
+        presets:
+            -
+                name: vanilla
+                mappings:
+                    -
+                        entrance: stage_exit
+                        exits:
+                            - hub_start
+                    -
+                        entrance: portal
+                        exits:
+                            - stage_start
+hubs:
+    -
+        name: Artisans
+        id: *vals_env_id_hub_artisans
+        balloon_addresses:
+            -
+                io: write
+                data:
+                    address: 0x7bc04
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7bc08
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+        text_offset:
+            io: write
+            data:
+                address: 0x1006c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "A"
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
+        total_gems: 100
+        gem_counter:
+            io: read
+            data: 
+                address: 0x77420
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        regions:
+            -
+                name: Artisans Start
+                locations:
+                    -
+                        name: Artisans - Nestor
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77913
+                                type: flag
+                                domain: MainRAM
+                                value: 0x01
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Artisans - Argus
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77913
+                                type: flag
+                                domain: MainRAM
+                                value: 0x08
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Artisans - Delbin
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77919
+                                type: flag
+                                domain: MainRAM
+                                value: 0x80
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Artisans - Tomas
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77913
+                                type: flag
+                                domain: MainRAM
+                                value: 0x20
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
+        levels:
+            -
+                name: Stone Hill
+                id: *vals_env_id_level_stone_hill
+                vortex_moby_address: 0x177330
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101fc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "S"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 200
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77424
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Stone Hill Start
+                        locations:
+                            -
+                                name: Stone Hill - Lindar
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77932
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Stone Hill - Gavin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x7793d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Stone Hill - Astor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x7793a
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Stone Hill - Gildas
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77939
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Stone Hill - Egg 1 (Upper Area)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x7793c
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc12b4
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Dark Hollow
+                id: *vals_env_id_level_dark_hollow
+                vortex_moby_address: 0x1339ac
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x101f0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 100
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77428
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Dark Hollow Start
+                        locations:
+                            -
+                                name: Dark Hollow - Alban
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77950
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dark Hollow - Oswin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77953
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dark Hollow - Darius
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77955
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc12a8
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Town Square
+                id: *vals_env_id_level_town_square
+                vortex_moby_address: 0x17d644
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101e4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 200
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7742c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Town Square Start
+                        locations:
+                            -
+                                name: Town Square - Nils
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77969
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Town Square - Thor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77974
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Town Square - Alvar
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x7796e
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Town Square - Devlin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77969
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Town Square - Egg 1 (Upper Area)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77973
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc12c0
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Toasty
+                id: *vals_env_id_level_toasty
+                vortex_moby_address: 0x1738ac
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x75570
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 100
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77430
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Toasty Start
+                        locations:
+                            -
+                                name: Toasty - Nevin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x7798b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc129c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Boss Levels
+            -
+                name: Sunny Flight
+                id: *vals_env_id_level_sunny_flight
+                vortex_moby_address: null
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101d4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "S"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 300
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77434
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Sunny Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc12cc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Flight Levels
+        statue_head_checks:
+            -
+                io: write
+                data:
+                    address: 0x7f48c
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x7f4c8
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+    -
+        name: Peace Keepers
+        id: *vals_env_id_hub_peace_keepers
+        balloon_addresses:
+            -
+                io: write
+                data:
+                    address: 0x7c5dc
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c5e0
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+        text_offset:
+            io: write
+            data:
+                address: 0x1005c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "P"
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
+        total_gems: 200
+        gem_counter:
+            io: read
+            data: 
+                address: 0x77438
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        regions:
+            -
+                name: Peace Keepers Start
+                locations:
+                    -
+                        name: Peace Keepers - Titan
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x779cf
+                                type: flag
+                                domain: MainRAM
+                                value: 0x02
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Peace Keepers - Magnus
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x779cf
+                                type: flag
+                                domain: MainRAM
+                                value: 0x20
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Peace Keepers - Gunnar
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x779cf
+                                type: flag
+                                domain: MainRAM
+                                value: 0x08
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Peace Keepers - Egg 1 (Pool)
+                        groups:
+                            - Eggs
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x779cd
+                                type: flag
+                                domain: MainRAM
+                                value: 0x10
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
+        levels:
+            -
+                name: Dry Canyon
+                id: *vals_env_id_level_dry_canyon
+                vortex_moby_address: 0x169444
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101c8
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7743c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Dry Canyon Start
+                        locations:
+                            -
+                                name: Dry Canyon - Conan
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x779fc
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dry Canyon - Boris
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dry Canyon - Maximos
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dry Canyon - Ivor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dry Canyon - Egg 1 (Starting Area)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x779f2
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xbfc48
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Cliff Town
+                id: *vals_env_id_level_cliff_town
+                vortex_moby_address: 0x16f978
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x101bc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "C"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77440
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Cliff Town Start
+                        locations:
+                            -
+                                name: Cliff Town - Halvor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a1b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Cliff Town - Enzo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a0f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Cliff Town - Marco
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a0f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Cliff Town - Egg 1 (Square Building Past Bridge)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a1a
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xbfc54
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Ice Cavern
+                id: *vals_env_id_level_ice_cavern
+                vortex_moby_address: 0x16b454
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x101b0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "I"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77444
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Ice Cavern Start
+                        locations:
+                            -
+                                name: Ice Cavern - Ulric
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a37
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ice Cavern - Todor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a41
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ice Cavern - Andor
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a2b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ice Cavern - Asher
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a42
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Ice Cavern - Ragnar
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a30
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xbfc60
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Doctor Shemp
+                id: *vals_env_id_level_doctor_shemp
+                vortex_moby_address: 0x16ba44
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x101a0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 300
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77448
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Doctor Shemp Start
+                        locations:
+                            -
+                                name: Doctor Shemp - Trondo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77a50
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xbfc6c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Boss Levels
+            -
+                name: Night Flight
+                id: *vals_env_id_level_night_flight
+                vortex_moby_address: null
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10190
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "N"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 300
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7744c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Night Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xbfc78
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Flight Levels
+        statue_head_checks: []
+    -
+        name: Magic Crafters
+        id: *vals_env_id_hub_magic_crafters
+        balloon_addresses:
+            -
+                io: write
+                data:
+                    address: 0x7c5d4
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c5d8
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+        text_offset: 
+            io: write
+            data:
+                address: 0x1004c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "M"
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
+        total_gems: 300
+        gem_counter:
+            io: read
+            data: 
+                address: 0x77450
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        regions:
+            -
+                name: Magic Crafters Start
+                locations:
+                    -
+                        name: Magic Crafters - Cosmos
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77a88
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Magic Crafters - Zantor
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77a8a
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Magic Crafters - Boldar
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77a8b
+                                type: flag
+                                domain: MainRAM
+                                value: 0x01
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Magic Crafters - Egg 1 (Entry)
+                        groups:
+                            - Eggs
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77a88
+                                type: flag
+                                domain: MainRAM
+                                value: 0x01
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Magic Crafters - Egg 2 (Courtyard)
+                        groups:
+                            - Eggs
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77a89
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
+        levels:
+            -
+                name: Alpine Ridge
+                id: *vals_env_id_level_alpine_ridge
+                vortex_moby_address: 0x17bbec
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10180
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "A"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77454
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Alpine Ridge Start
+                        locations:
+                            -
+                                name: Alpine Ridge - Zane
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aa9
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Alpine Ridge - Eldrid
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aaa
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Alpine Ridge - Zander
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77abd
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Alpine Ridge - Kelvin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aac
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Alpine Ridge - Egg 1 (Distant Cave)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aad
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc627c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: High Caves
+                id: *vals_env_id_level_high_caves
+                vortex_moby_address: 0x17e188
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10174
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "H"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77458
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: High Caves Start
+                        locations:
+                            -
+                                name: High Caves - Cyrus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77acf
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: High Caves - Cedric
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77ad9
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: High Caves - Ajax
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77ad1
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: High Caves - Egg 1 (Distant Pool)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77ad8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: High Caves - Egg 2 (Cave)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aca
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc6294
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Wizard Peak
+                id: *vals_env_id_level_wizard_peak
+                vortex_moby_address: 0x179ce4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10168
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "W"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7745c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Wizard Peak Start
+                        locations:
+                            -
+                                name: Wizard Peak - Jarvis
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aef
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Wizard Peak - Hexus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aef
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Wizard Peak - Lucas
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77ae8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Wizard Peak - Egg 1 (Quad Wizard Ramp)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77af9
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Wizard Peak - Egg 2 (End Area Pool)
+                                groups:
+                                    - Eggs
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77aeb
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc6288
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Blowhard
+                id: *vals_env_id_level_blowhard
+                vortex_moby_address: 0x1396e4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1015c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "B"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77460
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Blowhard Start
+                        locations:
+                            -
+                                name: Blowhard - Altair
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b0b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc6264
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Boss Levels
+            -
+                name: Crystal Flight
+                id: *vals_env_id_level_crystal_flight
+                vortex_moby_address: null
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1014c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "C"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 300
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77464
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Crystal Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc6270
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Flight Levels
+        statue_head_checks: []
+    -
+        name: Beast Makers
+        id: *vals_env_id_hub_beast_makers
+        balloon_addresses:
+            -
+                io: write
+                data:
+                    address: 0x7c3c8
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: and
+                    next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c3cc
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+        text_offset: 
+            io: write
+            data:
+                address: 0x1003c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "B"
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
+        total_gems: 300
+        gem_counter:
+            io: read
+            data: 
+                address: 0x77468
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        regions:
+            -
+                name: Beast Makers Start
+                locations:
+                    -
+                        name: Beast Makers - Bruno
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77b48
+                                type: flag
+                                domain: MainRAM
+                                value: 0x40
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                    -
+                        name: Beast Makers - Cleetus
+                        groups:
+                            - Dragons
+                        bizhawk:
+                            io: both
+                            data:
+                                address: 0x77b49
+                                type: flag
+                                domain: MainRAM
+                                value: 0x20
+                            guard:
+                                type: always
+                        guard:
+                            type: always
+                guard:
+                    type: always
+                connections: []
+        levels:
+            -
+                name: Terrace Village
+                id: *vals_env_id_level_terrace_village
+                vortex_moby_address: 0x179020
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1013c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7746c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Terrace Village Start
+                        locations:
+                            -
+                                name: Terrace Village - Claude
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b6d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Terrace Village - Cyprin
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b6d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xb558c
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Misty Bog
+                id: *vals_env_id_level_misty_bog
+                vortex_moby_address: 0x17b68c
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10130
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "M"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77470
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Misty Bog Start
+                        locations:
+                            -
+                                name: Misty Bog - Rosco
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b93
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Misty Bog - Damon
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b93
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Misty Bog - Zeke
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b97
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Misty Bog - Bubba
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77b93
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xb5574
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Tree Tops
+                id: *vals_env_id_level_tree_tops
+                vortex_moby_address: 0x17ce24
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10124
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77474
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Tree Tops Start
+                        locations:
+                            -
+                                name: Tree Tops - Lyle
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77bb6
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Tree Tops - Jed
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77bb7
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Tree Tops - Isaak
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77bb6
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xb5580
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Metalhead
+                id: *vals_env_id_level_metalhead
+                vortex_moby_address: 0x173fc4
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10118
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "M"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77478
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Metalhead Start
+                        locations:
+                            -
+                                name: Metalhead - Sadiki
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77bcc
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x08
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xb5568
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Boss Levels
+            -
+                name: Wild Flight
+                id: *vals_env_id_level_wild_flight
+                vortex_moby_address: null
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x1010c
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "W"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 300
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7747c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Wild Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xb5598
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Flight Levels
+        statue_head_checks: []
+    -
+        name: Dream Weavers
+        id: *vals_env_id_hub_dream_weavers
+        balloon_addresses:
+            -
+                io: write
+                data:
+                    address: 0x7c5fc
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7c600
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+        text_offset:
+            io: write
+            data:
+                address: 0x1002c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "D"
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
+        total_gems: 300
+        gem_counter:
+            io: read
+            data: 
+                address: 0x77480
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        regions:
+            -
+                name: Dream Weavers Start
+                locations:
+                -
+                                name: Dream Weavers - Mazi
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c08
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                -
+                                name: Dream Weavers - Lateef
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c19
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                -
+                                name: Dream Weavers - Zikomo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c08
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                guard:
+                    type: always
+                connections: []
+        levels:
+            -
+                name: Dark Passage
+                id: *vals_env_id_level_dark_passage
+                vortex_moby_address: 0x178950
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100fc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "D"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77484
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Dark Passage Start
+                        locations:
+                            -
+                                name: Dark Passage - Kasiya
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c28
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dark Passage - Azizi
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c28
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dark Passage - Bakari
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c28
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dark Passage - Apara
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c30
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Dark Passage - Obasi
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c36
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc5ecc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Lofty Castle
+                id: *vals_env_id_level_lofty_castle
+                vortex_moby_address: 0x15a3d8
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100ec
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "L"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77488
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Lofty Castle Start
+                        locations:
+                            -
+                                name: Lofty Castle - Mudada
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c4f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Lofty Castle - Baruti
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c49
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Lofty Castle - Useni
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c49
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc5ee4
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Haunted Towers
+                id: *vals_env_id_level_haunted_towers
+                vortex_moby_address: 0x176964
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100dc
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "H"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7748c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Haunted Towers Start
+                        locations:
+                            -
+                                name: Haunted Towers - Kosoko
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c6f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Haunted Towers - Lutalo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c70
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x02
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Haunted Towers - Copano
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c6f
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc5efc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Jacques
+                id: *vals_env_id_level_jacques
+                vortex_moby_address: 0x16deb0
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x75568
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "J"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77490
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Jacques Start
+                        locations:
+                            -
+                                name: Jacques - Unika
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c8b
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Jacques - Revilo
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77c8d
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x80
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc5ed8
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Boss Levels
+            -
+                name: Icy Flight
+                id: *vals_env_id_level_icy_flight
+                vortex_moby_address: null
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100d0
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "I"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 300
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x77494
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Icy Flight Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xc5ef0
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Flight Levels
+        statue_head_checks: []
+    -
+        name: Gnasty's World
+        id: *vals_env_id_hub_gnastys_world
+        balloon_addresses:
+            -
+                io: write
+                data:
+                    address: 0x7bb74
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+            -
+                io: write
+                data:
+                    address: 0x7bb78
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: and
+                    next:
+                        -
+                            address: *addr_gamestate
+                            length: 1
+                            type: int
+                            domain: MainRAM
+                            value: *vals_gamestate_balloonist
+        text_offset:
+            io: write
+            data:
+                address: 0x1001c
+                domain: MainRAM
+                type: string
+                length: 1
+                value: "G"
+            guard:
+                type: or
+                next:
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_gameplay
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_inventory
+                    -
+                        address: *addr_gamestate
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: *vals_gamestate_loading
+        total_gems: 200
+        gem_counter:
+            io: read
+            data: 
+                address: 0x77498
+                length: 2
+                type: int
+                domain: MainRAM
+                value: 0
+            guard:
+                type: always
+        regions:
+            -
+                name: Gnasty's World Start
+                locations:
+                    -
+                                name: Gnasty's World - Delbin/Magnus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77cc8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x01
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                guard:
+                    type: always
+                connections: []
+        levels:
+            -
+                name: Gnorc Cove
+                id: *vals_env_id_level_gnorc_cove
+                vortex_moby_address: 0x174884
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100b4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "G"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x7749c
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Gnorc Cove Start
+                        locations:
+                            -
+                                name: Gnorc Cove - Lateef
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77cf0
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x20
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Gnorc Cove - Tomas
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77ce8
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x40
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xa69d8
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Twilight Harbor
+                id: *vals_env_id_level_twilight_harbor
+                vortex_moby_address: 0x17c298
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x100a4
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "T"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 400
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x774a0
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Twilight Harbor Start
+                        locations:
+                            -
+                                name: Twilight Harbor - Cosmos
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77d09
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x04
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                            -
+                                name: Twilight Harbor - Cleetus
+                                groups:
+                                    - Dragons
+                                bizhawk:
+                                    io: both
+                                    data:
+                                        address: 0x77d16
+                                        type: flag
+                                        domain: MainRAM
+                                        value: 0x10
+                                    guard:
+                                        type: always
+                                guard:
+                                    type: always
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xa69b4
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+            -
+                name: Gnasty Gnorc
+                id: *vals_env_id_level_gnasty_gnorc
+                vortex_moby_address: null
+                text_offset:
+                    io: write
+                    data:
+                        address: 0x10094
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "G"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 500
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x774a4
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Gnasty Gnorc Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xa69c0
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups:
+                    - Boss Levels
+            -
+                name: Gnasty's Loot
+                id: *vals_env_id_level_gnastys_loot
+                vortex_moby_address: 0x14da14
+                text_offset: 
+                    io: write
+                    data:
+                        address: 0x10084
+                        domain: MainRAM
+                        type: string
+                        length: 1
+                        value: "G"
+                    guard:
+                        type: or
+                        next:
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_gameplay
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_inventory
+                            -
+                                address: *addr_gamestate
+                                length: 1
+                                type: int
+                                domain: MainRAM
+                                value: *vals_gamestate_loading
+                total_gems: 2000
+                gem_counter:
+                    io: read
+                    data: 
+                        address: 0x774a8
+                        length: 2
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                regions:
+                    -
+                        name: Gnasty's Loot Start
+                        locations: []
+                        guard:
+                            type: always
+                        connections: []
+                portal:
+                    io: write
+                    data:
+                        address: 0xa69cc
+                        length: 1
+                        type: int
+                        domain: MainRAM
+                        value: 0
+                    guard:
+                        type: always
+                groups: []
+        statue_head_checks:
+            -
+                io: write
+                data:
+                    address: 0x817fc
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x81810
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x81848
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x81884
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x8189c
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always
+            -
+                io: write
+                data:
+                    address: 0x818b4
+                    length: 4
+                    type: bytes
+                    domain: MainRAM
+                    value: [0x00, 0x00, 0x00, 0x00]
+                guard:
+                    type: always

@@ -1,0 +1,183 @@
+# ----------
+# goal items
+# ----------
+-
+    name: Victory
+    virtual: false
+    internal: false
+    count: 1
+    categories:
+        - progression
+    aliases: []
+    groups:
+        - Goal Items
+    callback: null
+
+# ------
+# filler
+# ------
+-
+    name: Butterfly
+    virtual: false
+    internal: false
+    count: 0
+    categories:
+        - filler
+    aliases:
+        - Fodder
+    groups:
+        - Filler Item
+    callback: null
+-
+    name: Extra Life
+    virtual: false
+    internal: false
+    count: 0
+    categories:
+        - filler
+    aliases: []
+    groups:
+        - Filler Item
+    callback: null
+
+# -----
+# Traps
+# -----
+-
+    name: Flop Trap
+    virtual: false
+    internal: false
+    count: 0
+    categories:
+        - trap
+    aliases: []
+    groups:
+        - Trap Item
+    callback: null
+-
+    name: Roll Trap
+    virtual: false
+    internal: false
+    count: 0
+    categories:
+        - trap
+    aliases: []
+    groups:
+        - Trap Item
+    callback: null
+-
+    name: Faint Trap
+    virtual: false
+    internal: false
+    count: 0
+    categories:
+        - trap
+    aliases: []
+    groups:
+        - Trap Item
+    callback: null
+
+# ----
+# Hubs
+# ----
+-
+    name: Artisans Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Artisans
+    groups:
+        - Hub
+    callback: null
+
+# ------
+# Levels
+# ------
+
+# Artisans
+-
+    name: Stone Hill Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Stone Hill
+    groups:
+        - Level
+        - Artisans Level
+    callback: null
+-
+    name: Dark Hollow Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Dark Hollow
+    groups:
+        - Level
+        - Artisans Level
+    callback: null
+-
+    name: Town Square Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Town Square
+    groups:
+        - Level
+        - Artisans Level
+    callback: null
+-
+    name: Toasty Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Toasty
+    groups:
+        - Level
+        - Artisans Level
+        - Boss Level
+    callback: null
+-
+    name: Sunny Flight Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Sunny Flight
+    groups:
+        - Level
+        - Artisans Level
+        - Flight Level
+    callback: null
+
+# ----------
+# Boss Items
+# ----------
+-
+    name: Toasty's Stilts
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases: []
+    groups:
+        - Boss Item
+        - MacGuffin
+    callback: null

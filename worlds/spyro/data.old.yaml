@@ -81,19 +81,6 @@ vars:
 
 world:
     items:
-        # ----
-        # Hubs
-        # ----
-        - 
-            name: Artisans Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Artisans
-            groups:
-                - Hubs
         -
             name: Peace Keepers Access
             count:
@@ -150,63 +137,7 @@ world:
         # ------
 
         # Artisans
-        -
-            name: Stone Hill Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Stone Hill
-            groups:
-                - Levels
-                - Artisans Levels
-        -
-            name: Dark Hollow Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Dark Hollow
-            groups:
-                - Levels
-                - Artisans Levels
-        -
-            name: Town Square Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Town Square
-            groups:
-                - Levels
-                - Artisans Levels
-        -
-            name: Toasty Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Toasty
-            groups:
-                - Levels
-                - Artisans Levels
-                - Boss Levels
-        -
-            name: Sunny Flight Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Sunny Flight
-            groups:
-                - Levels
-                - Artisans Levels
-                - Flight Levels
+        # ... already in items.yaml...
 
         # Peace Keepers
         -
@@ -495,16 +426,6 @@ world:
         # Boss Items
         # ----------
         -
-            name: Toasty's Stilts
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases: []
-            groups:
-                - Boss Items
-                - MacGuffins
-        -
             name: Shemp's Staff
             count:
                 abs: 1
@@ -548,78 +469,18 @@ world:
         # ------------
         # Filler Items
         # ------------
-        -
-            name: Extra Life
-            count:
-                min: 0
-                max: 999999
-                weight: 1
-            categories:
-                - filler
-            aliases: []
-            groups:
-                - Filler Items
-        -
-            name: Butterfly
-            count:
-                min: 0
-                max: 999999
-                weight: 1
-            categories:
-                - filler
-            aliases: []
-            groups:
-                - Filler Items
+        # ... all moved over...
 
         # ----------
         # Trap Items
         # ----------
-        -
-            name: Flop Trap
-            count:
-                min: 0
-                max: 999999
-                weight: 1
-            categories:
-                - trap
-            aliases: []
-            groups:
-                - Trap Items
-        -
-            name: Roll Trap
-            count:
-                min: 0
-                max: 999999
-                weight: 1
-            categories:
-                - trap
-            aliases: []
-            groups:
-                - Trap Items
-        -
-            name: Faint Trap
-            count:
-                min: 0
-                max: 999999
-                weight: 1
-            categories:
-                - trap
-            aliases: []
-            groups:
-                - Trap Items
+        # ... all moved over...
 
         # ----------
         # Goal Items
         # ----------
-        -
-            name: Victory
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases: []
-            groups:
-                - Goal Items
+        # ... all moved over...
+        
     entrance_rando:
         enabled: false
         groups:

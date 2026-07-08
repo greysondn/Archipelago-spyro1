@@ -226,11 +226,390 @@
         - Flight Level
     callbacks: null
 
+# Peace Keepers
+-
+    name: Dry Canyon Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Dry Canyon
+    groups:
+        - Levels
+        - Peace Keepers Levels
+    callbacks: null
+-
+    name: Cliff Town Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Cliff Town
+    groups:
+        - Levels
+        - Peace Keepers Levels
+    callbacks: null
+-
+    name: Ice Cavern Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Ice Cavern
+    groups:
+        - Levels
+        - Peace Keepers Levels
+    callbacks: null
+-
+    name: Doctor Shemp Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Doctor Shemp
+    groups:
+        - Levels
+        - Peace Keepers Levels
+        - Boss Levels
+    callbacks: null
+-
+    name: Night Flight Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Night Flight
+    groups:
+        - Levels
+        - Peace Keepers Levels
+        - Flight Levels
+    callbacks: null
+
+# Magic Crafters
+-
+    name: Alpine Ridge Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Alpine Ridge
+    groups:
+        - Levels
+        - Magic Crafters Levels
+    callbacks: null
+-
+    name: High Caves Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - High Caves
+    groups:
+        - Levels
+        - Magic Crafters Levels
+    callbacks: null
+-
+    name: Wizard Peak Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Wizard Peak
+    groups:
+        - Levels
+        - Magic Crafters Levels
+    callbacks: null
+-
+    name: Blowhard Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Blowhard
+    groups:
+        - Levels
+        - Magic Crafters Levels
+        - Boss Levels
+    callbacks: null
+-
+    name: Crystal Flight Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Crystal Flight
+    groups:
+        - Levels
+        - Magic Crafters Levels
+        - Flight Levels
+    callbacks: null
+
+# Beast Makers
+-
+    name: Terrace Village Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Terrace Village
+    groups:
+        - Levels
+        - Beast Makers Levels
+    callbacks: null
+-
+    name: Misty Bog Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Misty Bog
+    groups:
+        - Levels
+        - Beast Makers Levels
+    callbacks: null
+-
+    name: Tree Tops Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Tree Tops
+    groups:
+        - Levels
+        - Beast Makers Levels
+    callbacks: null
+-
+    name: Metalhead Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Metalhead
+    groups:
+        - Levels
+        - Beast Makers Levels
+        - Boss Levels
+    callbacks: null
+-
+    name: Wild Flight Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Wild Flight
+    groups:
+        - Levels
+        - Beast Makers Levels
+        - Flight Levels
+    callbacks: null
+
+# Dream Weavers
+-
+    name: Dark Passage Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Dark Passage
+    groups:
+        - Levels
+        - Dream Weavers Levels
+    callbacks: null
+-
+    name: Lofty Castle Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Lofty Castle
+    groups:
+        - Levels
+        - Dream Weavers Levels
+    callbacks: null
+-
+    name: Haunted Towers Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Haunted Towers
+    groups:
+        - Levels
+        - Dream Weavers Levels
+    callbacks: null
+-
+    name: Jacques Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Jacques
+    groups:
+        - Levels
+        - Dream Weavers Levels
+        - Boss Levels
+    callbacks: null
+-
+    name: Icy Flight Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Icy Flight
+    groups:
+        - Levels
+        - Dream Weavers Levels
+        - Flight Levels
+    callbacks: null
+
+# Gnasty's World
+-
+    name: Gnorc Cove Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Gnorc Cove
+    groups:
+        - Levels
+        - Gnasty's World Levels
+    callbacks: null
+-
+    name: Twilight Harbor Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Twilight Harbor
+    groups:
+        - Levels
+        - Gnasty's World Levels
+    callbacks: null
+-
+    name: Gnasty Gnorc Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Gnasty Gnorc
+    groups:
+        - Levels
+        - Gnasty's World Levels
+        - Boss Levels
+    callbacks: null
+-
+    name: Gnasty's Loot Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Gnasty's Loot
+    groups:
+        - Levels
+        - Gnasty's World Levels
+    callbacks: null
+
 # ----------
 # Boss Items
 # ----------
 -
     name: Toasty's Stilts
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases: []
+    groups:
+        - Boss Item
+        - MacGuffin
+    callbacks: null
+-
+    name: Shemp's Staff
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases: []
+    groups:
+        - Boss Item
+        - MacGuffin
+    callbacks: null
+-
+    name: Blowhard's Beard
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases: []
+    groups:
+        - Boss Item
+        - MacGuffin
+    callbacks: null
+-
+    name: Metalhead's Mohawk
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases: []
+    groups:
+        - Boss Item
+        - MacGuffin
+    callbacks: null
+-
+    name: Jacques' Ribbon
     count: 1
     virtual: false
     internal: false

@@ -11,7 +11,7 @@
     aliases: []
     groups:
         - Goal Items
-    callback: null
+    callbacks: null
 
 # ------
 # filler
@@ -27,7 +27,7 @@
         - Fodder
     groups:
         - Filler Item
-    callback: null
+    callbacks: null
 -
     name: Extra Life
     virtual: false
@@ -38,7 +38,7 @@
     aliases: []
     groups:
         - Filler Item
-    callback: null
+    callbacks: null
 
 # -----
 # Traps
@@ -53,7 +53,7 @@
     aliases: []
     groups:
         - Trap Item
-    callback: null
+    callbacks: null
 -
     name: Roll Trap
     virtual: false
@@ -64,7 +64,7 @@
     aliases: []
     groups:
         - Trap Item
-    callback: null
+    callbacks: null
 -
     name: Faint Trap
     virtual: false
@@ -75,7 +75,7 @@
     aliases: []
     groups:
         - Trap Item
-    callback: null
+    callbacks: null
 
 # ----
 # Hubs
@@ -91,7 +91,67 @@
         - Artisans
     groups:
         - Hub
-    callback: null
+    callbacks: null
+-
+    name: Peace Keepers Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Peace Keepers
+    groups:
+        - Hub
+    callbacks: null
+-
+    name: Magic Crafters Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Magic Crafters
+    groups:
+        - Hub
+    callbacks: null
+-
+    name: Beast Makers Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Beast Makers
+    groups:
+        - Hub
+    callbacks: null
+-
+    name: Dream Weavers Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Dream Weavers
+    groups:
+        - Hub
+    callbacks: null
+-
+    name: Gnasty's World Access
+    count: 1
+    virtual: false
+    internal: false
+    categories:
+        - progression
+    aliases:
+        - Gnasty's World
+    groups:
+        - Hub
+    callbacks: null
 
 # ------
 # Levels
@@ -110,7 +170,7 @@
     groups:
         - Level
         - Artisans Level
-    callback: null
+    callbacks: null
 -
     name: Dark Hollow Access
     count: 1
@@ -123,7 +183,7 @@
     groups:
         - Level
         - Artisans Level
-    callback: null
+    callbacks: null
 -
     name: Town Square Access
     count: 1
@@ -136,7 +196,7 @@
     groups:
         - Level
         - Artisans Level
-    callback: null
+    callbacks: null
 -
     name: Toasty Access
     count: 1
@@ -150,7 +210,7 @@
         - Level
         - Artisans Level
         - Boss Level
-    callback: null
+    callbacks: null
 -
     name: Sunny Flight Access
     count: 1
@@ -164,7 +224,7 @@
         - Level
         - Artisans Level
         - Flight Level
-    callback: null
+    callbacks: null
 
 # ----------
 # Boss Items
@@ -180,4 +240,4 @@
     groups:
         - Boss Item
         - MacGuffin
-    callback: null
+    callbacks: null

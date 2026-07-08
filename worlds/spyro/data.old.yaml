@@ -81,56 +81,10 @@ vars:
 
 world:
     items:
-        -
-            name: Peace Keepers Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Peace Keepers
-            groups:
-                - Hubs
-        -
-            name: Magic Crafters Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Magic Crafters
-            groups:
-                - Hubs
-        -
-            name: Beast Makers Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Beast Makers
-            groups:
-                - Hubs
-        -
-            name: Dream Weavers Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Dream Weavers
-            groups:
-                - Hubs
-        -
-            name: Gnasty's World Access
-            count:
-                abs: 1
-            categories:
-                - progression
-            aliases:
-                - Gnasty's World
-            groups:
-                - Hubs
+        # ----
+        # hubs
+        # ----
+        # ... already in items.yaml...
 
         # ------
         # Levels

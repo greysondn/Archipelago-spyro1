@@ -1,5 +1,27 @@
 meta:
-    prefix: "$VAR "
+    game: "Spyro the Dragon"
+    var_prefix: "$VAR "
+
+    entrance_rando:
+        groups:
+            entrances:
+                - stage_exit
+                - portal
+            exits:
+                - hub_start
+                - stage_start
+        presets:
+            -
+                name: vanilla
+                mappings:
+                    -
+                        entrance: stage_exit
+                        exits:
+                            - hub_start
+                    -
+                        entrance: portal
+                        exits:
+                            - stage_start
 
 variables:
     # addresses

@@ -135,6 +135,57 @@ memory:
                     "Wizard Peak": 0x179ce4
 
     # -------------------------------------------------------------------------
+    # BALLOONS
+    # -------------------------------------------------------------------------
+
+    # artisans
+    -
+        name: Artisans balloon 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7bc04
+                format: bytes
+                length: 1
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Artisans balloon 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7bc08
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    
+
+    # -------------------------------------------------------------------------
     # DRAGONS
     # -------------------------------------------------------------------------
 
@@ -180,3 +231,58 @@ memory:
                         type: never
                 values: []
 
+    # -------------------------------------------------------------------------
+    # Text offsets
+    # -------------------------------------------------------------------------
+
+    -
+        name: Artisans text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1006c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []

@@ -2999,9 +2999,148 @@ memory:
                         type: always
     
     # -------------------------------------------------------------------------
+    # Statue Head Checks
+    # -------------------------------------------------------------------------
+    -
+        name: Artisans statue head check 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7f48c
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Artisans statue head check 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7f4c8
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Gnasty's World statue head check 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x817fc
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Gnasty's World statue head check 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x81810
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Gnasty's World statue head check 3
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x81848
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Gnasty's World statue head check 4
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x81884
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Gnasty's World statue head check 5
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x8189c
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+    -
+        name: Gnasty's World statue head check 6
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x818b4
+                format: bytes
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values: []
+
+    # -------------------------------------------------------------------------
     # Text offsets
     # -------------------------------------------------------------------------
-
     -
         name: Artisans text offset
         default: usa

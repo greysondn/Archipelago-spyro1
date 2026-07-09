@@ -208,6 +208,1488 @@ memory:
                 values:
                     default: False
                     0x01:    True
+    -
+        name: Artisans - Argus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77913
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Artisans - Delbin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77919
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Artisans - Tomas
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77913
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Stone Hill - Lindar
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77932
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Stone Hill - Gavin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7793d
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Stone Hill - Astor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7793a
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Stone Hill - Gildas
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77939
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Dark Hollow - Alban
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77950
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Dark Hollow - Oswin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77953
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Dark Hollow - Darius
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77955
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Town Square - Nils
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77969
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x10:    True
+    -
+        name: Town Square - Thor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77974
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Town Square - Alvar
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7796e
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Town Square - Devlin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77969
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Toasty - Nevin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7798b
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Peace Keepers - Titan
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779cf
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Peace Keepers - Magnus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779cf
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Peace Keepers - Gunnar
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779cf
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Dry Canyon - Conan
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779fc
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Dry Canyon - Boris
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779f2
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Dry Canyon - Maximos
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779f2
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Dry Canyon - Ivor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779f2
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Cliff Town - Halvor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a1b
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Cliff Town - Enzo
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a0f
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Cliff Town - Marco
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a0f
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Ice Cavern - Ulric
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a37
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Ice Cavern - Todor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a41
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Ice Cavern - Andor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a2b
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Ice Cavern - Asher
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a42
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Ice Cavern - Ragnar
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a30
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Doctor Shemp - Trondo
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a50
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Magic Crafters - Cosmos
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a88
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Magic Crafters - Zantor
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a8a
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Magic Crafters - Boldar
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a8b
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Alpine Ridge - Zane
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aa9
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Alpine Ridge - Eldrid
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aaa
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Alpine Ridge - Zander
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77abd
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x10:    True
+    -
+        name: Alpine Ridge - Kelvin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aac
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: High Caves - Cyrus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77acf
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: High Caves - Cedric
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77ad9
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: High Caves - Ajax
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77ad1
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Wizard Peak - Jarvis
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aef
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Wizard Peak - Hexus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aef
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Wizard Peak - Lucas
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77ae8
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Blowhard - Altair
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b0b
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Beast Makers - Bruno
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b48
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Beast Makers - Cleetus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b49
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Terrace Village - Claude
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b6d
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Terrace Village - Cyprin
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b6d
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name:  Misty Bog - Rosco
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b93
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Misty Bog - Damon
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b93
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x10:    True
+    -
+        name: Misty Bog - Zeke
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b97
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Misty Bog - Bubba
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77b93
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Tree Tops - Lyle
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77bb6
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Tree Tops - Jed
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77bb7
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Tree Tops - Isaak
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77bb6
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Metalhead - Sadiki
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77bcc
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Dream Weavers - Mazi
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c08
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Dream Weavers - Lateef
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c19
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Dream Weavers - Zikomo
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c08
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Dark Passage - Kasiya
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c28
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Dark Passage - Azizi
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c28
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Dark Passage - Bakari
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c28
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Dark Passage - Apara
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c30
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Dark Passage - Obasi
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c36
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Lofty Castle - Mudada
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c4f
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Lofty Castle - Baruti
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c49
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Lofty Castle - Useni
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c49
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Haunted Towers - Kosoko
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c6f
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Haunted Towers - Lutalo
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c70
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Haunted Towers - Copano
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c6f
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Jacques - Unika
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c8b
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Jacques - Revilo
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77c8d
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Gnasty's World - Delbin/Magnus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77cc8
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Gnorc Cove - Lateef
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77cf0
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x20:    True
+    -
+        name: Gnorc Cove - Tomas
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77ce8
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Twilight Harbor - Cosmos
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77d09
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Twilight Harbor - Cleetus
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77d16
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x10:    True
 
     # -------------------------------------------------------------------------
     # GEM COUNTERS

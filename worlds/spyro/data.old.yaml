@@ -14,45 +14,18 @@ hubs:
                         name: Artisans - Argus
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77913
-                                type: flag
-                                domain: MainRAM
-                                value: 0x08
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Artisans - Delbin
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77919
-                                type: flag
-                                domain: MainRAM
-                                value: 0x80
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Artisans - Tomas
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77913
-                                type: flag
-                                domain: MainRAM
-                                value: 0x20
-                            guard:
-                                type: always
                         guard:
                             type: always
                 guard:
@@ -98,60 +71,22 @@ hubs:
                                 name: Stone Hill - Lindar
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77932
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Stone Hill - Gavin
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x7793d
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Stone Hill - Astor
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x7793a
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
-                                guard:
-                                    type: always
                             -
                                 name: Stone Hill - Gildas
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77939
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -213,15 +148,6 @@ hubs:
                                 name: Dark Hollow - Alban
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77950
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -230,11 +156,6 @@ hubs:
                                     - Dragons
                                 bizhawk:
                                     io: both
-                                    data:
-                                        address: 0x77953
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
                                     guard:
                                         type: always
                                 guard:
@@ -243,15 +164,6 @@ hubs:
                                 name: Dark Hollow - Darius
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77955
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -298,60 +210,24 @@ hubs:
                                 name: Town Square - Nils
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77969
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x10
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Town Square - Thor
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77974
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Town Square - Alvar
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x7796e
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Town Square - Devlin
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77969
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -413,15 +289,6 @@ hubs:
                                 name: Toasty - Nevin
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x7798b
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -569,45 +436,18 @@ hubs:
                         name: Peace Keepers - Titan
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x779cf
-                                type: flag
-                                domain: MainRAM
-                                value: 0x02
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Peace Keepers - Magnus
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x779cf
-                                type: flag
-                                domain: MainRAM
-                                value: 0x20
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Peace Keepers - Gunnar
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x779cf
-                                type: flag
-                                domain: MainRAM
-                                value: 0x08
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
@@ -669,60 +509,24 @@ hubs:
                                 name: Dry Canyon - Conan
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x779fc
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dry Canyon - Boris
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x779f2
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dry Canyon - Maximos
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x779f2
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dry Canyon - Ivor
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x779f2
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -784,45 +588,18 @@ hubs:
                                 name: Cliff Town - Halvor
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a1b
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Cliff Town - Enzo
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a0f
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Cliff Town - Marco
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a0f
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -884,77 +661,30 @@ hubs:
                                 name: Ice Cavern - Ulric
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a37
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Ice Cavern - Todor
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a41
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Ice Cavern - Andor
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a2b
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Ice Cavern - Asher
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a42
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Ice Cavern - Ragnar
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a30
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
-                                guard:
-                                    type: always
                         guard:
                             type: always
                         connections: []
@@ -999,17 +729,6 @@ hubs:
                                 name: Doctor Shemp - Trondo
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a50
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
-                                guard:
-                                    type: always
                         guard:
                             type: always
                         connections: []
@@ -1137,43 +856,18 @@ hubs:
                             - Dragons
                         bizhawk:
                             io: both
-                            data:
-                                address: 0x77a88
-                                type: flag
-                                domain: MainRAM
-                                value: 0x40
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Magic Crafters - Zantor
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77a8a
-                                type: flag
-                                domain: MainRAM
-                                value: 0x40
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Magic Crafters - Boldar
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77a8b
-                                type: flag
-                                domain: MainRAM
-                                value: 0x01
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
@@ -1250,60 +944,24 @@ hubs:
                                 name: Alpine Ridge - Zane
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aa9
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Alpine Ridge - Eldrid
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aaa
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Alpine Ridge - Zander
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77abd
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x10
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Alpine Ridge - Kelvin
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aac
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -1365,45 +1023,18 @@ hubs:
                                 name: High Caves - Cyrus
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77acf
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: High Caves - Cedric
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77ad9
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: High Caves - Ajax
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77ad1
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -1480,45 +1111,18 @@ hubs:
                                 name: Wizard Peak - Jarvis
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aef
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Wizard Peak - Hexus
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aef
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Wizard Peak - Lucas
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77ae8
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
@@ -1595,15 +1199,6 @@ hubs:
                                 name: Blowhard - Altair
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b0b
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -1732,30 +1327,12 @@ hubs:
                         name: Beast Makers - Bruno
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77b48
-                                type: flag
-                                domain: MainRAM
-                                value: 0x40
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Beast Makers - Cleetus
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77b49
-                                type: flag
-                                domain: MainRAM
-                                value: 0x20
-                            guard:
-                                type: always
                         guard:
                             type: always
                 guard:
@@ -1802,30 +1379,12 @@ hubs:
                                 name: Terrace Village - Claude
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b6d
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Terrace Village - Cyprin
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b6d
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -1872,62 +1431,24 @@ hubs:
                                 name: Misty Bog - Rosco
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b93
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Misty Bog - Damon
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b93
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x10
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Misty Bog - Zeke
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b97
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Misty Bog - Bubba
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77b93
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
-                                guard:
-                                    type: always
                         guard:
                             type: always
                         connections: []
@@ -1972,45 +1493,18 @@ hubs:
                                 name: Tree Tops - Lyle
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77bb6
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Tree Tops - Jed
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77bb7
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Tree Tops - Isaak
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77bb6
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
 
@@ -2058,17 +1552,6 @@ hubs:
                                 name: Metalhead - Sadiki
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77bcc
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
-                                guard:
-                                    type: always
                         guard:
                             type: always
                         connections: []
@@ -2195,45 +1678,18 @@ hubs:
                                 name: Dream Weavers - Mazi
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c08
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                 -
                                 name: Dream Weavers - Lateef
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c19
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                 -
                                 name: Dream Weavers - Zikomo
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c08
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                 guard:
@@ -2280,75 +1736,30 @@ hubs:
                                 name: Dark Passage - Kasiya
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c28
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dark Passage - Azizi
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c28
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dark Passage - Bakari
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c28
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dark Passage - Apara
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c30
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Dark Passage - Obasi
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c36
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -2395,45 +1806,18 @@ hubs:
                                 name: Lofty Castle - Mudada
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c4f
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Lofty Castle - Baruti
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c49
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Lofty Castle - Useni
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c49
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -2479,45 +1863,18 @@ hubs:
                                 name: Haunted Towers - Kosoko
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c6f
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Haunted Towers - Lutalo
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c70
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Haunted Towers - Copano
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c6f
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -2564,30 +1921,12 @@ hubs:
                                 name: Jacques - Unika
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c8b
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Jacques - Revilo
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77c8d
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -2715,15 +2054,6 @@ hubs:
                                 name: Gnasty's World - Delbin/Magnus
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77cc8
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                 guard:
@@ -2770,30 +2100,12 @@ hubs:
                                 name: Gnorc Cove - Lateef
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77cf0
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x20
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Gnorc Cove - Tomas
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77ce8
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -2840,30 +2152,12 @@ hubs:
                                 name: Twilight Harbor - Cosmos
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77d09
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Twilight Harbor - Cleetus
                                 groups:
                                     - Dragons
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77d16
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x10
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:

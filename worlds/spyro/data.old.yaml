@@ -5,27 +5,11 @@ world:
 hubs:
     -
         name: Artisans
-        
-        balloon_addresses:
-            
-        text_offset:
-
-        
-        gem_counter:
-
         regions:
             -
                 name: Artisans Start
                 locations:
-                    -
-                        name: Artisans - Nestor
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Artisans - Nestor
-                                value: True
+
                     -
                         name: Artisans - Argus
                         groups:
@@ -73,7 +57,6 @@ hubs:
                             type: always
                 guard:
                     type: always
-                connections: []
         levels:
             -
                 name: Stone Hill

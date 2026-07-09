@@ -4,12 +4,16 @@ regions:
         name: world
         guard:
             type: always
+        connections: []
+        locations: []
         extra: []
         children: # hubs
             -
                 name: Artisans
                 guard:
                     type: always
+                connections: []
+                locations: []
                 extra:
                     total_gems: 100
                 children:
@@ -18,6 +22,17 @@ regions:
                         name: Artisans Start
                         guard:
                             type: always
+                        connections: []
+                        locations:
+                            -
+                                name: Artisans - Nestor
+                                groups:
+                                    - Dragons
+                                guard:
+                                    type: memory_equals
+                                    params:
+                                        name:  Artisans - Nestor
+                                        value: True
                         extra: []
                         children: []
                     

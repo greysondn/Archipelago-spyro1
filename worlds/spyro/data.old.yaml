@@ -90,16 +90,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 200
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77424
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Stone Hill Start
@@ -215,16 +205,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 100
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77428
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Dark Hollow Start
@@ -310,16 +290,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 200
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7742c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Town Square Start
@@ -435,16 +405,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 100
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77430
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Toasty Start
@@ -501,16 +461,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 300
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77434
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Sunny Flight Start
@@ -611,16 +561,6 @@ hubs:
                         domain: MainRAM
                         value: *vals_gamestate_loading
         total_gems: 200
-        gem_counter:
-            io: read
-            data: 
-                address: 0x77438
-                length: 2
-                type: int
-                domain: MainRAM
-                value: 0
-            guard:
-                type: always
         regions:
             -
                 name: Peace Keepers Start
@@ -721,16 +661,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7743c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Dry Canyon Start
@@ -846,16 +776,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77440
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Cliff Town Start
@@ -956,16 +876,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77444
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Ice Cavern Start
@@ -1081,16 +991,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 300
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77448
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Doctor Shemp Start
@@ -1146,17 +1046,6 @@ hubs:
                                 type: int
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
-                total_gems: 300
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7744c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Night Flight Start
@@ -1238,16 +1127,6 @@ hubs:
                         domain: MainRAM
                         value: *vals_gamestate_loading
         total_gems: 300
-        gem_counter:
-            io: read
-            data: 
-                address: 0x77450
-                length: 2
-                type: int
-                domain: MainRAM
-                value: 0
-            guard:
-                type: always
         regions:
             -
                 name: Magic Crafters Start
@@ -1363,16 +1242,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77454
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Alpine Ridge Start
@@ -1488,16 +1357,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77458
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: High Caves Start
@@ -1613,16 +1472,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7745c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Wizard Peak Start
@@ -1738,16 +1587,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77460
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Blowhard Start
@@ -1804,16 +1643,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 300
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77464
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Crystal Flight Start
@@ -1895,16 +1724,6 @@ hubs:
                         domain: MainRAM
                         value: *vals_gamestate_loading
         total_gems: 300
-        gem_counter:
-            io: read
-            data: 
-                address: 0x77468
-                length: 2
-                type: int
-                domain: MainRAM
-                value: 0
-            guard:
-                type: always
         regions:
             -
                 name: Beast Makers Start
@@ -1975,16 +1794,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7746c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Terrace Village Start
@@ -2055,16 +1864,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77470
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Misty Bog Start
@@ -2165,16 +1964,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77474
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Tree Tops Start
@@ -2261,16 +2050,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77478
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Metalhead Start
@@ -2327,16 +2106,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 300
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7747c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Wild Flight Start
@@ -2418,16 +2187,6 @@ hubs:
                         domain: MainRAM
                         value: *vals_gamestate_loading
         total_gems: 300
-        gem_counter:
-            io: read
-            data: 
-                address: 0x77480
-                length: 2
-                type: int
-                domain: MainRAM
-                value: 0
-            guard:
-                type: always
         regions:
             -
                 name: Dream Weavers Start
@@ -2513,16 +2272,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77484
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Dark Passage Start
@@ -2638,16 +2387,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77488
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Lofty Castle Start
@@ -2732,16 +2471,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7748c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Haunted Towers Start
@@ -2827,16 +2556,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77490
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Jacques Start
@@ -2908,16 +2627,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 300
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x77494
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Icy Flight Start
@@ -2998,16 +2707,6 @@ hubs:
                         domain: MainRAM
                         value: *vals_gamestate_loading
         total_gems: 200
-        gem_counter:
-            io: read
-            data: 
-                address: 0x77498
-                length: 2
-                type: int
-                domain: MainRAM
-                value: 0
-            guard:
-                type: always
         regions:
             -
                 name: Gnasty's World Start
@@ -3063,16 +2762,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x7749c
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Gnorc Cove Start
@@ -3143,16 +2832,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 400
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x774a0
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Twilight Harbor Start
@@ -3223,16 +2902,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 500
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x774a4
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Gnasty Gnorc Start
@@ -3274,16 +2943,6 @@ hubs:
                                 domain: MainRAM
                                 value: *vals_gamestate_loading
                 total_gems: 2000
-                gem_counter:
-                    io: read
-                    data: 
-                        address: 0x774a8
-                        length: 2
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 regions:
                     -
                         name: Gnasty's Loot Start

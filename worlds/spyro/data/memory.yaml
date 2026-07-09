@@ -230,6 +230,1111 @@ memory:
                     write:
                         type: never
                 values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name:  gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Stone Hill gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77424
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Dark Hollow gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77428
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Town Square gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7742c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Toasty gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77430
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Sunny Flight gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77434
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Peace Keepers gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77438
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Dry Canyon gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7743c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Cliff Town gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77440
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Ice Cavern gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77444
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Doctor Shemp gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77448
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Night Flight gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7744c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Magic Crafters gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77450
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Alpine Ridge gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77454
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: High Caves gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77458
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Wizard Peak gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7745c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Blowhard gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77460
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Crystal Flight gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77464
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Beast Makers gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77468
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Terrace Vilage gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7746c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Misty Bog gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77470
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Tree Tops gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77474
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Metalhead gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77478
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Wild Flight gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7747c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Dream Weavers gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77480
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Dark Passage gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77484
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Lofty Castle gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77488
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Haunted Towers gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7748c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Jacques gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77490
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Icy Flight gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77494
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Gnasty's World gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77498
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Gnorc Cove gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7749c
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Twilight Harbor gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x774a0
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Gnasty Gnorc gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x774a4
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+    -
+        name: Gnasty's Loot gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x774a8
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
 
     # -------------------------------------------------------------------------
     # Portals

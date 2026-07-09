@@ -69,8 +69,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Dark Hollow
                 # text offset
@@ -103,8 +101,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Town Square
                 # text offset
@@ -145,8 +141,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Toasty
                 # text offset
@@ -163,7 +157,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Boss Levels
             -
@@ -173,10 +166,8 @@ hubs:
                 regions:
                     -
                         name: Sunny Flight Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Flight Levels
         statue_head_checks:
@@ -272,7 +263,6 @@ hubs:
                             type: always
                 guard:
                     type: always
-                connections: []
         levels:
             -
                 name: Dry Canyon
@@ -314,8 +304,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Cliff Town
                 # text offset
@@ -350,8 +338,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Ice Cavern
                 # text offset
@@ -390,8 +376,6 @@ hubs:
                                     - Dragons
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Doctor Shemp
                 # text offset
@@ -406,7 +390,6 @@ hubs:
                                     - Dragons
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Boss Levels
             -
@@ -415,16 +398,12 @@ hubs:
                 regions:
                     -
                         name: Night Flight Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Flight Levels
-        statue_head_checks: []
     -
         name: Magic Crafters
-        id: *vals_env_id_hub_magic_crafters
         balloon_addresses:
             -
                 io: write
@@ -503,7 +482,6 @@ hubs:
                             type: always
                 guard:
                     type: always
-                connections: []
         levels:
             -
                 name: Alpine Ridge
@@ -545,8 +523,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: High Caves
                 # text offset
@@ -587,8 +563,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Wizard Peak
                 # text offset
@@ -629,8 +603,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Blowhard
                 # text offset
@@ -647,7 +619,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Boss Levels
             -
@@ -657,16 +628,12 @@ hubs:
                 regions:
                     -
                         name: Crystal Flight Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Flight Levels
-        statue_head_checks: []
     -
         name: Beast Makers
-        id: *vals_env_id_hub_beast_makers
         balloon_addresses:
             -
                 io: write
@@ -725,7 +692,6 @@ hubs:
                             type: always
                 guard:
                     type: always
-                connections: []
         levels:
             -
                 name: Terrace Village
@@ -749,8 +715,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Misty Bog
                 # text offset
@@ -783,8 +747,6 @@ hubs:
                                     - Dragons
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Tree Tops
                 # text offset
@@ -811,11 +773,8 @@ hubs:
                                     - Dragons
                                 guard:
                                     type: always
-
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Metalhead
                 # text offset
@@ -830,7 +789,6 @@ hubs:
                                     - Dragons
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Boss Levels
             -
@@ -840,16 +798,12 @@ hubs:
                 regions:
                     -
                         name: Wild Flight Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Flight Levels
-        statue_head_checks: []
     -
         name: Dream Weavers
-        id: *vals_env_id_hub_dream_weavers
         balloon_addresses:
             -
                 io: write
@@ -914,7 +868,6 @@ hubs:
                                     type: always
                 guard:
                     type: always
-                connections: []
         levels:
             -
                 name: Dark Passage
@@ -956,8 +909,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Lofty Castle
                 # text offset
@@ -986,7 +937,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
             -
                 name: Haunted 
                 # text offset
@@ -1015,8 +965,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Jacques
                 # text offset
@@ -1039,7 +987,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Boss Levels
             -
@@ -1049,13 +996,10 @@ hubs:
                 regions:
                     -
                         name: Icy Flight Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Flight Levels
-        statue_head_checks: []
     -
         name: Gnasty's World
         balloon_addresses:
@@ -1110,7 +1054,6 @@ hubs:
                                     type: always
                 guard:
                     type: always
-                connections: []
         levels:
             -
                 name: Gnorc Cove
@@ -1134,8 +1077,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Twilight Harbor
                 # text offset
@@ -1158,8 +1099,6 @@ hubs:
                                     type: always
                         guard:
                             type: always
-                        connections: []
-                groups: []
             -
                 name: Gnasty Gnorc
                 # text offset
@@ -1167,10 +1106,8 @@ hubs:
                 regions:
                     -
                         name: Gnasty Gnorc Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
                 groups:
                     - Boss Levels
             -
@@ -1180,11 +1117,8 @@ hubs:
                 regions:
                     -
                         name: Gnasty's Loot Start
-                        locations: []
                         guard:
                             type: always
-                        connections: []
-                groups: []
         statue_head_checks:
             -
                 io: write

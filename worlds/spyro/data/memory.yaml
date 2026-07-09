@@ -1,45 +1,7 @@
 memory:
-    -
-        name: last_touched_whirlwind # it IS a pointer, but we don't care.
-        readonly: true
-        default: usa
-        aliases: []
-        versions:
-            usa:
-                domain: MainRAM
-                address: 0x78C7C
-                format: int
-                length: 4
-                byte_order: little
-                guards:
-                    read:
-                        type: always
-                    write:
-                        type: never
-                values: 
-                    "Alpine Ridge": 0x17bbec
-                    "Blowhard": 0x1396e4
-                    "Cliff Town": 0x16f978
-                    "Dark Hollow": 0x1339ac
-                    "Dark Passage": 0x178950
-                    "Doctor Shemp": 0x16ba44
-                    "Dry Canyon": 0x169444
-                    "Gnasty's Loot": 0x14da14
-                    "Gnorc Cove": 0x174884
-                    "Haunted Towers": 0x176964
-                    "High Caves": 0x17e188
-                    "Ice Cavern": 0x16b454
-                    "Jacques": 0x16deb0
-                    "Lofty Castle": 0x15a3d8
-                    "Metalhead": 0x173fc4
-                    "Misty Bog": 0x17b68c
-                    "Stone Hill":  0x177330
-                    "Terrace Village": 0x179020
-                    "Town Square": 0x17d644
-                    "Toasty": 0x1738ac
-                    "Tree Tops": 0x17ce24
-                    "Twilight Harbor": 0x17c298
-                    "Wizard Peak": 0x179ce4
+    # -------------------------------------------------------------------------
+    # GLOBALS
+    # -------------------------------------------------------------------------
 
     -
         # environment id
@@ -128,27 +90,54 @@ memory:
                     "loading":          0x01
                     "paused":           0x02
                     "title screen":     0x0D
-    
-    # gem counters
     -
-        name: Artisans gem counter
+        # Last return vortex we touched - lot of level exits
+        # it IS a pointer, but we don't care.
+        name: last_touched_whirlwind
+        readonly: true
         default: usa
         aliases: []
         versions:
             usa:
                 domain: MainRAM
-                address: 0x77420
+                address: 0x78C7C
                 format: int
-                length: 2
+                length: 4
                 byte_order: little
                 guards:
                     read:
                         type: always
                     write:
                         type: never
-                values: []
+                values: 
+                    "Alpine Ridge": 0x17bbec
+                    "Blowhard": 0x1396e4
+                    "Cliff Town": 0x16f978
+                    "Dark Hollow": 0x1339ac
+                    "Dark Passage": 0x178950
+                    "Doctor Shemp": 0x16ba44
+                    "Dry Canyon": 0x169444
+                    "Gnasty's Loot": 0x14da14
+                    "Gnorc Cove": 0x174884
+                    "Haunted Towers": 0x176964
+                    "High Caves": 0x17e188
+                    "Ice Cavern": 0x16b454
+                    "Jacques": 0x16deb0
+                    "Lofty Castle": 0x15a3d8
+                    "Metalhead": 0x173fc4
+                    "Misty Bog": 0x17b68c
+                    "Stone Hill":  0x177330
+                    "Terrace Village": 0x179020
+                    "Town Square": 0x17d644
+                    "Toasty": 0x1738ac
+                    "Tree Tops": 0x17ce24
+                    "Twilight Harbor": 0x17c298
+                    "Wizard Peak": 0x179ce4
 
-    # dragons
+    # -------------------------------------------------------------------------
+    # DRAGONS
+    # -------------------------------------------------------------------------
+
     -
         name: Artisans - Nestor
         default: usa
@@ -168,3 +157,26 @@ memory:
                 values:
                     default: False
                     0x01:    True
+
+    # -------------------------------------------------------------------------
+    # GEM COUNTERS
+    # -------------------------------------------------------------------------
+
+    -
+        name: Artisans gem counter
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77420
+                format: int
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: []
+

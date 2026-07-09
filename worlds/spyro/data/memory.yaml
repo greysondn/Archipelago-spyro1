@@ -1692,9 +1692,240 @@ memory:
                     0x10:    True
 
     # -------------------------------------------------------------------------
+    # Eggs
+    # -------------------------------------------------------------------------
+    -
+        name: Stone Hill - Egg 1 (Upper Area)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7793c
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Town Square - Egg 1 (Upper Area)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77973
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Peace Keepers - Egg 1 (Pool)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779cd
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x10:    True
+    -
+        name: Dry Canyon - Egg 1 (Starting Area)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x779f2
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x80:    True
+    -
+        name: Cliff Town - Egg 1 (Square Building Past Bridge)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a1a
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+    -
+        name: Magic Crafters - Egg 1 (Entry)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a88
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x01:    True
+    -
+        name: Magic Crafters - Egg 2 (Courtyard)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77a89
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: Alpine Ridge - Egg 1 (Distant Cave)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aad
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: High Caves - Egg 1 (Distant Pool)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77ad8
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x40:    True
+    -
+        name: High Caves - Egg 2 (Cave)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aca
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x02:    True
+    -
+        name: Wizard Peak - Egg 1 (Quad Wizard Ramp)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77af9
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x08:    True
+    -
+        name: Wizard Peak - Egg 2 (End Area Pool)
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x77aeb
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    default: False
+                    0x04:    True
+
+    # -------------------------------------------------------------------------
     # GEM COUNTERS
     # -------------------------------------------------------------------------
-
     -
         name: Artisans gem counter
         default: usa

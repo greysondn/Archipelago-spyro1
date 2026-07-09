@@ -93,15 +93,6 @@ hubs:
                                 name: Stone Hill - Egg 1 (Upper Area)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x7793c
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -234,15 +225,6 @@ hubs:
                                 name: Town Square - Egg 1 (Upper Area)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77973
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x01
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -454,15 +436,6 @@ hubs:
                         name: Peace Keepers - Egg 1 (Pool)
                         groups:
                             - Eggs
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x779cd
-                                type: flag
-                                domain: MainRAM
-                                value: 0x10
-                            guard:
-                                type: always
                         guard:
                             type: always
                 guard:
@@ -533,15 +506,6 @@ hubs:
                                 name: Dry Canyon - Egg 1 (Starting Area)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x779f2
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x80
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -606,15 +570,6 @@ hubs:
                                 name: Cliff Town - Egg 1 (Square Building Past Bridge)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77a1a
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -874,30 +829,12 @@ hubs:
                         name: Magic Crafters - Egg 1 (Entry)
                         groups:
                             - Eggs
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77a88
-                                type: flag
-                                domain: MainRAM
-                                value: 0x01
-                            guard:
-                                type: always
                         guard:
                             type: always
                     -
                         name: Magic Crafters - Egg 2 (Courtyard)
                         groups:
                             - Eggs
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77a89
-                                type: flag
-                                domain: MainRAM
-                                value: 0x40
-                            guard:
-                                type: always
                         guard:
                             type: always
                 guard:
@@ -968,15 +905,6 @@ hubs:
                                 name: Alpine Ridge - Egg 1 (Distant Cave)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aad
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -1041,30 +969,12 @@ hubs:
                                 name: High Caves - Egg 1 (Distant Pool)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77ad8
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x40
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: High Caves - Egg 2 (Cave)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aca
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x02
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:
@@ -1129,30 +1039,12 @@ hubs:
                                 name: Wizard Peak - Egg 1 (Quad Wizard Ramp)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77af9
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x08
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                             -
                                 name: Wizard Peak - Egg 2 (End Area Pool)
                                 groups:
                                     - Eggs
-                                bizhawk:
-                                    io: both
-                                    data:
-                                        address: 0x77aeb
-                                        type: flag
-                                        domain: MainRAM
-                                        value: 0x04
-                                    guard:
-                                        type: always
                                 guard:
                                     type: always
                         guard:

@@ -199,16 +199,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc12b4
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Dark Hollow
@@ -304,16 +294,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc12a8
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Town Square
@@ -439,16 +419,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc12c0
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Toasty
@@ -514,16 +484,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc129c
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Boss Levels
             -
@@ -575,16 +535,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc12cc
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Flight Levels
         statue_head_checks:
@@ -880,16 +830,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xbfc48
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Cliff Town
@@ -1000,16 +940,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xbfc54
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Ice Cavern
@@ -1135,16 +1065,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xbfc60
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Doctor Shemp
@@ -1210,16 +1130,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xbfc6c
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Boss Levels
             -
@@ -1271,16 +1181,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xbfc78
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Flight Levels
         statue_head_checks: []
@@ -1572,16 +1472,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc627c
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: High Caves
@@ -1707,16 +1597,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc6294
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Wizard Peak
@@ -1842,16 +1722,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc6288
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Blowhard
@@ -1917,16 +1787,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc6264
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Boss Levels
             -
@@ -1978,16 +1838,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc6270
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Flight Levels
         statue_head_checks: []
@@ -2189,16 +2039,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xb558c
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Misty Bog
@@ -2309,16 +2149,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xb5574
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Tree Tops
@@ -2415,16 +2245,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xb5580
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Metalhead
@@ -2490,16 +2310,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xb5568
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Boss Levels
             -
@@ -2551,16 +2361,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xb5598
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Flight Levels
         statue_head_checks: []
@@ -2822,16 +2622,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc5ecc
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Lofty Castle
@@ -2927,17 +2717,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc5ee4
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
-                groups: []
             -
                 name: Haunted Towers
                 text_offset:
@@ -3032,16 +2811,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc5efc
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Jacques
@@ -3122,16 +2891,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc5ed8
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Boss Levels
             -
@@ -3183,22 +2942,11 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xc5ef0
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Flight Levels
         statue_head_checks: []
     -
         name: Gnasty's World
-        id: *vals_env_id_hub_gnastys_world
         balloon_addresses:
             -
                 io: write
@@ -3379,16 +3127,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xa69d8
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Twilight Harbor
@@ -3469,16 +3207,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xa69b4
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
             -
                 name: Gnasty Gnorc
@@ -3529,16 +3257,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xa69c0
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups:
                     - Boss Levels
             -
@@ -3590,16 +3308,6 @@ hubs:
                         guard:
                             type: always
                         connections: []
-                portal:
-                    io: write
-                    data:
-                        address: 0xa69cc
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: 0
-                    guard:
-                        type: always
                 groups: []
         statue_head_checks:
             -

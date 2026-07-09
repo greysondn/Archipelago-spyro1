@@ -172,44 +172,6 @@ hubs:
                     - Flight Levels
     -
         name: Peace Keepers
-        balloon_addresses:
-            -
-                io: write
-                data:
-                    address: 0x7c5dc
-                    domain: MainRAM
-                    type: bytes
-                    length: 1
-                    value: 
-                        - 0x01
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
-            -
-                io: write
-                data:
-                    address: 0x7c5e0
-                    domain: MainRAM
-                    type: bytes
-                    length: 2
-                    value:
-                        - 0x0c
-                        - 0xf0
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
         # text offset
         total_gems: 200
         regions:
@@ -383,44 +345,6 @@ hubs:
                     - Flight Levels
     -
         name: Magic Crafters
-        balloon_addresses:
-            -
-                io: write
-                data:
-                    address: 0x7c5d4
-                    domain: MainRAM
-                    type: bytes
-                    length: 1
-                    value: 
-                        - 0x01
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
-            -
-                io: write
-                data:
-                    address: 0x7c5d8
-                    domain: MainRAM
-                    type: bytes
-                    length: 2
-                    value:
-                        - 0x0c
-                        - 0xf0
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
         # text offset
         total_gems: 300
         regions:
@@ -613,44 +537,6 @@ hubs:
                     - Flight Levels
     -
         name: Beast Makers
-        balloon_addresses:
-            -
-                io: write
-                data:
-                    address: 0x7c3c8
-                    domain: MainRAM
-                    type: bytes
-                    length: 1
-                    value: 
-                        - 0x01
-                guard:
-                    type: and
-                    next:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_balloonist
-            -
-                io: write
-                data:
-                    address: 0x7c3cc
-                    domain: MainRAM
-                    type: bytes
-                    length: 2
-                    value:
-                        - 0x0c
-                        - 0xf0
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
         # text offset
         total_gems: 300
         regions:
@@ -783,44 +669,6 @@ hubs:
                     - Flight Levels
     -
         name: Dream Weavers
-        balloon_addresses:
-            -
-                io: write
-                data:
-                    address: 0x7c5fc
-                    domain: MainRAM
-                    type: bytes
-                    length: 1
-                    value: 
-                        - 0x01
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
-            -
-                io: write
-                data:
-                    address: 0x7c600
-                    domain: MainRAM
-                    type: bytes
-                    length: 2
-                    value:
-                        - 0x0c
-                        - 0xf0
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
         # text offset
         total_gems: 300
         regions:
@@ -981,44 +829,6 @@ hubs:
                     - Flight Levels
     -
         name: Gnasty's World
-        balloon_addresses:
-            -
-                io: write
-                data:
-                    address: 0x7bb74
-                    domain: MainRAM
-                    type: bytes
-                    length: 1
-                    value: 
-                        - 0x01
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
-            -
-                io: write
-                data:
-                    address: 0x7bb78
-                    domain: MainRAM
-                    type: bytes
-                    length: 2
-                    value:
-                        - 0x0c
-                        - 0xf0
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
         # text offset
         total_gems: 200
         regions:

@@ -182,6 +182,226 @@ memory:
                         params:
                             name:  gamestate
                             value: balloonist
+    -
+        name: Peace Keepers balloon 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c5dc
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Peace Keepers balloon 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c5e0
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Magic Crafters balloon 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c5d4
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Magic Crafters balloon 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c5d8
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Beast Makers balloon 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c3c8
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Beast Makers balloon 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c3cc
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Dream Weavers balloon 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c5fc
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Dream Weavers balloon 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7c600
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Gnasty's World balloon 1
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7bb74
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+    -
+        name: Gnasty's World balloon 2
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7bb78
+                format: bytes
+                length: 2
+                byte_order: little
+                guard:
+                    read:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
+                    write:
+                        type: memory_equals
+                        params:
+                            name:  gamestate
+                            value: balloonist
     
 
     # -------------------------------------------------------------------------

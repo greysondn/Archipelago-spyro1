@@ -1,0 +1,11 @@
+regions:
+    - # main game environment
+        name: world
+        extra: []
+        children: # hubs
+            -
+                name: Artisans
+                extra:
+                    id: "Artisans"
+                    total_gems: 100
+                children: # Artisans levels

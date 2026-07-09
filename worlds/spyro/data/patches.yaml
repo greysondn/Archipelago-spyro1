@@ -1,0 +1,60 @@
+patches:
+    -
+        name: Artisans balloon
+        writes: 
+            -
+                data:
+                    address: 0x7bc04
+                    domain: MainRAM
+                    type: bytes
+                    length: 1
+                    value: 
+                        - 0x01
+                guard:
+                    type: memory_equals
+                    params:
+                        name:  gamestate
+                        value: balloonist
+            -
+                data:
+                    address: 0x7bc08
+                    domain: MainRAM
+                    type: bytes
+                    length: 2
+                    value:
+                        - 0x0c
+                        - 0xf0
+                guard:
+                    type: memory_equals
+                    params:
+                        name:  gamestate
+                        value: balloonist
+    -
+        name: Artisans text offset
+        writes:
+            -
+                data:
+                    address: 0x1006c
+                    domain: MainRAM
+                    type: string
+                    length: 1
+                    value: "A"
+                guard:
+                    type: or
+                    params:
+                        next:
+                            -
+                                type: memory_equals
+                                params:
+                                    name:  gamestate
+                                    value: gameplay
+                            -
+                                type: memory_equals
+                                params:
+                                    name:  gamestate
+                                    value: inventory
+                            -
+                                type: memory_equals
+                                params:
+                                    name:  gamestate
+                                    value: loading

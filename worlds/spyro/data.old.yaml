@@ -5,85 +5,14 @@ world:
 hubs:
     -
         name: Artisans
-        id: *vals_env_id_hub_artisans
+        
         balloon_addresses:
-            -
-                io: write
-                data:
-                    address: 0x7bc04
-                    domain: MainRAM
-                    type: bytes
-                    length: 1
-                    value: 
-                        - 0x01
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
-            -
-                io: write
-                data:
-                    address: 0x7bc08
-                    domain: MainRAM
-                    type: bytes
-                    length: 2
-                    value:
-                        - 0x0c
-                        - 0xf0
-                guard:
-                    type: and
-                    next:
-                        -
-                            address: *addr_gamestate
-                            length: 1
-                            type: int
-                            domain: MainRAM
-                            value: *vals_gamestate_balloonist
+            
         text_offset:
-            io: write
-            data:
-                address: 0x1006c
-                domain: MainRAM
-                type: string
-                length: 1
-                value: "A"
-            guard:
-                type: or
-                next:
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_gameplay
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_inventory
-                    -
-                        address: *addr_gamestate
-                        length: 1
-                        type: int
-                        domain: MainRAM
-                        value: *vals_gamestate_loading
-        total_gems: 100
+
+        
         gem_counter:
-            io: read
-            data: 
-                address: 0x77420
-                length: 2
-                type: int
-                domain: MainRAM
-                value: 0
-            guard:
-                type: always
+
         regions:
             -
                 name: Artisans Start
@@ -92,17 +21,11 @@ hubs:
                         name: Artisans - Nestor
                         groups:
                             - Dragons
-                        bizhawk:
-                            io: both
-                            data:
-                                address: 0x77913
-                                type: flag
-                                domain: MainRAM
-                                value: 0x01
-                            guard:
-                                type: always
                         guard:
-                            type: always
+                            type: memory_equals
+                            params:
+                                name:  Artisans - Nestor
+                                value: True
                     -
                         name: Artisans - Argus
                         groups:
@@ -154,8 +77,6 @@ hubs:
         levels:
             -
                 name: Stone Hill
-                id: *vals_env_id_level_stone_hill
-                vortex_moby_address: 0x177330
                 text_offset:
                     io: write
                     data:
@@ -291,8 +212,6 @@ hubs:
                 groups: []
             -
                 name: Dark Hollow
-                id: *vals_env_id_level_dark_hollow
-                vortex_moby_address: 0x1339ac
                 text_offset: 
                     io: write
                     data:
@@ -398,8 +317,6 @@ hubs:
                 groups: []
             -
                 name: Town Square
-                id: *vals_env_id_level_town_square
-                vortex_moby_address: 0x17d644
                 text_offset:
                     io: write
                     data:
@@ -535,8 +452,6 @@ hubs:
                 groups: []
             -
                 name: Toasty
-                id: *vals_env_id_level_toasty
-                vortex_moby_address: 0x1738ac
                 text_offset:
                     io: write
                     data:
@@ -613,8 +528,6 @@ hubs:
                     - Boss Levels
             -
                 name: Sunny Flight
-                id: *vals_env_id_level_sunny_flight
-                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -697,7 +610,6 @@ hubs:
                     type: always
     -
         name: Peace Keepers
-        id: *vals_env_id_hub_peace_keepers
         balloon_addresses:
             -
                 io: write
@@ -846,8 +758,6 @@ hubs:
         levels:
             -
                 name: Dry Canyon
-                id: *vals_env_id_level_dry_canyon
-                vortex_moby_address: 0x169444
                 text_offset:
                     io: write
                     data:
@@ -983,8 +893,6 @@ hubs:
                 groups: []
             -
                 name: Cliff Town
-                id: *vals_env_id_level_cliff_town
-                vortex_moby_address: 0x16f978
                 text_offset: 
                     io: write
                     data:
@@ -1105,8 +1013,6 @@ hubs:
                 groups: []
             -
                 name: Ice Cavern
-                id: *vals_env_id_level_ice_cavern
-                vortex_moby_address: 0x16b454
                 text_offset: 
                     io: write
                     data:
@@ -1242,8 +1148,6 @@ hubs:
                 groups: []
             -
                 name: Doctor Shemp
-                id: *vals_env_id_level_doctor_shemp
-                vortex_moby_address: 0x16ba44
                 text_offset:
                     io: write
                     data:
@@ -1320,8 +1224,6 @@ hubs:
                     - Boss Levels
             -
                 name: Night Flight
-                id: *vals_env_id_level_night_flight
-                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -1548,8 +1450,6 @@ hubs:
         levels:
             -
                 name: Alpine Ridge
-                id: *vals_env_id_level_alpine_ridge
-                vortex_moby_address: 0x17bbec
                 text_offset:
                     io: write
                     data:
@@ -1685,8 +1585,6 @@ hubs:
                 groups: []
             -
                 name: High Caves
-                id: *vals_env_id_level_high_caves
-                vortex_moby_address: 0x17e188
                 text_offset:
                     io: write
                     data:
@@ -1822,8 +1720,6 @@ hubs:
                 groups: []
             -
                 name: Wizard Peak
-                id: *vals_env_id_level_wizard_peak
-                vortex_moby_address: 0x179ce4
                 text_offset:
                     io: write
                     data:
@@ -1959,8 +1855,6 @@ hubs:
                 groups: []
             -
                 name: Blowhard
-                id: *vals_env_id_level_blowhard
-                vortex_moby_address: 0x1396e4
                 text_offset:
                     io: write
                     data:
@@ -2037,8 +1931,6 @@ hubs:
                     - Boss Levels
             -
                 name: Crystal Flight
-                id: *vals_env_id_level_crystal_flight
-                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -2220,8 +2112,6 @@ hubs:
         levels:
             -
                 name: Terrace Village
-                id: *vals_env_id_level_terrace_village
-                vortex_moby_address: 0x179020
                 text_offset:
                     io: write
                     data:
@@ -2312,8 +2202,6 @@ hubs:
                 groups: []
             -
                 name: Misty Bog
-                id: *vals_env_id_level_misty_bog
-                vortex_moby_address: 0x17b68c
                 text_offset:
                     io: write
                     data:
@@ -2434,8 +2322,6 @@ hubs:
                 groups: []
             -
                 name: Tree Tops
-                id: *vals_env_id_level_tree_tops
-                vortex_moby_address: 0x17ce24
                 text_offset:
                     io: write
                     data:
@@ -2542,8 +2428,6 @@ hubs:
                 groups: []
             -
                 name: Metalhead
-                id: *vals_env_id_level_metalhead
-                vortex_moby_address: 0x173fc4
                 text_offset:
                     io: write
                     data:
@@ -2620,8 +2504,6 @@ hubs:
                     - Boss Levels
             -
                 name: Wild Flight
-                id: *vals_env_id_level_wild_flight
-                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -2818,8 +2700,6 @@ hubs:
         levels:
             -
                 name: Dark Passage
-                id: *vals_env_id_level_dark_passage
-                vortex_moby_address: 0x178950
                 text_offset:
                     io: write
                     data:
@@ -2955,8 +2835,6 @@ hubs:
                 groups: []
             -
                 name: Lofty Castle
-                id: *vals_env_id_level_lofty_castle
-                vortex_moby_address: 0x15a3d8
                 text_offset:
                     io: write
                     data:
@@ -3062,8 +2940,6 @@ hubs:
                 groups: []
             -
                 name: Haunted Towers
-                id: *vals_env_id_level_haunted_towers
-                vortex_moby_address: 0x176964
                 text_offset:
                     io: write
                     data:
@@ -3169,8 +3045,6 @@ hubs:
                 groups: []
             -
                 name: Jacques
-                id: *vals_env_id_level_jacques
-                vortex_moby_address: 0x16deb0
                 text_offset:
                     io: write
                     data:
@@ -3262,8 +3136,6 @@ hubs:
                     - Boss Levels
             -
                 name: Icy Flight
-                id: *vals_env_id_level_icy_flight
-                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -3430,8 +3302,6 @@ hubs:
         levels:
             -
                 name: Gnorc Cove
-                id: *vals_env_id_level_gnorc_cove
-                vortex_moby_address: 0x174884
                 text_offset:
                     io: write
                     data:
@@ -3522,8 +3392,6 @@ hubs:
                 groups: []
             -
                 name: Twilight Harbor
-                id: *vals_env_id_level_twilight_harbor
-                vortex_moby_address: 0x17c298
                 text_offset:
                     io: write
                     data:
@@ -3614,8 +3482,6 @@ hubs:
                 groups: []
             -
                 name: Gnasty Gnorc
-                id: *vals_env_id_level_gnasty_gnorc
-                vortex_moby_address: null
                 text_offset:
                     io: write
                     data:
@@ -3677,8 +3543,6 @@ hubs:
                     - Boss Levels
             -
                 name: Gnasty's Loot
-                id: *vals_env_id_level_gnastys_loot
-                vortex_moby_address: 0x14da14
                 text_offset: 
                     io: write
                     data:

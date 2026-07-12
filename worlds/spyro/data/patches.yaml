@@ -3,11 +3,15 @@ patches:
         name: Artisans balloon 1
         value:
             - 0x01
+        guard:
+            type: always
     -
         name: Artisans balloon 2
         value:
             - 0x0c
             - 0xf0
+        guard:
+            type: always
     -
         name: Artisans statue head check 1
         value: 
@@ -15,6 +19,8 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Artisans statue head check 2
         value: 
@@ -22,33 +28,47 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Beast Makers balloon 1
         value:
             - 0x01
+        guard:
+            type: always
     -
         name: Beast Makers balloon 2
         value:
             - 0x0c
             - 0xf0
+        guard:
+            type: always
     -
         name: Dream Weavers balloon 1
         value:
             - 0x01
+        guard:
+            type: always
     -
         name: Dream Weavers balloon 2
         value:
             - 0x0c
             - 0xf0
+        guard:
+            type: always
     -
         name: Gnasty's World balloon 1
         value:
             - 0x01
+        guard:
+            type: always
     -
         name: Gnasty's World balloon 2
         value:
             - 0x0c
             - 0xf0
+        guard:
+            type: always
     -
         name: Gnasty's World statue head check 1
         value: 
@@ -56,6 +76,8 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Gnasty's World statue head check 2
         value: 
@@ -63,6 +85,8 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Gnasty's World statue head check 3
         value: 
@@ -70,6 +94,8 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Gnasty's World statue head check 4
         value: 
@@ -77,6 +103,8 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Gnasty's World statue head check 5
         value: 
@@ -84,6 +112,8 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Gnasty's World statue head check 6
         value: 
@@ -91,21 +121,61 @@ patches:
             - 0x00
             - 0x00
             - 0x00
+        guard:
+            type: always
     -
         name: Magic Crafters balloon 1
         value:
             - 0x01
+        guard:
+            type: always
     -
         name: Magic Crafters balloon 2
         value:
             - 0x0c
             - 0xf0
+        guard:
+            type: always
     -
         name: Peace Keepers balloon 1
         value:
             - 0x01
+        guard:
+            type: always
     -
         name: Peace Keepers balloon 2
         value:
             - 0x0c
             - 0xf0
+        guard:
+            type: always
+    -
+        name: unlocked world - Artisans
+        value: 2
+        guard:
+            type: always
+    -
+        name: unlocked world - Beast Makers
+        value: 2
+        guard:
+            type: always
+    -
+        name: unlocked world - Dream Weavers
+        value: 2
+        guard:
+            type: always
+    -
+        name: unlocked world - Gnasty's World
+        value: 2
+        guard:
+            type: always
+    -
+        name: unlocked world - Magic Crafters
+        value: 2
+        guard:
+            type: always
+    -
+        name: unlocked world - Peace Keepers
+        value: 2
+        guard:
+            type: always

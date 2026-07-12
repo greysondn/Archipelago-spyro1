@@ -1,70 +1,60 @@
 regions:
     -
-        name: Stone Hill
+        name: Peace Keepers
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: Peace Keepers text offset
         groups: []
         extra:
             total_gems: 200
         children:
             -
-                name: Stone Hill Start
+                name: Peace Keepers Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: Peace Keepers - Titan
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name: Peace Keepers - Titan
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: Peace Keepers - Magnus
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name: Peace Keepers - Magnus
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: Peace Keepers - Gunnar
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name: Peace Keepers - Gunnar
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Stone Hill - Gildas
-                                value: True
-                        callbacks: []
-                    -
-                        name: Stone Hill - Egg 1 (Upper Area)
+                        name: Peace Keepers - Egg 1 (Pool)
                         groups:
                             - Eggs
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
+                                name: Peace Keepers - Egg 1 (Pool)
                                 value: True
                         callbacks: []
                 memory: []

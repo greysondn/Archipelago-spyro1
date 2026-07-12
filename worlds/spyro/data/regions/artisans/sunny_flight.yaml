@@ -1,0 +1,24 @@
+regions:
+    -
+        name: Sunny Flight
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Sunny Flight text offset
+        groups:
+            - Flight Levels
+        extra:
+            total_gems: 300
+        children:
+            -
+                name: Sunny Flight Start
+                guard:
+                    type: always
+                connections: []
+                locations: []
+                memory: []
+                extra:
+                    total_gems: 300
+                children: []

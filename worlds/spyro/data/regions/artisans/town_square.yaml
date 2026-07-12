@@ -1,70 +1,60 @@
 regions:
     -
-        name: Stone Hill
+        name: Town Square
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: Town Square text offset
         groups: []
         extra:
             total_gems: 200
         children:
             -
-                name: Stone Hill Start
+                name: Town Square Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: Town Square - Nils
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name:  Town Square - Nils
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: Town Square - Alvar
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name:  Town Square - Alvar
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: Town Square - Devlin
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name:  Town Square - Devlin
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Stone Hill - Gildas
-                                value: True
-                        callbacks: []
-                    -
-                        name: Stone Hill - Egg 1 (Upper Area)
+                        name: Town Square - Egg 1 (Upper Area)
                         groups:
                             - Eggs
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
+                                name:  Town Square - Egg 1 (Upper Area)
                                 value: True
                         callbacks: []
                 memory: []

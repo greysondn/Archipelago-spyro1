@@ -1,0 +1,34 @@
+regions:
+    -
+        name: Doctor Shemp
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Doctor Shemp text offset
+        groups:
+            - Boss Levels
+        extra:
+            total_gems: 300
+        children:
+            -
+                name: Doctor Shemp Start
+                guard:
+                    type: always
+                connections: []
+                locations:
+                    -
+                        name: Doctor Shemp - Trondo
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name: Doctor Shemp - Trondo
+                                value: True
+                        callbacks: []
+                memory: []
+                extra:
+                    total_gems: 300
+                children: []

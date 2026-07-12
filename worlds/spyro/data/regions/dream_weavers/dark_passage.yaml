@@ -1,73 +1,73 @@
 regions:
     -
-        name: Stone Hill
+        name: Dark Passage
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: Dark Passage text offset
         groups: []
         extra:
-            total_gems: 200
+            total_gems: 500
         children:
             -
-                name: Stone Hill Start
+                name: Dark Passage Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: Dark Passage - Kasiya
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name: Dark Passage - Kasiya
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: Dark Passage - Azizi
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name: Dark Passage - Azizi
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: Dark Passage - Bakari
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name: Dark Passage - Bakari
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
+                        name: Dark Passage - Apara
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gildas
+                                name: Dark Passage - Apara
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Egg 1 (Upper Area)
+                        name: Dark Passage - Obasi
                         groups:
-                            - Eggs
+                            - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
+                                name: Dark Passage - Obasi
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 200
+                    total_gems: 500
                 children: []

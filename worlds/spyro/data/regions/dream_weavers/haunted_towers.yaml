@@ -1,53 +1,53 @@
 regions:
     -
-        name: Dark Hollow
+        name: Haunted Towers
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Dark Hollow text offset
+            text_offset: Haunted Towers text offset
         groups: []
         extra:
-            total_gems: 100
+            total_gems: 500
         children:
             -
-                name: Dark Hollow Start
+                name: Haunted Towers Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Dark Hollow - Alban
+                        name: Haunted Towers - Kosoko
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Alban
+                                name: Haunted Towers - Kosoko
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Oswin
+                        name: Haunted Towers - Lutalo
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Oswin
+                                name: Haunted Towers - Lutalo
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Darius
+                        name: Haunted Towers - Copano
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Darius
+                                name: Haunted Towers - Copano
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 100
+                    total_gems: 500
                 children: []

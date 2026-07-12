@@ -1,0 +1,34 @@
+regions:
+    -
+        name: Blowhard
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Blowhard text offset
+        groups:
+            - Boss Levels
+        extra:
+            total_gems: 400
+        children:
+            -
+                name: Blowhard Start
+                guard:
+                    type: always
+                connections: []
+                locations:
+                    -
+                        name: Blowhard - Altair
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name: Blowhard - Altair
+                                value: True
+                        callbacks: []
+                memory: []
+                extra:
+                    total_gems: 400
+                children: []

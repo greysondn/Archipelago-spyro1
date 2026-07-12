@@ -1,0 +1,34 @@
+regions:
+    -
+        name: Toasty
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Toasty text offset
+        groups:
+            - Boss Levels
+        extra:
+            total_gems: 100
+        children:
+            -
+                name: Toasty Start
+                guard:
+                    type: always
+                connections: []
+                locations:
+                    -
+                        name: Toasty - Nevin
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name: Toasty - Nevin
+                                value: True
+                        callbacks: []
+                memory: []
+                extra:
+                    total_gems: 100
+                children: []

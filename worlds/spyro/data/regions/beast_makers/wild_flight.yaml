@@ -1,0 +1,24 @@
+regions:
+    -
+        name: Wild Flight
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Wild Flight text offset
+        groups:
+            - Flight Levels
+        extra:
+            total_gems: 300
+        children:
+            -
+                name: Wild Flight Start
+                guard:
+                    type: always
+                connections: []
+                locations: []
+                memory: []
+                extra:
+                    total_gems: 300
+                children: []

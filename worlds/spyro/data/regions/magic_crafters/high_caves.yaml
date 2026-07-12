@@ -1,73 +1,73 @@
 regions:
     -
-        name: Stone Hill
+        name: High Caves
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: High Caves text offset
         groups: []
         extra:
-            total_gems: 200
+            total_gems: 500
         children:
             -
-                name: Stone Hill Start
+                name: High Caves Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: High Caves - Cyrus
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name: High Caves - Cyrus
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: High Caves - Cedric
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name: High Caves - Cedric
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: High Caves - Ajax
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name: High Caves - Ajax
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Stone Hill - Gildas
-                                value: True
-                        callbacks: []
-                    -
-                        name: Stone Hill - Egg 1 (Upper Area)
+                        name: High Caves - Egg 1 (Distant Pool)
                         groups:
                             - Eggs
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
+                                name: High Caves - Egg 1 (Distant Pool)
+                                value: True
+                        callbacks: []
+                    -
+                        name: High Caves - Egg 2 (Cave)
+                        groups:
+                            - Eggs
+                        guard:
+                            type: memory_equals
+                            params:
+                                name: High Caves - Egg 2 (Cave)
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 200
+                    total_gems: 500
                 children: []

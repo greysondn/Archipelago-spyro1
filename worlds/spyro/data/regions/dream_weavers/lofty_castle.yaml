@@ -1,53 +1,53 @@
 regions:
     -
-        name: Dark Hollow
+        name: Lofty Castle
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Dark Hollow text offset
+            text_offset: Lofty Castle text offset
         groups: []
         extra:
-            total_gems: 100
+            total_gems: 400
         children:
             -
-                name: Dark Hollow Start
+                name: Lofty Castle Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Dark Hollow - Alban
+                        name: Lofty Castle - Mudada
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Alban
+                                name: Lofty Castle - Mudada
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Oswin
+                        name: Lofty Castle - Baruti
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Oswin
+                                name: Lofty Castle - Baruti
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Darius
+                        name: Lofty Castle - Useni
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Darius
+                                name: Lofty Castle - Useni
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 100
+                    total_gems: 400
                 children: []

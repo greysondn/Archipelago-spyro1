@@ -1,53 +1,43 @@
 regions:
     -
-        name: Dark Hollow
+        name: Gnorc Cove
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Dark Hollow text offset
+            text_offset: Gnorc Cove text offset
         groups: []
         extra:
-            total_gems: 100
+            total_gems: 400
         children:
             -
-                name: Dark Hollow Start
+                name: Gnorc Cove Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Dark Hollow - Alban
+                        name: Gnorc Cove - Lateef
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Alban
+                                name: Gnorc Cove - Lateef
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Oswin
+                        name: Gnorc Cove - Tomas
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Oswin
-                                value: True
-                        callbacks: []
-                    -
-                        name: Dark Hollow - Darius
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Dark Hollow - Darius
+                                name: Gnorc Cove - Tomas
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 100
+                    total_gems: 400
                 children: []

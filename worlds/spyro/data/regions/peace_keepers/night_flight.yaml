@@ -1,0 +1,24 @@
+regions:
+    -
+        name: Night Flight
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Night Flight text offset
+        groups:
+            - Flight Levels
+        extra:
+            total_gems: 0  #TODO: Figure out total_gems
+        children:
+            -
+                name: Night Flight Start
+                guard:
+                    type: always
+                connections: []
+                locations: []
+                memory: []
+                extra:
+                    total_gems: 0
+                children: []

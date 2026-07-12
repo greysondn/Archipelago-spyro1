@@ -1,0 +1,33 @@
+regions:
+    -
+        name: Gnasty's World
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Gnasty's World text offset
+        groups: []
+        extra:
+            total_gems: 200
+        children:
+            -
+                name: Gnasty's World Start
+                guard:
+                    type: always
+                connections: []
+                locations:
+                    -
+                        name: Gnasty's World - Delbin/Magnus
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name: Gnasty's World - Delbin/Magnus
+                                value: True
+                        callbacks: []
+                memory: []
+                extra:
+                    total_gems: 200
+                children: []

@@ -1,53 +1,44 @@
 regions:
     -
-        name: Dark Hollow
+        name: Jacques
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Dark Hollow text offset
-        groups: []
+            text_offset: Jacques text offset
+        groups:
+            - Boss Levels
         extra:
-            total_gems: 100
+            total_gems: 500
         children:
             -
-                name: Dark Hollow Start
+                name: Jacques Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Dark Hollow - Alban
+                        name: Jacques - Unika
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Alban
+                                name: Jacques - Unika
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Oswin
+                        name: Jacques - Revilo
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Oswin
-                                value: True
-                        callbacks: []
-                    -
-                        name: Dark Hollow - Darius
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Dark Hollow - Darius
+                                name: Jacques - Revilo
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 100
+                    total_gems: 500
                 children: []

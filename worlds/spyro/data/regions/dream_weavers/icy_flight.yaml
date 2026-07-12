@@ -1,0 +1,24 @@
+regions:
+    -
+        name: Icy Flight
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Icy Flight text offset
+        groups:
+            - Flight Levels
+        extra:
+            total_gems: 300
+        children:
+            -
+                name: Icy Flight Start
+                guard:
+                    type: always
+                connections: []
+                locations: []
+                memory: []
+                extra:
+                    total_gems: 300
+                children: []

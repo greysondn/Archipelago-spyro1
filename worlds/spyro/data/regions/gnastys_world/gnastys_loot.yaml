@@ -1,0 +1,23 @@
+regions:
+    -
+        name: Gnasty's Loot
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Gnasty's Loot text offset
+        groups: []
+        extra:
+            total_gems: 2000
+        children:
+            -
+                name: Gnasty's Loot Start
+                guard:
+                    type: always
+                connections: []
+                locations: []
+                memory: []
+                extra:
+                    total_gems: 2000
+                children: []

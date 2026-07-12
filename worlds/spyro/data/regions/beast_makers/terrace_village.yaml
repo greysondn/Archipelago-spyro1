@@ -1,53 +1,43 @@
 regions:
     -
-        name: Dark Hollow
+        name: Terrace Village
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Dark Hollow text offset
+            text_offset: Terrace Village text offset
         groups: []
         extra:
-            total_gems: 100
+            total_gems: 400
         children:
             -
-                name: Dark Hollow Start
+                name: Terrace Village Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Dark Hollow - Alban
+                        name: Terrace Village - Claude
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Alban
+                                name: Terrace Village - Claude
                                 value: True
                         callbacks: []
                     -
-                        name: Dark Hollow - Oswin
+                        name: Terrace Village - Cyprin
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Dark Hollow - Oswin
-                                value: True
-                        callbacks: []
-                    -
-                        name: Dark Hollow - Darius
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Dark Hollow - Darius
+                                name: Terrace Village - Cyprin
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 100
+                    total_gems: 400
                 children: []

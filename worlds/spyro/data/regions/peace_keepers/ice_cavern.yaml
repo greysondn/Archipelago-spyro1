@@ -1,73 +1,73 @@
 regions:
     -
-        name: Stone Hill
+        name: Ice Cavern
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: Ice Cavern text offset
         groups: []
         extra:
-            total_gems: 200
+            total_gems: 400
         children:
             -
-                name: Stone Hill Start
+                name: Ice Cavern Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: Ice Cavern - Ulric
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name: Ice Cavern - Ulric
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: Ice Cavern - Todor
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name: Ice Cavern - Todor
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: Ice Cavern - Andor
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name: Ice Cavern - Andor
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
+                        name: Ice Cavern - Asher
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gildas
+                                name: Ice Cavern - Asher
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Egg 1 (Upper Area)
+                        name: Ice Cavern - Ragnar
                         groups:
-                            - Eggs
+                            - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
+                                name: Ice Cavern - Ragnar
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 200
+                    total_gems: 400
                 children: []

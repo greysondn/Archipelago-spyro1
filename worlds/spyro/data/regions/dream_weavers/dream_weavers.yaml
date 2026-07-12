@@ -1,61 +1,53 @@
 regions:
     -
-        name: Artisans
+        name: Dream Weavers
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Artisans text offset
+            text_offset: Dream Weavers text offset
+        groups: []
         extra:
-            total_gems: 100
+            total_gems: 300
         children:
             -
-                name: Artisans Start
+                name: Dream Weavers Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Artisans - Nestor
+                        name: Dream Weavers - Mazi
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Artisans - Nestor
+                                name: Dream Weavers - Mazi
                                 value: True
                         callbacks: []
                     -
-                        name: Artisans - Argus
+                        name: Dream Weavers - Lateef
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Artisans - Argus
+                                name: Dream Weavers - Lateef
                                 value: True
                         callbacks: []
                     -
-                        name: Artisans - Delbin
+                        name: Dream Weavers - Zikomo
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Artisans - Delbin
+                                name: Dream Weavers - Zikomo
                                 value: True
                         callbacks: []
-                    -
-                        name: Artisans - Tomas
-                        groups:
-                            - Dragons
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Artisans - Tomas
-                                value: True
-                        callbacks: []
+                memory: []
                 extra:
-                    total_gems: 100
+                    total_gems: 300
                 children: []

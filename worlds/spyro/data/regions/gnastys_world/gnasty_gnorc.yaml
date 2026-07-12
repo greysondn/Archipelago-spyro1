@@ -1,0 +1,24 @@
+regions:
+    -
+        name: Gnasty Gnorc
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Gnasty Gnorc text offset
+        groups:
+            - Boss Levels
+        extra:
+            total_gems: 500
+        children:
+            -
+                name: Gnasty Gnorc Start
+                guard:
+                    type: always
+                connections: []
+                locations: []
+                memory: []
+                extra:
+                    total_gems: 500
+                children: []

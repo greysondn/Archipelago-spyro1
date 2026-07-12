@@ -1,73 +1,62 @@
 regions:
     -
-        name: Stone Hill
+        name: Artisans
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: Artisans text offset
         groups: []
         extra:
-            total_gems: 200
+            total_gems: 100
         children:
             -
-                name: Stone Hill Start
+                name: Artisans Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: Artisans - Nestor
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name:  Artisans - Nestor
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: Artisans - Argus
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name:  Artisans - Argus
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: Artisans - Delbin
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name:  Artisans - Delbin
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
+                        name: Artisans - Tomas
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gildas
+                                name:  Artisans - Tomas
                                 value: True
                         callbacks: []
-                    -
-                        name: Stone Hill - Egg 1 (Upper Area)
-                        groups:
-                            - Eggs
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
-                                value: True
-                        callbacks: []
-                memory: []
                 extra:
-                    total_gems: 200
+                    total_gems: 100
                 children: []

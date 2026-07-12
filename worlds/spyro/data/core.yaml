@@ -47,8 +47,72 @@ meta:
         -
             path: "regions/world.yaml"
         -
+            path: "regions/artisans/artisans.yaml"
+        -
             path: "regions/artisans/dark_hollow.yaml"
         -
-            path: "regions/artisans/hub.yaml"
-        -
             path: "regions/artisans/stone_hill.yaml"
+        -
+            path: "regions/artisans/sunny_flight.yaml"
+        -
+            path: "regions/artisans/toasty.yaml"
+        -
+            path: "regions/artisans/town_square.yaml"
+        -
+            path: "regions/beast_makers/beast_makers.yaml"
+        -
+            path: "regions/beast_makers/metalhead.yaml"
+        -
+            path: "regions/beast_makers/misty_bog.yaml"
+        -
+            path: "regions/beast_makers/terrace_village.yaml"
+        -
+            path: "regions/beast_makers/tree_tops.yaml"
+        -
+            path: "regions/beast_makers/wild_flight.yaml"
+        -
+            path: "regions/dream_weavers/dark_passage.yaml"
+        -
+            path: "regions/dream_weavers/dream_weavers.yaml"
+        -
+            path: "regions/dream_weavers/haunted_towers.yaml"
+        -
+            path: "regions/dream_weavers/icy_flight.yaml"
+        -
+            path: "regions/dream_weavers/jacques.yaml"
+        -
+            path: "regions/dream_weavers/lofty_castle.yaml"
+        -
+            path: "regions/gnastys_world/gnasty_gnorc.yaml"
+        -
+            path: "regions/gnastys_world/gnastys_loot.yaml"
+        -
+            path: "regions/gnastys_world/gnastys_world.yaml"
+        -
+            path: "regions/gnastys_world/gnorc_cove.yaml"
+        -
+            path: "regions/gnastys_world/twilight_harbor.yaml"
+        -
+            path: "regions/magic_crafters/alpine_ridge.yaml"
+        -
+            path: "regions/magic_crafters/blowhard.yaml"
+        -
+            path: "regions/magic_crafters/crystal_flight.yaml"
+        -
+            path: "regions/magic_crafters/high_caves.yaml"
+        -
+            path: "regions/magic_crafters/magic_crafters.yaml"
+        -
+            path: "regions/magic_crafters/wizard_peak.yaml"
+        -
+            path: "regions/peace_keepers/cliff_town.yaml"
+        -
+            path: "regions/peace_keepers/doctor_shemp.yaml"
+        -
+            path: "regions/peace_keepers/dry_canyon.yaml"
+        -
+            path: "regions/peace_keepers/ice_cavern.yaml"
+        -
+            path: "regions/peace_keepers/night_flight.yaml"
+        -
+            path: "regions/peace_keepers/peace_keepers.yaml"

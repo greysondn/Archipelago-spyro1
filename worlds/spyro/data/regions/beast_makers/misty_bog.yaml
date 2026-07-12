@@ -1,73 +1,63 @@
 regions:
     -
-        name: Stone Hill
+        name: Misty Bog
         guard:
             type: always
         connections: []
         locations: []
         memory:
-            text_offset: Stone Hill text offset
+            text_offset: Misty Bog text offset
         groups: []
         extra:
-            total_gems: 200
+            total_gems: 500
         children:
             -
-                name: Stone Hill Start
+                name: Misty Bog Start
                 guard:
                     type: always
                 connections: []
                 locations:
                     -
-                        name: Stone Hill - Lindar
+                        name: Misty Bog - Rosco
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Lindar
+                                name: Misty Bog - Rosco
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gavin
+                        name: Misty Bog - Damon
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gavin
+                                name: Misty Bog - Damon
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Astor
+                        name: Misty Bog - Zeke
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Astor
+                                name: Misty Bog - Zeke
                                 value: True
                         callbacks: []
                     -
-                        name: Stone Hill - Gildas
+                        name: Misty Bog - Bubba
                         groups:
                             - Dragons
                         guard:
                             type: memory_equals
                             params:
-                                name:  Stone Hill - Gildas
-                                value: True
-                        callbacks: []
-                    -
-                        name: Stone Hill - Egg 1 (Upper Area)
-                        groups:
-                            - Eggs
-                        guard:
-                            type: memory_equals
-                            params:
-                                name:  Stone Hill - Egg 1 (Upper Area)
+                                name: Misty Bog - Bubba
                                 value: True
                         callbacks: []
                 memory: []
                 extra:
-                    total_gems: 200
+                    total_gems: 500
                 children: []

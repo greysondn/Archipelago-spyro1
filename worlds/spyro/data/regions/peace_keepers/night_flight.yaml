@@ -10,7 +10,7 @@ regions:
         groups:
             - Flight Levels
         extra:
-            total_gems: 0  #TODO: Figure out total_gems
+            total_gems: 300
         children:
             -
                 name: Night Flight Start
@@ -20,5 +20,5 @@ regions:
                 locations: []
                 memory: []
                 extra:
-                    total_gems: 0
+                    total_gems: 300
                 children: []

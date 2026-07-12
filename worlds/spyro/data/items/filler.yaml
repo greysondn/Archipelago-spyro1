@@ -1,0 +1,27 @@
+items:
+    # ------
+    # filler
+    # ------
+    -
+        name: Butterfly
+        virtual: false
+        internal: false
+        count: 0
+        categories:
+            - filler
+        aliases:
+            - Fodder
+        groups:
+            - Filler Item
+        callbacks: null
+    -
+        name: Extra Life
+        virtual: false
+        internal: false
+        count: 0
+        categories:
+            - filler
+        aliases: []
+        groups:
+            - Filler Item
+        callbacks: null

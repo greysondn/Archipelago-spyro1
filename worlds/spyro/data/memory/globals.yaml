@@ -1,0 +1,496 @@
+memory:
+    # -------------------------------------------------------------------------
+    # GLOBALS - Vanilla
+    # -------------------------------------------------------------------------
+    -
+        name: balloonist menu choice
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x777F0
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+    -
+        name: current level id
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7596C
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "Alpine Ridge":     31
+                    "Artisans":         10
+                    "Beast Makers":     40
+                    "Blowhard":         34
+                    "Cliff Town":       22
+                    "Crystal Flight":   35
+                    "Dark Hollow":      12
+                    "Dark Passage":     51
+                    "Doctor Shemp":     24
+                    "Dry Canyon":       21
+                    "Dream Weavers":    50
+                    "Gnasty Gnorc":     63
+                    "Gnasty's Loot":    64
+                    "Gnasty's World":   60
+                    "Gnorc Cove":       61
+                    "Haunted Towers":   53
+                    "High Caves":       32
+                    "Ice Cavern":       23
+                    "Icy Flight":       55
+                    "Jacques":          54
+                    "Lofty Castle":     52
+                    "Magic Crafters":   30
+                    "Metalhead":        44
+                    "Misty Bog":        42
+                    "Night Flight":     25
+                    "Peace Keepers":    20
+                    "Stone Hill":       11
+                    "Sunny Flight":     15
+                    "Terrace Village":  41
+                    "Toasty":           14
+                    "Town Square":      13
+                    "Tree Tops":        43
+                    "Twilight Harbor":  62
+                    "Wild Flight":      45
+                    "Wizard Peak":      33
+    -
+        name: gnasty animation id
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x160f08
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "defeated":     8
+    -
+        name: destination level id
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758B4
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "Alpine Ridge":     31
+                    "Artisans":         10
+                    "Beast Makers":     40
+                    "Blowhard":         34
+                    "Cliff Town":       22
+                    "Crystal Flight":   35
+                    "Dark Hollow":      12
+                    "Dark Passage":     51
+                    "Doctor Shemp":     24
+                    "Dry Canyon":       21
+                    "Dream Weavers":    50
+                    "Gnasty Gnorc":     63
+                    "Gnasty's Loot":    64
+                    "Gnasty's World":   60
+                    "Gnorc Cove":       61
+                    "Haunted Towers":   53
+                    "High Caves":       32
+                    "Ice Cavern":       23
+                    "Icy Flight":       55
+                    "Jacques":          54
+                    "Lofty Castle":     52
+                    "Magic Crafters":   30
+                    "Metalhead":        44
+                    "Misty Bog":        42
+                    "Night Flight":     25
+                    "Peace Keepers":    20
+                    "Stone Hill":       11
+                    "Sunny Flight":     15
+                    "Terrace Village":  41
+                    "Toasty":           14
+                    "Town Square":      13
+                    "Tree Tops":        43
+                    "Twilight Harbor":  62
+                    "Wild Flight":      45
+                    "Wizard Peak":      33
+    -
+        # environment id
+        name: env_id
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x7596c
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "Alpine Ridge":     31
+                    "Artisans":         10
+                    "Beast Makers":     40
+                    "Blowhard":         34
+                    "Cliff Town":       22
+                    "Crystal Flight":   35
+                    "Dark Hollow":      12
+                    "Dark Passage":     51
+                    "Doctor Shemp":     24
+                    "Dry Canyon":       21
+                    "Dream Weavers":    50
+                    "Gnasty Gnorc":     63
+                    "Gnasty's Loot":    64
+                    "Gnasty's World":   60
+                    "Gnorc Cove":       61
+                    "Haunted Towers":   53
+                    "High Caves":       32
+                    "Ice Cavern":       23
+                    "Icy Flight":       55
+                    "Jacques":          54
+                    "Lofty Castle":     52
+                    "Magic Crafters":   30
+                    "Metalhead":        44
+                    "Misty Bog":        42
+                    "Night Flight":     25
+                    "Peace Keepers":    20
+                    "Stone Hill":       11
+                    "Sunny Flight":     15
+                    "Terrace Village":  41
+                    "Toasty":           14
+                    "Town Square":      13
+                    "Tree Tops":        43
+                    "Twilight Harbor":  62
+                    "Wild Flight":      45
+                    "Wizard Peak":      33
+    -
+        # game state
+        name: gamestate
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x757d8
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "balloonist":       0x0C
+                    "credits":          0x0F
+                    "cutscene":         0x0E
+                    "death":            0x04
+                    "dragon cutscene":  0x08
+                    "exiting level":    0x0A
+                    "fairy textbox":    0x0B
+                    "flight menu":      0x07
+                    "fly in":           0x09
+                    "game over":        0x05
+                    "gameplay":         0x00
+                    "inventory":        0x03
+                    "loading":          0x01
+                    "paused":           0x02
+                    "title screen":     0x0D
+    -
+        # Holds a pointer to the moby object for the last touched whirlwind.
+        name: last_touched_whirlwind
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x78C7C
+                format: uint
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values: 
+                    "Alpine Ridge": 0x17bbec
+                    "Blowhard": 0x1396e4
+                    "Cliff Town": 0x16f978
+                    "Dark Hollow": 0x1339ac
+                    "Dark Passage": 0x178950
+                    "Doctor Shemp": 0x16ba44
+                    "Dry Canyon": 0x169444
+                    "Gnasty's Loot": 0x14da14
+                    "Gnorc Cove": 0x174884
+                    "Haunted Towers": 0x176964
+                    "High Caves": 0x17e188
+                    "Ice Cavern": 0x16b454
+                    "Jacques": 0x16deb0
+                    "Lofty Castle": 0x15a3d8
+                    "Metalhead": 0x173fc4
+                    "Misty Bog": 0x17b68c
+                    "Stone Hill":  0x177330
+                    "Terrace Village": 0x179020
+                    "Town Square": 0x17d644
+                    "Toasty": 0x1738ac
+                    "Tree Tops": 0x17ce24
+                    "Twilight Harbor": 0x17c298
+                    "Wizard Peak": 0x179ce4
+    -
+        name: Spyro current animation
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x78ad0
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "death spin":   0x1E
+                    "flop":         0x06
+                    "roll":         0x13
+                    "standing":     0x00
+                    "whirlwind":    0x11
+    -
+        # Which level you start in after the intro cutscene.
+        name: starting level id
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x2d4f0
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: never
+                values:
+                    "Alpine Ridge":     31
+                    "Artisans":         10
+                    "Beast Makers":     40
+                    "Blowhard":         34
+                    "Cliff Town":       22
+                    "Crystal Flight":   35
+                    "Dark Hollow":      12
+                    "Dark Passage":     51
+                    "Doctor Shemp":     24
+                    "Dry Canyon":       21
+                    "Dream Weavers":    50
+                    "Gnasty Gnorc":     63
+                    "Gnasty's Loot":    64
+                    "Gnasty's World":   60
+                    "Gnorc Cove":       61
+                    "Haunted Towers":   53
+                    "High Caves":       32
+                    "Ice Cavern":       23
+                    "Icy Flight":       55
+                    "Jacques":          54
+                    "Lofty Castle":     52
+                    "Magic Crafters":   30
+                    "Metalhead":        44
+                    "Misty Bog":        42
+                    "Night Flight":     25
+                    "Peace Keepers":    20
+                    "Stone Hill":       11
+                    "Sunny Flight":     15
+                    "Terrace Village":  41
+                    "Toasty":           14
+                    "Town Square":      13
+                    "Tree Tops":        43
+                    "Twilight Harbor":  62
+                    "Wild Flight":      45
+                    "Wizard Peak":      33
+    -
+        name: total gem count
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x75860
+                format: uint
+                length: 2
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+    -
+        name: unlocked world - Artisans
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758D0
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+                values:
+                    0: "unknown"
+                    1: "hinted" # in spyro terms, not AP terms
+                    2: "unlocked"
+    -
+        name: unlocked world - Peace Keepers
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758D1
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+                values:
+                    0: "unknown"
+                    1: "hinted" # in spyro terms, not AP terms
+                    2: "unlocked"
+    -
+        name: unlocked world - Magic Crafters
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758D2
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+                values:
+                    0: "unknown"
+                    1: "hinted" # in spyro terms, not AP terms
+                    2: "unlocked"
+    -
+        name: unlocked world - Beast Makers
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758D3
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+                values:
+                    0: "unknown"
+                    1: "hinted" # in spyro terms, not AP terms
+                    2: "unlocked"
+    -
+        name: unlocked world - Dream Weavers
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758D4
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+                values:
+                    0: "unknown"
+                    1: "hinted" # in spyro terms, not AP terms
+                    2: "unlocked"
+    -
+        name: unlocked world - Gnasty's World
+        readonly: true
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x758D5
+                format: uint
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+                values:
+                    0: "unknown"
+                    1: "hinted" # in spyro terms, not AP terms
+                    2: "unlocked"

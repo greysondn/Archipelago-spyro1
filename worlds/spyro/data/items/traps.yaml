@@ -1,0 +1,37 @@
+items:
+# -----
+# Traps
+# -----
+    -
+        name: Flop Trap
+        virtual: false
+        internal: false
+        count: 0
+        categories:
+            - trap
+        aliases: []
+        groups:
+            - Trap Item
+        callbacks: null
+    -
+        name: Roll Trap
+        virtual: false
+        internal: false
+        count: 0
+        categories:
+            - trap
+        aliases: []
+        groups:
+            - Trap Item
+        callbacks: null
+    -
+        name: Faint Trap
+        virtual: false
+        internal: false
+        count: 0
+        categories:
+            - trap
+        aliases: []
+        groups:
+            - Trap Item
+        callbacks: null

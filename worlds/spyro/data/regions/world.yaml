@@ -1,0 +1,10 @@
+regions:
+    -
+        name: world
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory: []
+        extra: []
+        children: []

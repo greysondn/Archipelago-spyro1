@@ -2,23 +2,51 @@ meta:
     game: "Spyro the Dragon"
     var_prefix: "$VAR "
 
-    entrance_rando:
-        groups:
-            entrances:
-                - stage_exit
-                - portal
-            exits:
-                - hub_start
-                - stage_start
-        presets:
-            -
-                name: vanilla
-                mappings:
-                    -
-                        entrance: stage_exit
-                        exits:
-                            - hub_start
-                    -
-                        entrance: portal
-                        exits:
-                            - stage_start
+    sources:
+        # entrance_rando
+        -
+            path: "entrance_rando.yaml"
+
+        # items
+        -
+            path: "items/filler.yaml"
+        -
+            path: "items/goals.yaml"
+        -
+            path: "items/hubs.yaml"
+        -
+            path: "items/levels.yaml"
+        -
+            path: "items/macguffins.yaml"
+        -
+            path: "items/traps.yaml"
+
+        # memory
+        -
+            path: "memory/archipelago.yaml"
+        -
+            path: "memory/balloons.yaml"
+        -
+            path: "memory/dragons.yaml"
+        -
+            path: "memory/eggs.yaml"
+        -
+            path: "memory/globals.yaml"
+        -
+            path: "memory/portals.yaml"
+        -
+            path: "memory/statue_head_checks.yaml"
+        -
+            path: "memory/text_offsets"
+
+        # patches
+        -
+            path: "patches.yaml"
+
+        # regions
+        -
+            path: "regions/world.yaml"
+        -
+            path: "regions/artisans/hub.yaml"
+        -
+            path: "regions/artisans/stone_hill.yaml"

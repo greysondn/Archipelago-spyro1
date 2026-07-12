@@ -1,0 +1,47 @@
+memory:
+    # -------------------------------------------------------------------------
+    # GLOBALS - Ours / Archipelago
+    # -------------------------------------------------------------------------
+
+    # we *think* there's unused RAM starting at 0x0f000 in the USA version
+    # we haven't located any unused space in europe or japan yet.
+    #
+    # but these addresses start from the unused space, counting up
+
+    -
+        # The ID of the last item the game has been given.
+        # Useful for save state issues and such.
+        name: last received archipelago id
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x0f000
+                format: int
+                length: 4
+                byte_order: little
+                guards:
+                    read:
+                        type:always
+                    write:
+                        type:always
+    -
+        name: switched portal destination
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x0f004
+                format: flag
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+                values:
+                    default: False
+                    0x01:    True

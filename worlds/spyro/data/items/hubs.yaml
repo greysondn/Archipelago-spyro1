@@ -1,0 +1,76 @@
+items:
+    # ----
+    # Hubs
+    # ----
+    -
+        name: Artisans Access
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases:
+            - Artisans
+        groups:
+            - Hub
+        callbacks: null
+    -
+        name: Peace Keepers Access
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases:
+            - Peace Keepers
+        groups:
+            - Hub
+        callbacks: null
+    -
+        name: Magic Crafters Access
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases:
+            - Magic Crafters
+        groups:
+            - Hub
+        callbacks: null
+    -
+        name: Beast Makers Access
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases:
+            - Beast Makers
+        groups:
+            - Hub
+        callbacks: null
+    -
+        name: Dream Weavers Access
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases:
+            - Dream Weavers
+        groups:
+            - Hub
+        callbacks: null
+    -
+        name: Gnasty's World Access
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases:
+            - Gnasty's World
+        groups:
+            - Hub
+        callbacks: null

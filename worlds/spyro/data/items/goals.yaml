@@ -1,0 +1,15 @@
+items:
+    # ----------
+    # goal items
+    # ----------
+    -
+        name: Victory
+        virtual: false
+        internal: false
+        count: 1
+        categories:
+            - progression
+        aliases: []
+        groups:
+            - Goal Items
+        callbacks: null

@@ -1,0 +1,1789 @@
+memory:
+    # -------------------------------------------------------------------------
+    # Text offsets
+    # -------------------------------------------------------------------------
+    -
+        name: Artisans text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1006c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Stone Hill text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101fc
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Dark Hollow text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101f0
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Town Square text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101e4
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Toasty text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101e4
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Sunny Flight text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101d4
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Peace Keepers text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1005c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Dry Canyon text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101c8
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Cliff Town text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101bc
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Ice Cavern text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101b0
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Doctor Shemp text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x101a0
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Night Flight text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10190
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Magic Crafters text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1004c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Alpine Ridge text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10180
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: High Caves text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10174
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Wizard Peak text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10168
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Blowhard text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1015c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Crystal Flight text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1014c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Beast Makers text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1003c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Terrace Village text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1013c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Misty Bog text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10130
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Tree Tops text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Metalhead text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10118
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Wild Flight text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1010c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Dream Weavers text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1002c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Dark Passage text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x100fc
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Lofty Castle text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x100ec
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Haunted Towers text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x100dc
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Jacques text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x75568
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Icy Flight text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x100d0
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Gnasty's World text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x1001c
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Gnorc Cave text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x100b4
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Twilight Harbor text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x100a4
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Gnasty Gnorc text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10094
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []
+    -
+        name: Gnasty's Loot text offset
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0x10084
+                format: string
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                    write:
+                        type: or
+                        params:
+                            next:
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: gameplay
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: inventory
+                                -
+                                    type: memory_equals
+                                    params:
+                                        name:  gamestate
+                                        value: loading
+                values: []

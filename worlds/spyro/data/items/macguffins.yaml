@@ -1,0 +1,64 @@
+items:
+    # ----------
+    # Boss Items
+    # ----------
+    -
+        name: Toasty's Stilts
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases: []
+        groups:
+            - Boss Item
+            - MacGuffin
+        callbacks: null
+    -
+        name: Shemp's Staff
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases: []
+        groups:
+            - Boss Item
+            - MacGuffin
+        callbacks: null
+    -
+        name: Blowhard's Beard
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases: []
+        groups:
+            - Boss Item
+            - MacGuffin
+        callbacks: null
+    -
+        name: Metalhead's Mohawk
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases: []
+        groups:
+            - Boss Item
+            - MacGuffin
+        callbacks: null
+    -
+        name: Jacques' Ribbon
+        count: 1
+        virtual: false
+        internal: false
+        categories:
+            - progression
+        aliases: []
+        groups:
+            - Boss Item
+            - MacGuffin
+        callbacks: null

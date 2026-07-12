@@ -1,0 +1,61 @@
+regions:
+    -
+        name: Artisans
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Artisans text offset
+        extra:
+            total_gems: 100
+        children:
+            -
+                name: Artisans Start
+                guard:
+                    type: always
+                connections: []
+                locations:
+                    -
+                        name: Artisans - Nestor
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Artisans - Nestor
+                                value: True
+                        callbacks: []
+                    -
+                        name: Artisans - Argus
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Artisans - Argus
+                                value: True
+                        callbacks: []
+                    -
+                        name: Artisans - Delbin
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Artisans - Delbin
+                                value: True
+                        callbacks: []
+                    -
+                        name: Artisans - Tomas
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Artisans - Tomas
+                                value: True
+                        callbacks: []
+                extra:
+                    total_gems: 100
+                children: []

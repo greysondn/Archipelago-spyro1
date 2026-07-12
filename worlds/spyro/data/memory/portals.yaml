@@ -1,0 +1,476 @@
+    # -------------------------------------------------------------------------
+    # Portals
+    # -------------------------------------------------------------------------
+
+    # Artisans
+
+    -
+        name: Stone Hill portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc12b4
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Dark Hollow portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc12a8
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Town Square portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc12c0
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Toasty portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc129c
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Sunny Flight portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc12cc
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    
+    # Peace Keepers
+    -
+        name: Dry Canyon portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xbfc48
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Cliff Town portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xbfc54
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Ice Cavern portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xbfc60
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Doctor Shemp portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xbfc6c
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Night Flight portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xbfc78
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    # Magic Crafters
+    -
+        name: Alpine Ridge portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc627c
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: High Caves portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc6294
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Wizard Peak portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc6288
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Blowhard portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc6264
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Crystal Flight portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc6270
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    # Beast Makers
+    -
+        name: Terrace Village portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xb558c
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Misty Bog portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xb5574
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Tree Tops portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xb5580
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Metalhead portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xb5568
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Wild Flight portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xb5598
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    # Dream Weavers
+    -
+        name: Dark Passage portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc5ecc
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Lofty Castle portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc5ee4
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Haunted Towers portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc5efc
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Jacques portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc5ed8
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Icy Flight portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xc5ef0
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    # Gnasty's World
+    -
+        name: Gnorc Cove portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xa69d8
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Twilight Harbor portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xa69b4
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Gnasty Gnorc portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xa69c0
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always
+    -
+        name: Gnasty's Loot portal
+        default: usa
+        aliases: []
+        versions:
+            usa:
+                domain: MainRAM
+                address: 0xa69cc
+                format: int
+                length: 1
+                byte_order: little
+                guards:
+                    read:
+                        type: always
+                    write:
+                        type: always

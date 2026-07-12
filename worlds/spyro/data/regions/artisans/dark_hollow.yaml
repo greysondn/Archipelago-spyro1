@@ -11,7 +11,7 @@ regions:
             total_gems: 100
         children:
             -
-                name: Stone Hill Start
+                name: Dark Hollow Start
                 guard:
                     type: always
                 connections: []

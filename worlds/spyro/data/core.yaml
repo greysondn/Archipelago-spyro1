@@ -47,6 +47,8 @@ meta:
         -
             path: "regions/world.yaml"
         -
+            path: "regions/artisans/dark_hollow.yaml"
+        -
             path: "regions/artisans/hub.yaml"
         -
             path: "regions/artisans/stone_hill.yaml"

@@ -1,0 +1,52 @@
+regions:
+    -
+        name: Dark Hollow
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory:
+            text_offset: Dark Hollow text offset
+        extra:
+            total_gems: 100
+        children:
+            -
+                name: Stone Hill Start
+                guard:
+                    type: always
+                connections: []
+                locations:
+                    -
+                        name: Dark Hollow - Alban
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Dark Hollow - Alban
+                                value: True
+                        callbacks: []
+                    -
+                        name: Dark Hollow - Oswin
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Dark Hollow - 
+                                value: True
+                        callbacks: []
+                    -
+                        name: Dark Hollow - Darius
+                        groups:
+                            - Dragons
+                        guard:
+                            type: memory_equals
+                            params:
+                                name:  Dark Hollow - Darius
+                                value: True
+                        callbacks: []
+                memory: []
+                extra:
+                    total_gems: 100
+                children: []

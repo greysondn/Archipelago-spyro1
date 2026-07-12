@@ -47,7 +47,11 @@ class Hub(
         # TODO: text offset?
         # TODO: total gems?
         # TODO: gem counter?
-        # TODO: regions?
+
+        for region in data["regions"]:
+            swp:Region = Region.create_from_data_yaml(region)
+            self.regions.append(swp)
+        
         # TODO: levels?
         # TODO: statue head checks?
     
@@ -70,6 +74,14 @@ class Hub(
     @id.setter
     def id(self, val:int) -> None:
         self._id = val
+        
+    @property
+    def regions(self) -> list["Region"]:
+        return self._regions
+    
+    @regions.setter
+    def regions(self, val:list["Region"]):
+        self._regions = val
         
 class Item(ap.Item):
     pass
@@ -101,7 +113,32 @@ class Region(
         Connection
     ]
 ):
-    pass
+    def __init__(self):
+        super().__init__("Spyro the Dragon")
+    
+    @override
+    def set_from_data_yaml(self, data:dict[str, Any]) -> None:
+        """Set data on this object from the expected strucutre in data.yaml
+
+        Args:
+            data: The parsed data.yaml structure
+        """
+        super().set_from_data_yaml(data)
+        
+        # TODO: locations?
+        # TODO: guard?
+        # TODO: connections?
+    
+    @classmethod
+    def create_from_data_yaml(cls, data:dict[str, Any]) -> "Region":
+        """Create this from the expected data.yaml structure
+
+        Args:
+            data: The parsed data.yaml structure
+        """
+        ret:Region = cls()
+        ret.set_from_data_yaml(data)
+        return ret
 
 class World(
     ap.GameWorld[
@@ -128,8 +165,8 @@ class World(
         # Hubs?
         hubs = cast(list[dict[str, Any]], data["hubs"])
         for hub in hubs:
-            swp:Hub = Hub.create_from_data_yaml(data)
-            swp.set_from_data_yaml(data)
+            swp:Hub = Hub.create_from_data_yaml(hub)
+            swp.set_from_data_yaml(hub)
             self.roots.append(swp)
     
     @classmethod

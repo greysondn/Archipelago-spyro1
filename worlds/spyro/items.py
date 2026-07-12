@@ -28,27 +28,12 @@ for hub in RAM.hub_environments:
         level_access.append(level.name)
 
 boss_items: list[str] = [
-    "Toasty's Stilts",
-    "Shemp's Staff",
-    "Blowhard's Beard",
-    "Metalhead's Mohawk",
-    "Jacques' Ribbon"
+
 ]
 
 goal_item: list[str] = ["Victory"]
 
 # TODO: useful items: progressive Sparx?
-
-trap_items: list[str] = [
-    "Flop Trap",
-    "Roll Trap",
-    "Faint Trap"
-]
-
-filler_items: list[str] = [
-    "Extra Life",
-    "Butterfly"
-]
 
 full_item_list: list[str] = homeworld_access + level_access + boss_items + goal_item
 full_item_list += trap_items + filler_items

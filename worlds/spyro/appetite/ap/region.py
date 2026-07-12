@@ -7,6 +7,7 @@ from appetite.ap.core import (
 )
 
 from typing import (
+    Any,
     Callable,
     Optional,
     TypeVar,
@@ -56,3 +57,19 @@ class Region[ConnectionType]():
         self._entrances:list[ConnectionType] = []
         self._exits:list[ConnectionType] = []
         self._guard:Callable[[CollectionState], bool] = lambda state: True
+
+    def set_from_data_yaml(self, data:dict[str, Any]) -> None:
+        """Set data on this object from the expected strucutre in data.yaml
+
+        Args:
+            data: The parsed data.yaml structure
+        """
+        self.name = data["name"]
+    
+    @property
+    def name(self) -> str:
+        return self._name
+    
+    @name.setter
+    def name(self, val:str):
+        self._name = val

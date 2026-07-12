@@ -1,0 +1,10 @@
+regions:
+    -
+        name: balloonist
+        guard:
+            type: always
+        connections: []
+        locations: []
+        memory: []
+        extra: []
+        children: []

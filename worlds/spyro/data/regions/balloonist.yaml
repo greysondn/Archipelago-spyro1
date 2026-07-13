@@ -3,7 +3,103 @@ regions:
         name: balloonist
         guard:
             type: always
-        connections: []
+        connections:
+            -
+                name: Balloonist to Artisans
+                destination: Artisans Start
+                related: null
+                tail:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+                point:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+            -
+                name: Balloonist to Beast Makers
+                destination: Beast Makers Start
+                related: null
+                tail:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+                point:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+            -
+                name: Balloonist to Dream Weavers
+                destination: Dream Weavers Start
+                related: null
+                tail:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+                point:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+            -
+                name: Balloonist to Gnasty's World
+                destination: Gnasty's World Start
+                related: null
+                tail:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+                point:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+            -
+                name: Balloonist to Magic Crafters
+                destination: Magic Crafters Start
+                related: null
+                tail:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+                point:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+            -
+                name: Balloonist to Peace Keepers
+                destination: Peace Keepers Start
+                related: null
+                tail:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
+                point:
+                    guard:
+                        type: always
+                    groups: []
+                    callbacks:
+                        on_connect: nop
         locations: []
         memory: []
         extra: []

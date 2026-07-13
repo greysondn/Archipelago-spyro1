@@ -15,7 +15,112 @@ regions:
                 name: Beast Makers Start
                 guard:
                     type: always
-                connections: []
+                connections:
+                    -
+                        name: Metalhead Portal to Fly-in
+                        destination: Metalhead Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Metalhead Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Misty Bog Portal to Fly-in
+                        destination: Misty Bog Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Misty Bog Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Terrace Village Portal to Fly-in
+                        destination: Terrace Village Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Terrace Village Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Tree Tops Portal to Fly-in
+                        destination: Tree Tops Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Tree Tops Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Wild Flight Portal to Fly-in
+                        destination: Wild Flight Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Wild Flight Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
                 locations:
                     -
                         name: Beast Makers - Bruno

@@ -15,7 +15,112 @@ regions:
                 name: Dream Weavers Start
                 guard:
                     type: always
-                connections: []
+                connections:
+                    -
+                        name: Dark Passage Portal to Fly-in
+                        destination: Dark Passage Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Dark Passage Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Haunted Towers Portal to Fly-in
+                        destination: Haunted Towers Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Haunted Towers Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Icy Flight Portal to Fly-in
+                        destination: Icy Flight Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Icy Flight Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Jacques Portal to Fly-in
+                        destination: Jacques Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Jacques Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Lofty Castle Portal to Fly-in
+                        destination: Lofty Castle Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Lofty Castle Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
                 locations:
                     -
                         name: Dream Weavers - Mazi

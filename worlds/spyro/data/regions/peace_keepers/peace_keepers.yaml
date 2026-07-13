@@ -15,7 +15,112 @@ regions:
                 name: Peace Keepers Start
                 guard:
                     type: always
-                connections: []
+                connections:
+                    -
+                        name: Cliff Town  Portal to Fly-in
+                        destination: Cliff Town Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Cliff Town Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Doctor Shemp Portal to Fly-in
+                        destination: Doctor Shemp Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Doctor Shemp Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Dry Canyon Portal to Fly-in
+                        destination: Dry Canyon Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Dry Canyon Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Ice Cavern Portal to Fly-in
+                        destination: Ice Cavern Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Ice Cavern Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Night Flight Portal to Fly-in
+                        destination: Night Flight Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Night Flight Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
                 locations:
                     -
                         name: Peace Keepers - Titan

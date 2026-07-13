@@ -15,7 +15,91 @@ regions:
                 name: Gnasty's World Start
                 guard:
                     type: always
-                connections: []
+                connections:
+                    -
+                        name: Gnasty Gnorc Portal to Fly-in
+                        destination: Gnasty Gnorc Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Gnasty Gnorc Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Gnasty's Loot Portal to Fly-in
+                        destination: Gnasty's Loot Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Gnasty's Loot Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Gnorc Cove Portal to Fly-in
+                        destination: Gnorc Cove Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Gnorc Cove Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Twilight Harbor Portal to Fly-in
+                        destination: Twilight Harbor Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Twilight Harbor Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
                 locations:
                     -
                         name: Gnasty's World - Delbin/Magnus

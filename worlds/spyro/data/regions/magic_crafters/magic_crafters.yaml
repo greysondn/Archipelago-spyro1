@@ -15,7 +15,112 @@ regions:
                 name: Magic Crafters Start
                 guard:
                     type: always
-                connections: []
+                connections:
+                    -
+                        name: Alpine Ridge Portal to Fly-in
+                        destination: Alpine Ridge Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Alpine Ridge Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Blowhard Portal to Fly-in
+                        destination: Blowhard Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Blowhard Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Crystal Flight Portal to Fly-in
+                        destination: Crystal Flight Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Crystal Flight Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: High Caves Portal to Fly-in
+                        destination: High Caves Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: High Caves Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
+                    -
+                        name: Wizard Peak Portal to Fly-in
+                        destination: Wizard Peak Start
+                        related: null
+                        tail:
+                            guard:
+                                type: has_item
+                                params:
+                                    name: Wizard Peak Access
+                                    count: 1
+                            groups:
+                                - portal
+                            callbacks:
+                                on_connect: nop
+                        point:
+                            guard:
+                                type: always
+                            groups:
+                                - stage_start
+                            callbacks:
+                                on_connect: nop
                 locations:
                     -
                         name: Magic Crafters - Cosmos

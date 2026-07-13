@@ -3,7 +3,11 @@ regions:
         name: world
         guard:
             type: always
+        
         connections: []
+        # there is a dynamic connection from here to the start hub
+        # and another dynamic connection from the start hub to the baloonist
+
         locations: []
         memory: []
         extra: []

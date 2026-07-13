@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: High Caves - Cyrus
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: High Caves - Cedric
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: High Caves - Ajax
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: High Caves - Egg 1 (Distant Pool)
+                        description: null
                         groups:
                             - Eggs
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: High Caves - Egg 2 (Cave)
+                        description: null
                         groups:
                             - Eggs
                         guard:

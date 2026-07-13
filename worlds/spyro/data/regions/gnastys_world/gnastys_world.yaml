@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Gnasty's World - Delbin/Magnus
+                        description: null
                         groups:
                             - Dragons
                         guard:

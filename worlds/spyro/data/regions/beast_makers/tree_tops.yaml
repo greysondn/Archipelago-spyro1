@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Tree Tops - Lyle
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Tree Tops - Jed
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Tree Tops - Isaak
+                        description: null
                         groups:
                             - Dragons
                         guard:

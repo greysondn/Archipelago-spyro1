@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Artisans - Nestor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Artisans - Argus
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Artisans - Delbin
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Artisans - Tomas
+                        description: null
                         groups:
                             - Dragons
                         guard:

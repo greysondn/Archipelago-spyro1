@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Alpine Ridge - Zane
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Alpine Ridge - Eldrid
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Alpine Ridge - Zander
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Alpine Ridge - Kelvin
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Alpine Ridge - Egg 1 (Distant Cave)
+                        description: null
                         groups:
                             - Eggs
                         guard:

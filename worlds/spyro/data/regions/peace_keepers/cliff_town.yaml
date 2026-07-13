@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Cliff Town - Halvor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Cliff Town - Enzo
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Cliff Town - Marco
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Cliff Town - Egg 1 (Square Building Past Bridge)
+                        description: null
                         groups:
                             - Eggs
                         guard:

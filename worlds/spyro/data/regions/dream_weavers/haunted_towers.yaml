@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Haunted Towers - Kosoko
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Haunted Towers - Lutalo
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Haunted Towers - Copano
+                        description: null
                         groups:
                             - Dragons
                         guard:

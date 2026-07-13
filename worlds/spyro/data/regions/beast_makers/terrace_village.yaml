@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Terrace Village - Claude
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Terrace Village - Cyprin
+                        description: null
                         groups:
                             - Dragons
                         guard:

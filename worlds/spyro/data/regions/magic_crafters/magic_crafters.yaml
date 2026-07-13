@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Magic Crafters - Cosmos
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Magic Crafters - Zantor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Magic Crafters - Boldar
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Magic Crafters - Egg 1 (Entry)
+                        description: null
                         groups:
                             - Eggs
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Magic Crafters - Egg 2 (Courtyard)
+                        description: null
                         groups:
                             - Eggs
                         guard:

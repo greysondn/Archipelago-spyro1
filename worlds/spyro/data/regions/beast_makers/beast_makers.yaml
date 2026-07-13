@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Beast Makers - Bruno
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Beast Makers - Cleetus
+                        description: null
                         groups:
                             - Dragons
                         guard:

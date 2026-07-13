@@ -20,6 +20,7 @@ regions:
                 locations:
                     -
                         name: Jacques - Unika
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -30,6 +31,7 @@ regions:
                         callbacks: []
                     -
                         name: Jacques - Revilo
+                        description: null
                         groups:
                             - Dragons
                         guard:

@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Lofty Castle - Mudada
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Lofty Castle - Baruti
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Lofty Castle - Useni
+                        description: null
                         groups:
                             - Dragons
                         guard:

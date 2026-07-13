@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Gnorc Cove - Lateef
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Gnorc Cove - Tomas
+                        description: null
                         groups:
                             - Dragons
                         guard:

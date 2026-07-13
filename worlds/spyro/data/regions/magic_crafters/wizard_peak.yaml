@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Wizard Peak - Jarvis
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Wizard Peak - Hexus
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Wizard Peak - Lucas
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Wizard Peak - Egg 1 (Quad Wizard Ramp)
+                        description: null
                         groups:
                             - Eggs
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Wizard Peak - Egg 2 (End Area Pool)
+                        description: null
                         groups:
                             - Eggs
                         guard:

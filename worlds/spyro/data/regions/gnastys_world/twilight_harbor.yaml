@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Twilight Harbor - Cosmos
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Twilight Harbor - Cleetus
+                        description: null
                         groups:
                             - Dragons
                         guard:

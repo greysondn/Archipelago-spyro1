@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Ice Cavern - Ulric
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Ice Cavern - Todor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Ice Cavern - Andor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Ice Cavern - Asher
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Ice Cavern - Ragnar
+                        description: null
                         groups:
                             - Dragons
                         guard:

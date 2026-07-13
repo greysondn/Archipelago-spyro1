@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Dark Hollow - Alban
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Dark Hollow - Oswin
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Dark Hollow - Darius
+                        description: null
                         groups:
                             - Dragons
                         guard:

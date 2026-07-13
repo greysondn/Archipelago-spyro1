@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Stone Hill - Lindar
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Stone Hill - Gavin
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Stone Hill - Astor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Stone Hill - Gildas
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Stone Hill - Egg 1 (Upper Area)
+                        description: null
                         groups:
                             - Eggs
                         guard:

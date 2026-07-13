@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Town Square - Nils
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Town Square - Alvar
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Town Square - Devlin
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Town Square - Egg 1 (Upper Area)
+                        description: null
                         groups:
                             - Eggs
                         guard:

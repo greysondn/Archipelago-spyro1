@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Peace Keepers - Titan
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Peace Keepers - Magnus
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Peace Keepers - Gunnar
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Peace Keepers - Egg 1 (Pool)
+                        description: null
                         groups:
                             - Eggs
                         guard:

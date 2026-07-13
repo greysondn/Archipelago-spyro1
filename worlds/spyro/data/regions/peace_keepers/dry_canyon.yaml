@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Dry Canyon - Conan
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Dry Canyon - Boris
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Dry Canyon - Maximos
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Dry Canyon - Ivor
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Dry Canyon - Egg 1 (Starting Area)
+                        description: null
                         groups:
                             - Eggs
                         guard:

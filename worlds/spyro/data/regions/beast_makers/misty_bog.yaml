@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Misty Bog - Rosco
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Misty Bog - Damon
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Misty Bog - Zeke
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Misty Bog - Bubba
+                        description: null
                         groups:
                             - Dragons
                         guard:

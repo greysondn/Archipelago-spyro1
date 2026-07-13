@@ -20,6 +20,7 @@ regions:
                 locations:
                     -
                         name: Toasty - Nevin
+                        description: null
                         groups:
                             - Dragons
                         guard:

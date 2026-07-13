@@ -19,6 +19,7 @@ regions:
                 locations:
                     -
                         name: Dark Passage - Kasiya
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -29,6 +30,7 @@ regions:
                         callbacks: []
                     -
                         name: Dark Passage - Azizi
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -39,6 +41,7 @@ regions:
                         callbacks: []
                     -
                         name: Dark Passage - Bakari
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -49,6 +52,7 @@ regions:
                         callbacks: []
                     -
                         name: Dark Passage - Apara
+                        description: null
                         groups:
                             - Dragons
                         guard:
@@ -59,6 +63,7 @@ regions:
                         callbacks: []
                     -
                         name: Dark Passage - Obasi
+                        description: null
                         groups:
                             - Dragons
                         guard:

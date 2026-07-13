@@ -4,6 +4,7 @@ items:
 # -----
     -
         name: Flop Trap
+        description: null
         virtual: false
         internal: false
         count: 0
@@ -15,6 +16,7 @@ items:
         callbacks: null
     -
         name: Roll Trap
+        description: null
         virtual: false
         internal: false
         count: 0
@@ -26,6 +28,7 @@ items:
         callbacks: null
     -
         name: Faint Trap
+        description: null
         virtual: false
         internal: false
         count: 0

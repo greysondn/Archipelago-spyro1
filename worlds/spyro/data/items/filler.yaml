@@ -4,6 +4,7 @@ items:
     # ------
     -
         name: Butterfly
+        description: null
         virtual: false
         internal: false
         count: 0
@@ -16,6 +17,7 @@ items:
         callbacks: null
     -
         name: Extra Life
+        description: null
         virtual: false
         internal: false
         count: 0

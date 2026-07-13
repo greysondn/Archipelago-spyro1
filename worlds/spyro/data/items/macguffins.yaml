@@ -4,6 +4,7 @@ items:
     # ----------
     -
         name: Toasty's Stilts
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -16,6 +17,7 @@ items:
         callbacks: null
     -
         name: Shemp's Staff
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -28,6 +30,7 @@ items:
         callbacks: null
     -
         name: Blowhard's Beard
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -40,6 +43,7 @@ items:
         callbacks: null
     -
         name: Metalhead's Mohawk
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -52,6 +56,7 @@ items:
         callbacks: null
     -
         name: Jacques' Ribbon
+        description: null
         count: 1
         virtual: false
         internal: false

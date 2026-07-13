@@ -4,6 +4,7 @@ items:
     # ----------
     -
         name: Victory
+        description: null
         virtual: false
         internal: false
         count: 1

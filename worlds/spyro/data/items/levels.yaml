@@ -6,6 +6,7 @@ items:
     # Artisans
     -
         name: Stone Hill Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -19,6 +20,7 @@ items:
         callbacks: null
     -
         name: Dark Hollow Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -32,6 +34,7 @@ items:
         callbacks: null
     -
         name: Town Square Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -45,6 +48,7 @@ items:
         callbacks: null
     -
         name: Toasty Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -59,6 +63,7 @@ items:
         callbacks: null
     -
         name: Sunny Flight Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -75,6 +80,7 @@ items:
     # Peace Keepers
     -
         name: Dry Canyon Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -88,6 +94,7 @@ items:
         callbacks: null
     -
         name: Cliff Town Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -101,6 +108,7 @@ items:
         callbacks: null
     -
         name: Ice Cavern Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -114,6 +122,7 @@ items:
         callbacks: null
     -
         name: Doctor Shemp Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -128,6 +137,7 @@ items:
         callbacks: null
     -
         name: Night Flight Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -144,6 +154,7 @@ items:
     # Magic Crafters
     -
         name: Alpine Ridge Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -157,6 +168,7 @@ items:
         callbacks: null
     -
         name: High Caves Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -170,6 +182,7 @@ items:
         callbacks: null
     -
         name: Wizard Peak Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -183,6 +196,7 @@ items:
         callbacks: null
     -
         name: Blowhard Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -197,6 +211,7 @@ items:
         callbacks: null
     -
         name: Crystal Flight Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -213,6 +228,7 @@ items:
     # Beast Makers
     -
         name: Terrace Village Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -226,6 +242,7 @@ items:
         callbacks: null
     -
         name: Misty Bog Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -239,6 +256,7 @@ items:
         callbacks: null
     -
         name: Tree Tops Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -252,6 +270,7 @@ items:
         callbacks: null
     -
         name: Metalhead Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -266,6 +285,7 @@ items:
         callbacks: null
     -
         name: Wild Flight Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -282,6 +302,7 @@ items:
     # Dream Weavers
     -
         name: Dark Passage Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -295,6 +316,7 @@ items:
         callbacks: null
     -
         name: Lofty Castle Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -308,6 +330,7 @@ items:
         callbacks: null
     -
         name: Haunted Towers Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -321,6 +344,7 @@ items:
         callbacks: null
     -
         name: Jacques Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -335,6 +359,7 @@ items:
         callbacks: null
     -
         name: Icy Flight Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -351,6 +376,7 @@ items:
     # Gnasty's World
     -
         name: Gnorc Cove Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -364,6 +390,7 @@ items:
         callbacks: null
     -
         name: Twilight Harbor Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -377,6 +404,7 @@ items:
         callbacks: null
     -
         name: Gnasty Gnorc Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -391,6 +419,7 @@ items:
         callbacks: null
     -
         name: Gnasty's Loot Access
+        description: null
         count: 1
         virtual: false
         internal: false

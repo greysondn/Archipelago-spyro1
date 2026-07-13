@@ -4,6 +4,7 @@ items:
     # ----
     -
         name: Artisans Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -16,6 +17,7 @@ items:
         callbacks: null
     -
         name: Peace Keepers Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -28,6 +30,7 @@ items:
         callbacks: null
     -
         name: Magic Crafters Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -40,6 +43,7 @@ items:
         callbacks: null
     -
         name: Beast Makers Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -52,6 +56,7 @@ items:
         callbacks: null
     -
         name: Dream Weavers Access
+        description: null
         count: 1
         virtual: false
         internal: false
@@ -64,6 +69,7 @@ items:
         callbacks: null
     -
         name: Gnasty's World Access
+        description: null
         count: 1
         virtual: false
         internal: false
